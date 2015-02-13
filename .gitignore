@@ -1,1 +1,6 @@
 *.aux
+Master.pdf
+*.gz
+*.log
+*.out
+*.toc
