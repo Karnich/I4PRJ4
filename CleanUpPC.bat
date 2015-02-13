@@ -1,26 +1,10 @@
 echo off
-rem the next line deletes only files and NOT directories.
-del "*.bbl" 
-del "*.blg" 
-del "*.log" 
-del "*.out" 
-del "*.toc" 
-del "*.aux" 
-del "*.lox" 
-del "*.tps" 
-del "*.nlo" 
-del "*.gz"
-del "*.pdf"
-del "*.DS_Store"
-del "filer\*.bbl" 
-del "filer\*.blg" 
-del "filer\*.log" 
-del "filer\*.out" 
-del "filer\*.toc" 
-del "filer\*.aux" 
-del "filer\*.lox" 
-del "filer\*.tps" 
-del "filer\*.nlo" 
-del "filer\*.gz"
+FOR /r %%f IN (Master.pdf) do del %%f
+FOR /r %%f IN (*.aux) do del %%f
+FOR /r %%f IN (*.log) do del %%f
+FOR /r %%f IN (*.out) do del %%f
+FOR /r %%f IN (*.DS_Store) do del %%f
+FOR /r %%f IN (*.gz) do del %%f
+FOR /r %%f IN (*.toc) do del %%f
 
-pause
+echo on
