@@ -8,35 +8,37 @@
 		\multicolumn{2}{|l|}{\textbf{UC3: Find Topic}} \\\hline
 		\endhead	
 		
-		\textbf{Mål}						&%SKRIV
+		\textbf{Mål}						& Bruger har fundet ønsket topic
 		\\\hline
-		\textbf{Initialisering}			&%SKRIV
+		\textbf{Initialisering}			& Bruger
 		\\\hline
-		\textbf{Aktører og Stakeholders}	&%SKRIV
+		\textbf{Aktører og Stakeholders}	&Bruger
 		\\\hline 
-		\textbf{Referencer}				&%SKRIV
+		\textbf{Referencer}				& (evt. login)
 		\\\hline
-		\textbf{AASH}					&%SKRIV Antal samtidige hændelser
+		\textbf{AASH}					& 1 pr. bruger
 		\\\hline
-		\textbf{Efterfølgende tilstand}	&%SKRIV
+		\textbf{Efterfølgende tilstand}	& ?
 		\\\hline
 		\textbf{Hovedforløb}					
 			&\begin{enumerate}
-				% Tilføj punkter for forløbet med items
+				\item Bruger ventreklikker i søgefeltet på brugergrænsefladen.
+				\item \label{ucFindTopicSearch} Bruger indtaster navnet på de tags %(eller evt. navnet på topic??) 
+				som det ønskede topic har tilknyttet, og trykker på SØG knappen på brugergrænsefladen eller Enter på brugerens tastatur.
+				\item \label{ucFindTopicNoResults} Brugeren vises en række topics, som har tilknyttet de tags brugeren indtastede.
+				\textbf{Undtagelse \ref{ucFindTopicNoResults}.a} \newline
 				%
-				% \item blablabla
-				%
-				% \item \label{ucPunktLabel} blablablabla
-				%
-				% \item \label{ucPunktLabel} blabla med undtagelse
-				%
+				\item Bruger venstreklikker på det ønskede topic.
 				% \textbf{[Undtagelse \ref{ucPunktLabel}.a]} \newline
 				% 	ALERT!!
 				
-				\item Dummy item
 			\end{enumerate}\\\hline
 		\textbf{Undtagelser}
-			&			
+			&\begin{enumerate} [label=\ref{ucFindTopicNoResults}.a]
+				\item Søgningen fandt ingen topics med de angivne tags %(eller navne??)
+				\item Gå til UC\ref{ucFindTopic}.\ref{ucFindTopicSearch}
+			\end{enumerate}
+						
 			% Undtagelser laves som små enumeraters. Brug syntaksen her under, så punkter automatisk opdateres
 			%\begin{enumerate}[label=\ref{ucPunktLabel}.a]
 			%	\item Gå til UC3.\ref{ucPunktLabelSomSkalTil}
