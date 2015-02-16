@@ -8,27 +8,27 @@
 		\multicolumn{2}{|l|}{\textbf{UC3: Find Topic}} \\\hline
 		\endhead	
 		
-		\textbf{Mål}						& Bruger har fundet ønsket topic
+		\textbf{Mål}					& Bruger har fundet ønsket topic
 		\\\hline
-		\textbf{Initialisering}			& Bruger
+		\textbf{Initialisering}			& (evt. login i senere iteration)
 		\\\hline
 		\textbf{Aktører og Stakeholders}	&Bruger
 		\\\hline 
-		\textbf{Referencer}				& (evt. login)
+		\textbf{Referencer}				& (evt. login i senere iteration)
 		\\\hline
-		\textbf{AASH}					& 1 pr. bruger
+		\textbf{AASH}					& 1 pr. session
 		\\\hline
 		\textbf{Efterfølgende tilstand}	& ?
 		\\\hline
 		\textbf{Hovedforløb}					
 			&\begin{enumerate}
-				\item Bruger ventreklikker i søgefeltet på brugergrænsefladen.
+				\item Bruger aktiverer søgefeltet på brugergrænsefladen.
 				\item \label{ucFindTopicSearch} Bruger indtaster navnet på de tags %(eller evt. navnet på topic??) 
 				som det ønskede topic har tilknyttet, og trykker på SØG knappen på brugergrænsefladen eller Enter på brugerens tastatur.
 				\item \label{ucFindTopicNoResults} Brugeren vises en række topics, som har tilknyttet de tags brugeren indtastede.
-				\textbf{Undtagelse \ref{ucFindTopicNoResults}.a} \newline
+				\textbf{Undtagelse \ref{ucFindTopicNoResults}.a}
 				%
-				\item Bruger venstreklikker på det ønskede topic.
+				\item Bruger markerer det ønskede topic.
 				% \textbf{[Undtagelse \ref{ucPunktLabel}.a]} \newline
 				% 	ALERT!!
 				
