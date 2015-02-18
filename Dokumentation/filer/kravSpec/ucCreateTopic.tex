@@ -5,41 +5,31 @@
 		\endfirsthead
 		
 		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline %% Til LONGTABLE
-		\multicolumn{2}{|l|}{\textbf{UC1: Create Topic}} \\\hline
+		\multicolumn{2}{|l|}{\textbf{UC1: Create Quiz}} \\\hline
 		\endhead	
 		
-		\textbf{Mål}						&Bruger har oprettet et topic
+		\textbf{Mål}						&Bruger vil oprette en quiz
 		\\\hline
-		\textbf{Initialisering}			&Ingen (?bruger logget ind?)
+		\textbf{Initialisering}			&Ingen
 		\\\hline
-		\textbf{Aktører og Stakeholders}	&Bruger (evt. system administrator (os))
+		\textbf{Aktører og Stakeholders}	&Bruger, Database server og Web server
 		\\\hline 
 		\textbf{Referencer}				&%SKRIV
 		\\\hline
-		\textbf{AASH}					&Én hændelse per bruger
+		\textbf{AASH}					&1 pr. session
 		\\\hline
-		\textbf{Efterfølgende tilstand}	&?
+		\textbf{Efterfølgende tilstand}	&Bruger har oprettet en quiz
 		\\\hline
 		\textbf{Hovedforløb}					
 			&\begin{enumerate}
-				% Tilføj punkter for forløbet med items
-				%
-				% \item blablabla
-				%
-				% \item \label{ucPunktLabel} blablablabla
-				%
-				% \item \label{ucPunktLabel} blabla med undtagelse
-				%
-				% \textbf{[Undtagelse \ref{ucPunktLabel}.a]} \newline
-				% 	ALERT!!
-				
-				\item Bruger trykker på "Create Topic"
+				\item Bruger trykker på "Create Quiz"
 				\item Brugergrænsefladen opdaterer, således at de forskellige konfigurationsmuligheder bliver præsenteret
 				\item Bruger indtaster navn på topic
 				\item Bruger indtaster søgbare tags på topic
 				\item \label{ucPunktLabelSpm} Bruger indtaster det første spørgsmål
 				\item Bruger indtaster svarmuligheder og angiver det korrekte svar
 				\item Bruger kan tilføje flere spørgsmål ved at trykke "Create new question", hvormed \ref{ucPunktLabelSpm} gentages
+				\item Bruger trykker på "Create" knappen og UC afsluttes
 				
 			\end{enumerate}\\\hline
 		\textbf{Undtagelser}
