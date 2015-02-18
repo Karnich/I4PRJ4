@@ -1,11 +1,11 @@
-\begin{center} \centering \label{ucAnswerTopic}
+\begin{center} \centering \label{ucAnswerQuiz}
 	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}  %% Longtable = forsætter på næste side
 		\hline
-		\multicolumn{2}{|l|}{\textbf{UC2: Answer Topic}} \\\hline
+		\multicolumn{2}{|l|}{\textbf{UC2: Answer Quiz}} \\\hline
 		\endfirsthead
 		
 		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline %% Til LONGTABLE
-		\multicolumn{2}{|l|}{\textbf{UC2: Answer Topic}} \\\hline
+		\multicolumn{2}{|l|}{\textbf{UC2: Answer Quiz}} \\\hline
 		\endhead	
 		
 		\textbf{Mål}						&Bruger vil besvare en quiz
@@ -23,14 +23,19 @@
 		\textbf{Hovedforløb}					
 			&\begin{enumerate}
 			\item Bruger vælger topic
-			\item Bruger præsenteres for spørgsmål.
+			\item\label{ucAnswerQuizQPresent} Bruger præsenteres for spørgsmål.
 			\item Bruger vælger en af svarmulighederne. 
 			\item System viser rigtigt svar.
+<<<<<<< HEAD:Dokumentation/filer/kravSpec/ucAnswerTopic.tex
 			\item Næste spørgsmål præsenteres for bruger 
 			
 			[punkt 2 - 5 gentages indtil der ikke er flere spørgsmål i topic.]
+=======
+			\item\label{ucAnswerQuizQEnd} Næste spørgsmål præsenteres for bruger \newline
+			[Punkt \ref{ucAnswerQuizQPresent} - \ref{ucAnswerQuizQEnd} gentages indtil der ikke er flere spørgsmål i quiz]
+>>>>>>> FETCH_HEAD:Dokumentation/filer/kravSpec/ucAnswerQuiz.tex
 			\item Bruger præsenteres for statistik der viser hvor mange spørgsmål der er 	besvaret korrekt.
-			\item Bruger vælger at afslutte hvorved topic forlades (Bruger vises det oprindelige "billede" fra punkt 0)
+			\item Bruger vælger at afslutte hvorved quiz forlades
 
 
 			\end{enumerate}\\\hline
