@@ -1,30 +1,29 @@
 \begin{center} \centering \label{ucFindQuiz}
 	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}  %% Longtable = forsætter på næste side
 	\hline
-		\multicolumn{2}{|l|}{\textbf{UC3: Find Quiz}} \\\hline
+		\multicolumn{2}{|l|}{\textbf{UC2: Find Quiz}} \\\hline
 		\endfirsthead
 		
 		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline %% Til LONGTABLE
-		\multicolumn{2}{|l|}{\textbf{UC3: Find Quiz}} \\\hline
+		\multicolumn{2}{|l|}{\textbf{UC2: Find Quiz}} \\\hline
 		\endhead	
 		
-		\textbf{Mål}					& Bruger har fundet den ønskede Quiz
+		\textbf{Mål}					& Bruger har fundet den ønskede Quiz.
 		\\\hline
-		\textbf{Initialisering}			& %evt. login i senere iteration
+		\textbf{Initialisering}			& Bruger aktiverer søgefeltet på brugergrænsefladen.
 		\\\hline
-		\textbf{Aktører og Stakeholders}	&Bruger, Database server, Web server
+		\textbf{Aktører og Stakeholders}	& Bruger, Database server, Web server.
 		\\\hline 
 		\textbf{Referencer}				& % evt. login i senere iteration
 		\\\hline
-		\textbf{AASH}					& 1 pr. session
+		\textbf{AASH}					& 1 pr. session.
 		\\\hline
-		\textbf{Efterfølgende tilstand}	& Bruger har markeret den ønskede Quiz
+		\textbf{Efterfølgende tilstand}	& Bruger har markeret den ønskede Quiz.
 		\\\hline
 		\textbf{Hovedforløb}					
 			&\begin{enumerate}
-				\item Bruger aktiverer søgefeltet på brugergrænsefladen.
-				\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, %(eller evt. navnet på topic??) 
-				som den ønskede Quiz har tilknyttet, og trykker på SØG knappen på brugergrænsefladen.
+				\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, som den ønskede Quiz har tilknyttet, og trykker på SØG knappen på brugergrænsefladen. 
+				\textbf{Undtagelse \ref{ucFindQuizSearch}.a}
 				\item \label{ucFindQuizNoResults} Brugeren vises en række quizzer, som har tilknyttet de tags Bruger indtastede.
 				\textbf{Undtagelse \ref{ucFindQuizNoResults}.a}
 				%
@@ -34,9 +33,13 @@
 				
 			\end{enumerate}\\\hline
 		\textbf{Undtagelser}
-			&\begin{enumerate} [label=\ref{ucFindQuizNoResults}.a]
-				\item Søgningen fandt ingen quizzer med de angivne tags %(eller navne??)
-				\subitem Gå til UC3.\ref{ucFindQuizSearch}
+			&\begin{enumerate} [label=\ref{ucFindQuizSearch}.a]
+				\item Bruger fjerner fokus fra søgefeltet.
+				\subitem Use casen afsluttes.
+			\end{enumerate}
+			\begin{enumerate} [label=\ref{ucFindQuizNoResults}.a]
+				\item Søgningen fandt ingen quizzer med de angivne tags.
+				\subitem Gå til UC2 punkt \ref{ucFindQuizSearch}.
 			\end{enumerate}
 						
 			% Undtagelser laves som små enumeraters. Brug syntaksen her under, så punkter automatisk opdateres
