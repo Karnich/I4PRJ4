@@ -1,51 +1,40 @@
-\begin{center} \centering \label{ucCreateQuiz}
-	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}  %% Longtable = forsætter på næste side
-	\hline
-		\multicolumn{2}{|l|}{\textbf{UC1: Create Quiz}} \\\hline
-		\endfirsthead
+% Tabel header
+
+\uchead
+	{1}
+	{Create quiz}
+	{Bruger vil oprette en Quiz.}
+	{Bruger trykker på ''Create Quiz'' på brugergrænsefladen.}
+	{Bruger, Databaseserver og Webserver.}
+	{}
+	{1 pr. session.}
+	{Bruger har oprettet en Quiz.}
+
+\item Brugergrænsefladen viser de forskellige konfigurationsmuligheder, som Bruger har til rådighed ved ''Create Quiz''.
+
+\item \label{ucCreateQuizName} Bruger indtaster navn på Quiz, og dette tilføjes automatisk som et søgbart tag til Quizzen.
+
+\item Bruger indtaster søgbare tags på Quiz.
+
+\item \label{ucCreateQuizQst} Bruger indtaster spørgsmål.
+
+\item Bruger indtaster svarmuligheder og angiver det korrekte svar.
+
+\item Bruger kan tilføje flere spørgsmål ved at trykke ''Create new question'', hvormed der hoppes til punkt \ref{ucCreateQuizQst}.
+
+\item \label{ucCreateQuizDone} Bruger trykker på ''Create'' knappen og UC afsluttes.
+\textbf{Undtagelse \ref{ucCreateQuizDone}.a} \textbf{Undtagelse \ref{ucCreateQuizDone}.b}
+
+\ucdescriptionend
+
+\ucextension
+	{Bruger vælger i løbet af use casens forløb at trykke ''Discard Quiz''.}
+	{Quizzen oprettes ikke, og use casen afsluttes.}
+	{\ref{ucCreateQuizDone}.a}
+	
+\ucextension
+	{De indtastede oplysninger om Quizzen er ikke i overensstemmelse med de ikke-funktionelle krav (se afsnit \ref{sec:nonFunctional}, side \pageref{sec:nonFunctional}).}
+	{Gå til UC1.\ref{ucCreateQuizName}}
+	{\ref{ucCreateQuizDone}.b}
 		
-		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline %% Til LONGTABLE
-		\multicolumn{2}{|l|}{\textbf{UC1: Create Quiz}} \\\hline
-		\endhead	
-		
-		\textbf{Mål}						&Bruger vil oprette en Quiz.
-		\\\hline
-		\textbf{Initialisering}			& Bruger trykker på ''Create Quiz'' på brugergrænsefladen.
-		\\\hline
-		\textbf{Aktører og Stakeholders}	&Bruger, Database server og Webserver.
-		\\\hline 
-		\textbf{Referencer}				&%SKRIV
-		\\\hline
-		\textbf{AASH}					&1 pr. session.
-		\\\hline
-		\textbf{Efterfølgende tilstand}	&Bruger har oprettet en Quiz.
-		\\\hline
-		\textbf{Hovedforløb}					
-			&\begin{enumerate}
-				\item Brugergrænsefladen viser de forskellige konfigurationsmuligheder, som Bruger har til rådighed ved ''Create Quiz''.
-				\item \label{ucCreateQuizName} Bruger indtaster navn på Quiz, og dette tilføjes automatisk som et søgbart tag til Quizzen.
-				\item Bruger indtaster søgbare tags på Quiz.
-				\item \label{ucCreateQuizQst} Bruger indtaster det første spørgsmål.
-				\item Bruger indtaster svarmuligheder og angiver det korrekte svar.
-				\item Bruger kan tilføje flere spørgsmål ved at trykke "Create new question", hvormed der hoppes til punkt\ref{ucCreateQuizQst} i use casen.
-				\item \label{ucCreateQuizDone} Bruger trykker på ''Create'' knappen og UC afsluttes.
-				\textbf{Undtagelse \ref{ucCreateQuizDone}.a}
-				\textbf{Undtagelse \ref{ucCreateQuizDone}.b}
-				
-			\end{enumerate}\\\hline
-		\textbf{Undtagelser}
-			&\begin{enumerate} [label=\ref{ucCreateQuizDone}.a]
-				\item Bruger vælger i løbet af use casens forløb at trykke ''Discard Quiz''.
-				\subitem Quizzen oprettes ikke, og use casen afsluttes.
-			\end{enumerate}
-			\begin{enumerate} [label=\ref{ucCreateQuizDone}.b]
-				\item De indtastede oplysninger om Quizzen er ikke i overensstemmelse med de ikke-funktionelle krav (se afsnit \ref{sec:nonFunctional} side \pageref{sec:nonFunctional} ).
-				\subitem Gå til UC1 punkt \ref{ucCreateQuizName}.
-			\end{enumerate}	
-			% Undtagelser laves som små enumeraters. Brug syntaksen her under, så punkter automatisk opdateres
-			%\begin{enumerate}[label=\ref{ucPunktLabel}.a]
-			%	\item Gå til UC1.\ref{ucPunktLabelSomSkalTil}
-			%\end{enumerate}																
-			\\\hline
-	\end{longtable} 
-\end{center}
+\ucfoot{CreateQuiz}

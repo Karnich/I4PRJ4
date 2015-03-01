@@ -1,45 +1,27 @@
-\begin{center} \centering \label{ucAnswerQuiz}
-	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}  %% Longtable = forsætter på næste side
-		\hline
-		\multicolumn{2}{|l|}{\textbf{UC3: Answer Quiz}} \\\hline
-		\endfirsthead
-		
-		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline %% Til LONGTABLE
-		\multicolumn{2}{|l|}{\textbf{UC3: Answer Quiz}} \\\hline
-		\endhead	
-		
-		\textbf{Mål}						&Bruger vil besvare en Quiz.
-		\\\hline
-		\textbf{Initialisering}			&Bruger har markeret en Quiz.
-		\\\hline
-		\textbf{Aktører og Stakeholders}	&Bruger, Database server og Web server.
-		\\\hline 
-		\textbf{Referencer}				&
-		\\\hline
-		\textbf{AASH}					&1 pr. session.
-		\\\hline
-		\textbf{Efterfølgende tilstand}	&Bruger har besvaret alle spørgsmål i en Quiz.
-		\\\hline
-		\textbf{Hovedforløb}					
-			&\begin{enumerate}
-			\item Bruger vælger ''Take Quiz'' på brugergrænsefladen.
-			\item\label{ucAnswerQuizPresent} Bruger præsenteres for spørgsmål.
-			\item Bruger vælger en af svarmulighederne. 
-			\item Brugergrænsefladen viser det rigtige svar.
+\uchead
+	{3}
+	{Answer Quiz}
+	{Bruger vil besvare en Quiz.}
+	{Bruger har markeret en Quiz.}
+	{Bruger, Databaseserver og Webserver.}
+	{}
+	{1 pr. session.}
+	{Bruger har besvaret alle spørgsmål i en Quiz.}
 
-			\item\label{ucAnswerQuizEnd} Næste spørgsmål præsenteres for bruger \newline
-			[Punkt \ref{ucAnswerQuizPresent} - \ref{ucAnswerQuizEnd} gentages indtil der ikke er flere spørgsmål i Quizzen]
-			\item Bruger præsenteres for statistik der viser hvor mange spørgsmål der er besvaret korrekt.
-			\item Bruger vælger at afslutte hvorved Quiz forlades
+\item Bruger vælger ''Take Quiz'' på brugergrænsefladen.
 
+\item\label{ucAnswerQuizPresent} Bruger præsenteres for spørgsmål.
 
-			\end{enumerate}\\\hline
-		\textbf{Undtagelser}
-			&			
-			% Undtagelser laves som små enumeraters. Brug syntaksen her under, så punkter automatisk opdateres
-			%\begin{enumerate}[label=\ref{ucPunktLabel}.a]
-			%	\item Gå til UC3.\ref{ucPunktLabelSomSkalTil}
-			%\end{enumerate}																
-			\\\hline
-	\end{longtable} 
-\end{center}
+\item Bruger vælger en af svarmulighederne. 
+
+\item Brugergrænsefladen viser det rigtige svar.
+
+\item\label{ucAnswerQuizEnd} Næste spørgsmål præsenteres for bruger \newline
+[Punkt \ref{ucAnswerQuizPresent} - \ref{ucAnswerQuizEnd} gentages indtil der ikke er flere spørgsmål i Quizzen]
+
+\item Bruger præsenteres for statistik der viser hvor mange spørgsmål der er besvaret korrekt.
+
+\item Bruger vælger at afslutte hvorved Quiz forlades
+
+\ucdescriptionend
+\ucfoot{AnswerQuiz}

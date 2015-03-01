@@ -224,13 +224,64 @@
 	%\afterpage{\blankpage}
 
 % ¤¤ Signaturelinjer ¤¤ %
-
 \newcommand*{\signature}[1]{%
     \par\noindent\makebox[8cm]{\hrulefill} %\hfill\makebox[2.0in]{\hrulefill} % Tilføj hvis dato skal med
 	\vspace{-2mm}    
     \par\noindent\makebox[8cm][l]{#1}      %\hfill\makebox[2.0in][l]{Dato}
     \vspace*{5mm}
 }
+
+% ¤¤ Use case tableller ¤¤ %
+\newcommand*{\uchead}[8]{
+\begin{center} \centering 
+	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}
+	\hline
+		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\endfirsthead
+		
+		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline
+		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\endhead	
+		
+		\textbf{Mål}					&#3
+		\\\hline
+		\textbf{Initialisering}			&#4
+		\\\hline
+		\textbf{Aktører og Stakeholders}&#5
+		\\\hline 
+		\textbf{Referencer}				&#6
+		\\\hline
+		\textbf{AASH}					&#7
+		\\\hline
+		\textbf{Efterfølgende tilstand}	&#8
+		\\\hline
+		\textbf{Hovedforløb}					
+			&
+		\begin{enumerate}
+}
+
+% Tabel midte
+\newcommand*{\ucdescriptionend}{
+	\end{enumerate}\\
+	\hline
+	\textbf{Undtagelser}&
+}
+
+\newcommand*{\ucextension}[3]{
+	\begin{enumerate} [label=#3]
+		\item #1
+			\subitem #2
+	\end{enumerate}
+}
+
+% Tabel footer
+\newcommand*{\ucfoot}[1]{	
+	\\\hline	
+	\end{longtable} 
+		\label{table:uct:#1}
+\end{center}
+}
+
 
 % ¤¤ Accept Test Tabeller ¤¤ %
 % Tabel header
@@ -269,6 +320,7 @@
 	&#5
 	\\\hline
 }
+
 %%%% ORDDELING %%%%
 
 %%%% noget jesper har smidt ind %%%%
