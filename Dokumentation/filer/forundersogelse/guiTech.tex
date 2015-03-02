@@ -4,10 +4,50 @@
 % Indhold
 Følgende teknologier er vurderet i forbindelse med udviklingen af den grafiske brugerflade.
 
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|p{3cm}|p{5.5cm}|p{5.5cm}|}
 \hline 
 \textbf{Navn} & \textbf{Pros} & \textbf{Cons} \\ 
-\hline 
-WFP & Bruger i I4GUI & Kan kun bruges på Windows-platfomen\\
 \hline
+
+WFP
+	&
+	\begin{itemize}
+		\item Anvendes i I4GUI
+	\end{itemize}
+	&
+	\begin{itemize}
+		\item Kan kun bruges på Windows-platfomen
+		\item Kræver .NET-frameworket på clientens computer
+	\end{itemize}
+	\\
+	\hline
+
+Silverlight
+	&
+	\begin{itemize}
+		\item Stærkt framework til grafisk præsentation
+	\end{itemize}
+	&
+	\begin{itemize}
+		\item Udvikles ikke længere af Microsoft
+		\item Kræver Silverlight-\newline frameworket på clientens computer
+	\end{itemize}
+	\\
+	\hline
+
+HTML5 og CSS3
+	&
+	\begin{itemize}
+		\item Anvendes i I4GUI
+		\item Den gængse teknologi for web-applikationer
+		\item Understøttet af de fleste platforme
+	\end{itemize}
+	&
+	\begin{itemize}
+	\item Mindre grafiske evner
+	\end{itemize}
+	\\
+	\hline
 \end{tabular} 
+
+Ud fra ovenstående er HTML5 og CSS3 valgt for at få en bredt undersøttet teknologi som har rigelige muligheder for programmets behov og anvendes generelt mest af de belyste teknologier.
