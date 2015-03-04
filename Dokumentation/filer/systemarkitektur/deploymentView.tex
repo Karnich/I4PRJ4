@@ -1,1 +1,10 @@
 \section{Deployment View}
+Systemet består af tre fysiske noder, som vist på figur \ref{fig:DeploymentView}. På Client-noden udføres den grafiske præsentation af HTML- og CSS-filerne samt client-side manipulation med JavaScript. Filerne tilgåes i en browser.
+Webserveren generer HTML og CSS filerne til Clienten. Her ligger buisiness-logic og adgang til databsen sker her igennem.
+Databaseserveren håndterer alle persisterede data i systemet.
+
+Kommunikationen i mellem Client og Webserver sker over HTTP-protokollen og i mellem Web- og Databaseserveren bruges SQL.
+
+\figur{0.8}{SystemArkitektur/DeploymentView}{Deployment View for systemets fysiske noder}{fig:DeploymentView}
+
+De identificerede pakker fra Logical View, \ref{sec:LogicalView}, side \pageref{sec:LogicalView}, ligger på hver fysiske node.
