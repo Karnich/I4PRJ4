@@ -1,11 +1,21 @@
 echo off
-FOR /r %%f IN (Master.pdf) do del %%f
-FOR /r %%f IN (*.aux) do del %%f
-FOR /r %%f IN (*.log) do del %%f
-FOR /r %%f IN (*.out) do del %%f
-FOR /r %%f IN (*.DS_Store) do del %%f
-FOR /r %%f IN (*.gz) do del %%f
-FOR /r %%f IN (*.toc) do del %%f
-FOR /r %%r IN (Thumbs.db) do del %%f
+FOR /r Dokumentation %%f IN (Master.pdf) DO del %%f
+FOR /r Dokumentation %%f IN (*.aux) DO del %%f
+FOR /r Dokumentation %%f IN (*.log) DO del %%f
+FOR /r Dokumentation %%f IN (*.out) DO del %%f
+FOR /r Dokumentation %%f IN (*.DS_Store) DO del %%f
+FOR /r Dokumentation %%f IN (*.gz) DO del %%f
+FOR /r Dokumentation %%f IN (*.toc) DO del %%f
 
+FOR /r Dokumentation %%r IN (Thumbs.db) DO del %%f
+
+FOR /r Rapport %%f IN (Master.pdf) DO del %%f
+FOR /r Rapport %%f IN (*.aux) DO del %%f
+FOR /r Rapport %%f IN (*.log) DO del %%f
+FOR /r Rapport %%f IN (*.out) DO del %%f
+FOR /r Rapport %%f IN (*.DS_Store) DO del %%f
+FOR /r Rapport %%f IN (*.gz) DO del %%f
+FOR /r Rapport %%f IN (*.toc) DO del %%f
+
+FOR /r Rapport %%r IN (Thumbs.db) DO del %%f
 echo on

@@ -5,7 +5,7 @@
 % ¤¤ Oversaettelse og tegnsaetning ¤¤ %
 \usepackage[utf8]{inputenc}					% Input-indkodning af tegnsaet (UTF8)
 \usepackage[danish]{babel}					% Dokumentets sprog
-\usepackage[T1]{fontenc}						% Output-indkodning af tegnsaet (T1)
+\usepackage[T1]{fontenc}					% Output-indkodning af tegnsaet (T1)
 \usepackage{ragged2e,anyfontsize}			% Justering af elementer
 \usepackage{fixltx2e}						% Retter forskellige fejl i LaTeX-kernen				
 															
@@ -14,15 +14,16 @@
 %\usepackage{eso-pic}						% Tilfoej billedekommandoer paa hver side
 %\usepackage{wrapfig}						% Indsaettelse af figurer omsvoebt af tekst. \begin{wrapfigure}{Placering}{Stoerrelse}
 \usepackage{multirow}                		% Fletning af raekker og kolonner (\multicolumn og \multirow)
-\usepackage{multicol}         	        		% Muliggoer output i spalter
+\usepackage{multicol}         	        	% Muliggoer output i spalter
 \usepackage{rotating}						% Rotation af tekst med \begin{sideways}...\end{sideways}
 \usepackage{colortbl} 						% Farver i tabeller (fx \columncolor og \rowcolor)
 \usepackage{xcolor}							% Definer farver med \definecolor. Se mere: http://en.wikibooks.org/wiki/LaTeX/Colors
-\usepackage{flafter}							% Soerger for at floats ikke optraeder i teksten foer deres reference
-\let\newfloat\relax 							% Justering mellem float-pakken og memoir
+\usepackage{flafter}						% Soerger for at floats ikke optraeder i teksten foer deres reference
+\let\newfloat\relax 						% Justering mellem float-pakken og memoir
 \usepackage{float}							% Muliggoer eksakt placering af floats, f.eks. \begin{figure}[H]
 \usepackage{longtable}						% Tabeller over flere sider
 \usepackage[section]{placeins}
+%\usepackage{svg}	% Inkluder svg-filer
 
 % ¤¤ Matematik mm. ¤¤
 \usepackage{amsmath,amssymb,stmaryrd} 		% Avancerede matematik-udvidelser
@@ -36,8 +37,8 @@
 % ¤¤ Referencer og kilder ¤¤ %
 \usepackage[danish]{varioref}				% Muliggoer bl.a. krydshenvisninger med sidetal (\vref)
 \usepackage{natbib}							% Udvidelse med naturvidenskabelige citationsmodeller
-%\usepackage{xr}								% Referencer til eksternt dokument med \externaldocument{<NAVN>}
-%\usepackage{glossaries}						% Terminologi- eller symbolliste (se mere i Daleifs Latex-bog)
+%\usepackage{xr}							% Referencer til eksternt dokument med \externaldocument{<NAVN>}
+%\usepackage{glossaries}					% Terminologi- eller symbolliste (se mere i Daleifs Latex-bog)
 
 % ¤¤ Misc. ¤¤ %
 \usepackage{listings}						% Placer kildekode i dokumentet med \begin{lstlisting}...\end{lstlisting}
@@ -61,7 +62,7 @@
 %	¤¤ Afsnitsformatering ¤¤ %
 \setlength{\parindent}{0mm}           		% Stoerrelse af indryk
 \setlength{\parskip}{3mm}          			% Afstand mellem afsnit ved brug af double Enter
-\linespread{1,1}								% Linie afstand
+\linespread{1,1}							% Linie afstand
 
 % ¤¤ Litteraturlisten ¤¤ %
 \bibpunct[,]{[}{]}{;}{a}{,}{,} 				% Definerer de 6 parametre ved Harvard henvisning (bl.a. parantestype og seperatortegn)
@@ -76,6 +77,7 @@
 \setlist{
   topsep=0pt,								% Vertikal afstand mellem tekst og listen
   itemsep=-1ex,								% Vertikal afstand mellem items
+  leftmargin=5mm,							% Horisontalt indryk til punkter
 } 
 
 % ¤¤ Visuelle referencer ¤¤ %
@@ -138,15 +140,15 @@
   \renewcommand\printchaptertitle[1]{%
     \noindent
     \ifchapternonum
-    \begin{tabularx}{\textwidth}{X}
-    {\let\\\newline\chaptitlefont ##1\par} 
-    \end{tabularx}
-    \par\vskip-2.5mm\hrule
+	    \begin{tabularx}{\textwidth}{X}
+	    	{\let\\\newline\chaptitlefont ##1\par} 
+	    \end{tabularx}
+	    \par\vskip-2.5mm\hrule
     \else
-    \begin{tabularx}{\textwidth}{Xl}
-    {\parbox[b]{\linewidth}{\chaptitlefont ##1}} & \raisebox{-15pt}{\chapnumfont \thechapter}
-    \end{tabularx}
-    \par\vskip2mm\hrule
+	    \begin{tabularx}{\textwidth}{Xl}
+	    	{\parbox[b]{\linewidth}{\chaptitlefont ##1}} & \raisebox{-15pt}{\chapnumfont \thechapter}
+	    \end{tabularx}
+	    \par\vskip2mm\hrule
     \fi
   }
 }											% ... her
@@ -168,12 +170,12 @@
 }
 \nouppercaseheads											% Ingen Caps oenskes
 
-\makeevenhead{ASE}{Gruppe 3}{}{\leftmark}				% Definerer lige siders sidehoved (\makeevenhead{Navn}{Venstre}{Center}{Hoejre})
-\makeoddhead{ASE}{\rightmark}{}{ASE - Aarhus Universitet}		% Definerer ulige siders sidehoved (\makeoddhead{Navn}{Venstre}{Center}{Hoejre})
+\makeevenhead{ASE}{Gruppe 3}{}{\leftmark}					% Definerer lige siders sidehoved (\makeevenhead{Navn}{Venstre}{Center}{Hoejre})
+\makeoddhead{ASE}{\rightmark}{}{ASE - Aarhus Universitet}	% Definerer ulige siders sidehoved (\makeoddhead{Navn}{Venstre}{Center}{Hoejre})
 \makeevenfoot{ASE}{\thepage}{}{}							% Definerer lige siders sidefod (\makeevenfoot{Navn}{Venstre}{Center}{Hoejre})
 \makeoddfoot{ASE}{}{}{\thepage}								% Definerer ulige siders sidefod (\makeoddfoot{Navn}{Venstre}{Center}{Hoejre})
 \makeheadrule{ASE}{\textwidth}{0.5pt}						% Tilfoejer en streg under sidehovedets indhold
-\makefootrule{ASE}{\textwidth}{0.5pt}{1mm}					% Tilfoejer en streg under sidefodens indhold
+\makefootrule{ASE}{\textwidth}{0.5pt}{1mm}					% Tilfoejer en streg over sidefodens indhold
 
 \copypagestyle{ASEchap}{ASE}								% Sidehoved for kapitelsider defineres som standardsider, men med blank sidehoved
 \makeoddhead{ASEchap}{}{}{}
@@ -187,7 +189,7 @@
 
 %%%% CUSTOM COMMANDS %%%%
 
-% ¤¤ Billede hack ¤¤ %
+% ¤¤ Billede inkludering ¤¤ %
 % Parametre
 %  #1: Bredde (I forhold til sidebredde, fx 0.5 -> halv sidebredde)
 %  #2: Stinavn (Uden billeder/ mappen, fx img.pdf -> billeder/img.pdf
@@ -198,10 +200,10 @@
 % \figur{1}{1.jpg}{Billede af blabla}{pic1}
 
 \newcommand{\figur}[4]{
-		\begin{figure}[H] \centering
-			\includegraphics[width=#1\textwidth]{billeder/#2}
-			\caption{#3}\label{#4}
-		\end{figure} 
+	\begin{figure}[H] \centering
+		\includegraphics[width=#1\textwidth]{billeder/#2}
+		\caption{#3}\label{#4}
+	\end{figure} 
 }
 
 % ¤¤ Specielle tegn ¤¤ %
@@ -258,6 +260,7 @@
 		\textbf{Hovedforløb}					
 			&
 		\begin{enumerate}
+		
 }
 
 % Tabel midte
@@ -268,7 +271,7 @@
 }
 
 \newcommand*{\ucextension}[3]{
-	\begin{enumerate} [label=#3]
+	\begin{enumerate} [label=#3, leftmargin=7mm]
 		\item #1
 			\subitem #2
 	\end{enumerate}
