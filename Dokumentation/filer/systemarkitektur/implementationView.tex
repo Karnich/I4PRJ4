@@ -1,1 +1,12 @@
 \section{Implementation View}
+Implementation View er en abstraktion af modulerne i systemet. På figur \ref{fig:implementationView} er vist de identificerede pakker i systemet.
+
+\figur{0.9}{SystemArkitektur/ImplementationView}{Implementation View af systemet med identificerede pakker og klasser}{fig:implementationView}
+
+View-pakken håndterer web-layoutet i form af HTML og CSS kode. Her styres præsentationens udseende.
+
+!.UI forklaring ud fra GUI skitse.!
+
+I controller-pakken ligger en klasse for hvert use case som håndterer de individuelle forløbshændelser og interaktionen i mellem Views og Model.
+
+Model-pakken håndterer data. Både databaseadgang og repository (maybe) klasser for dataelemnterne.

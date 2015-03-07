@@ -1,5 +1,5 @@
 \section{Logical View}\label{sec:LogicalView}
-Systemet udvikles på ASP.NET MVC-frameworket\footnote{\url{http://www.asp.net/mvc} Microsoft ASP.NET MVC}. Her inddeles systemet i tre lag:
+Systemet udvikles på ASP.NET MVC-frameworket\footnote{\url{http://www.asp.net/mvc} Microsoft ASP.NET MVC}. Her inddeles systemet i tre lag, som vist på figur \ref{fig:logicalView}.
 
 \figur{0.8}{SystemArkitektur/LogicalView}{Logical View for systemets overordnede ansvar}{fig:logicalView}
 
@@ -8,3 +8,9 @@ Model-laget har ansvaret for adgang til persisteret data. Her anvendes en databa
 View-laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne.
 
 Controller-laget har ansvaret for business logic og håndterer UC-forløbene.
+
+På figur \ref{fig:logicalSD} er vist et simpelt system-sekvensdiagram for UC1.
+
+\figur{1}{SystemArkitektur/CreateQuiz}{System-sekvensdiagram for UC1 Create Quiz}{fig:logicalSD}
+
+Controlleren for forløbet men også data udveksling i mellem de forskellige views og databasen.
