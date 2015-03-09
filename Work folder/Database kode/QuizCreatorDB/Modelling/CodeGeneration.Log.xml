@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///G:/PROGRAMMER/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="ProjectPath = ..\ModellingLib\ModellingLib.csproj" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="TemplateFilePath = G:\PROGRAMMER\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Diagnostic" Text="ResolvedTemplateFilePath = G:\PROGRAMMER\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-03-09T20:52:14" Importance="Medium" Text="Modelling's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Modelling::QuizCreator::Quiz' -  (Class), 'Modelling::QuizCreator::Question' -  (Class), 'Modelling::QuizCreator::QuizTagRelation' -  (Class), 'Modelling::QuizCreator::Answer' -  (Class), 'Modelling::QuizCreator::Tag' -  (Class) " />
+  <Message Timestamp="2015-03-09T20:52:19" Importance="Medium" Text="Project Added: G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\ModellingLib.csproj" />
+  <Message Timestamp="2015-03-09T20:52:19" Importance="Medium" Text="'Modelling::QuizCreator::Quiz' -  (Class) : success (file created) - G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\GeneratedCode\QuizCreator\Quiz.cs" />
+  <Message Timestamp="2015-03-09T20:52:19" Importance="Medium" Text="'Modelling::QuizCreator::Question' -  (Class) : success (file created) - G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\GeneratedCode\QuizCreator\Question.cs" />
+  <Message Timestamp="2015-03-09T20:52:19" Importance="Medium" Text="'Modelling::QuizCreator::QuizTagRelation' -  (Class) : success (file created) - G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\GeneratedCode\QuizCreator\QuizTagRelation.cs" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Medium" Text="'Modelling::QuizCreator::Answer' -  (Class) : success (file created) - G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\GeneratedCode\QuizCreator\Answer.cs" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Medium" Text="'Modelling::QuizCreator::Tag' -  (Class) : success (file created) - G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\GeneratedCode\QuizCreator\Tag.cs" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="ProjectPath = ..\ModellingLib\ModellingLib.csproj" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="TemplateFilePath = G:\PROGRAMMER\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="ResolvedTemplateFilePath = G:\PROGRAMMER\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Medium" Text="Modelling's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Modelling::QuizCreator::Quiz' -  (Class), 'Modelling::QuizCreator::Question' -  (Class), 'Modelling::QuizCreator::QuizTagRelation' -  (Class), 'Modelling::QuizCreator::Answer' -  (Class), 'Modelling::QuizCreator::Tag' -  (Class) " />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::Quiz' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::Question' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::QuizTagRelation' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::Answer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::Tag' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="The selection included 5 elements which were not bound to a template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator' -  (Package): no bound template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::' -  (Association): no bound template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::' -  (Association): no bound template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::' -  (Association): no bound template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="Diagnostic" Text="'Modelling::QuizCreator::' -  (Association): no bound template." />
+  <Message Timestamp="2015-03-09T20:52:20" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
