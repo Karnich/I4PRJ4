@@ -1,0 +1,5 @@
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\bin\Debug\QuizCreatorDB.dacpac
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\bin\Debug\QuizCreatorDB.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\bin\Debug\QuizCreatorDB.pdb
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\QuizCreatorDB.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\QuizCreatorDB.pdb
