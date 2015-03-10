@@ -39,11 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\QuizCreator\Answer.cs" />
-    <Compile Include="GeneratedCode\QuizCreator\Question.cs" />
-    <Compile Include="GeneratedCode\QuizCreator\Quiz.cs" />
-    <Compile Include="GeneratedCode\QuizCreator\QuizTagRelation.cs" />
-    <Compile Include="GeneratedCode\QuizCreator\Tag.cs" />
+    <Compile Include="GeneratedCode\Model\Answer.cs" />
+    <Compile Include="GeneratedCode\Model\Question.cs" />
+    <Compile Include="GeneratedCode\Model\Quiz.cs" />
+    <Compile Include="GeneratedCode\Model\QuizTagRelation.cs" />
+    <Compile Include="GeneratedCode\Model\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
