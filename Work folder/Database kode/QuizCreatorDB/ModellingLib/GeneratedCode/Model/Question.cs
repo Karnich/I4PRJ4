@@ -25,7 +25,13 @@ namespace Model
 			set;
 		}
 
-		public virtual Quiz Quiz
+		public virtual int QuizId
+		{
+			get;
+			set;
+		}
+
+		public virtual List<Answer> Answer
 		{
 			get;
 			set;

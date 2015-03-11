@@ -42,12 +42,13 @@
     <Compile Include="..\DAL\Class1.cs">
       <Link>Class1.cs</Link>
     </Compile>
-    <Compile Include="Model\Answer.cs" />
-    <Compile Include="Model\Question.cs" />
-    <Compile Include="Model\Quiz.cs" />
-    <Compile Include="Model\QuizTagRelation.cs" />
-    <Compile Include="Model\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModellingLib\ModellingLib.csproj">
+      <Project>{533d0bf1-3b7a-402d-8401-117f647782aa}</Project>
+      <Name>ModellingLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

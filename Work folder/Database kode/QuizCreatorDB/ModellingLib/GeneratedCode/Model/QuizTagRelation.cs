@@ -13,13 +13,13 @@ namespace Model
 
 	public class QuizTagRelation
 	{
-		public virtual Tag Tags
+		public virtual object QuizId
 		{
 			get;
 			set;
 		}
 
-		public virtual Quiz Quiz
+		public virtual object TagId
 		{
 			get;
 			set;

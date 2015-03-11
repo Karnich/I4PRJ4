@@ -54,112 +54,146 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <targetEnds>
-          <association
-            Id="221b7094-a7fc-4577-a260-4529c1d49dfa"
-            isDerived="false"
-            sourceEndRoleName="QuizTagRelation"
-            targetEndRoleName="Tags"
+        <ownedAttributesInternal>
+          <property
+            Id="037d3d1a-d9a2-4cfd-8fc2-1e48bc78efd9"
+            name="QuizId"
             isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="bd2e69ce-8012-4a34-a9f3-8e76f60ef81d"
-              LastKnownName="Tag"
-              LastKnownLocation="Package_2047.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d3eb2e46-6f3e-443d-8923-5ef8668d84f8"
-                  name="QuizTagRelation"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="554727f7-1b2c-4821-b798-165033d08cd9"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="83b08978-fe27-48b5-9d25-fd62cb33e68a"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="4beb10f5-6a11-4cc4-968a-3b66a11d9f13"
-                  name="Tags"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="24a24f3e-fad9-4d37-abcd-d9b9c1b11379"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
             isDerived="false"
-            sourceEndRoleName="QuizTagRelation"
-            targetEndRoleName="Quiz"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bb8e9deb-ada6-4f7c-9ccb-8eec93bc79c0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="747ae86e-ff66-4392-a2c9-ecc1bf553962">
+                    <propertyInstance
+                      Id="c2f9bb29-c4b1-42ef-b064-a84fb8278ba6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd7999d8-6d56-4b94-af5a-da63843e3bab">
+                    <propertyInstance
+                      Id="b2b41be5-2d65-4fcc-9912-94ffcba903e4"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7028091d-0e58-4fbd-ba2c-30a412ccdda4">
+                    <propertyInstance
+                      Id="ab23e131-9ede-4e75-9930-924a867ba3de"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddbe146a-d6eb-4bc2-955e-c21ce48d7969">
+                    <propertyInstance
+                      Id="ff7a69dc-36b0-40ad-bcd9-19aa77c51a27"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4173ef84-f31a-4a30-a582-496d10e66bee">
+                    <propertyInstance
+                      Id="28cdb3de-9106-4dc0-8b09-9ada704bde35"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8a1e178-3db8-4ba3-9f18-c8628823a02b">
+                    <propertyInstance
+                      Id="32f437f5-73e1-45bd-84d4-34e83cb88ba0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad7ef99f-e6df-43f2-8dd2-70457bb5ec20">
+                    <propertyInstance
+                      Id="d48c2698-b632-4aed-8ef4-f163bcdde5b6"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="76fdf16d-1ff1-4f7b-86b8-527c246d5739"
+            name="TagId"
             isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="6e6f98d8-e478-49cb-b4a2-976c6035f649"
-              LastKnownName="Quiz"
-              LastKnownLocation="Package_2047.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ac052b9c-01c0-45b1-8cd8-be46778d90a0"
-                  name="QuizTagRelation"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="86756831-dd03-4a91-8dd9-e05179daec82"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="01284694-9c4f-4080-a599-6f94e2d7bf97"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="18ce36be-8fcb-4037-8dce-cf0b2d2b25fa"
-                  name="Quiz"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="faa10631-6221-44d5-a2bd-393d78b27a46"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61159ebe-4615-4bab-820c-2776b2021361">
+                    <propertyInstance
+                      Id="6695acc2-a567-4f69-87ce-5cac249c259b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36f45592-a7f3-45e4-8fdd-618e98c50590">
+                    <propertyInstance
+                      Id="25ecfed9-27e7-460e-83ba-c31165a82114"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46b2aae0-e4cd-4698-a7cf-b6fc5667b918">
+                    <propertyInstance
+                      Id="5d5c30dc-85db-4025-a823-a69b7030e102"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="353e717d-fbba-4423-8b5f-e9acea36b8a0">
+                    <propertyInstance
+                      Id="e555cefb-8937-408c-a814-2c58b3fd1fe4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9999187-dd8f-4449-916b-bcf8348572d5">
+                    <propertyInstance
+                      Id="1c2446af-582c-4443-af7b-dd76f2eab8b7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="980f350b-3f35-482b-95f8-2175585c6212">
+                    <propertyInstance
+                      Id="b171b997-f07e-49d3-ae04-d9a00ac91751"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae48200f-6581-4405-b36f-d0b0e623dfb1">
+                    <propertyInstance
+                      Id="b9d331b5-aab1-4be1-b8c4-a860f346159c"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -212,6 +246,60 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="91fa1f38-200a-48da-bda4-5ea234cb5070"
+            isDerived="false"
+            sourceEndRoleName="Tag"
+            targetEndRoleName="QuizTagRelation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="29237049-2a2e-4c05-b72c-1fcfb0ae93d4"
+              LastKnownName="QuizTagRelation"
+              LastKnownLocation="Package_2047.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b09182e1-f166-4a66-a207-60fdfb279e30"
+                  name="Tag"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ff678e3-e183-4c71-b21b-6a5aa90559a5"
+                  name="QuizTagRelation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fedcf730-3fbd-4ff0-a8e7-bb031c854f21"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8fc3e68f-b90f-47aa-896b-cc99a5afe310"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="c10f8133-951f-46fa-8320-5d30626c8e47"
@@ -416,6 +504,112 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="f467768c-8fe7-4f43-9657-98fddb37c463"
+            isDerived="false"
+            sourceEndRoleName="Quiz"
+            targetEndRoleName="Question"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c896c210-4558-4e0a-a26a-1dd89c3ed5b9"
+              LastKnownName="Question"
+              LastKnownLocation="Package_2047.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a1e57be-041f-4160-b886-565adbacc95a"
+                  name="Quiz"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b5a5811-4770-481a-9c25-cfb468a90224"
+                  name="Question"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e6f95c98-c7e6-4147-ae84-97add9edd617"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fa7d8157-48d9-4bf2-9287-9e9b0d6c84df"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4f6b4c6a-2ba3-435a-99f4-95123bdffc7d"
+            isDerived="false"
+            sourceEndRoleName="Quiz"
+            targetEndRoleName="QuizTagRelation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="29237049-2a2e-4c05-b72c-1fcfb0ae93d4"
+              LastKnownName="QuizTagRelation"
+              LastKnownLocation="Package_2047.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3bd18e57-6e86-4f04-bdbf-aacd10f4c51d"
+                  name="Quiz"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71e3c286-0fd1-4e92-8bdf-5c7435c47167"
+                  name="QuizTagRelation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b3dd4ef3-9a51-4a33-b8a5-592f1eff3cca"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e5d34a30-5adb-4399-a307-146ff0185569"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="208432f3-912c-4373-8076-9b92c07b7f36"
@@ -622,20 +816,20 @@
         </appliedStereotypesInternal>
         <targetEnds>
           <association
-            Id="b5fe9e4b-f29e-46a1-b5b9-a602428413fd"
+            Id="89af8ffc-66a0-45dc-931b-4a8b3a2f03be"
             isDerived="false"
             sourceEndRoleName="Question"
-            targetEndRoleName="Quiz"
+            targetEndRoleName="Answer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="6e6f98d8-e478-49cb-b4a2-976c6035f649"
-              LastKnownName="Quiz"
+              Id="74a80a0b-5923-45ba-baad-c3abe5c936c4"
+              LastKnownName="Answer"
               LastKnownLocation="Package_2047.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="70a76867-b41b-4901-9ecb-45a33e155e6c"
+                  Id="5c4f0ec3-f1e8-4c03-b148-6a7f413f7831"
                   name="Question"
                   isLeaf="false"
                   isStatic="false"
@@ -644,32 +838,32 @@
                   isDerivedUnion="false"
                   aggregation="Shared"
                   isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="15cbc4b0-7c0d-4fb0-b894-7748a85ea97b"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="282f58a9-edf5-4cd1-9906-8378b0475036"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="d38b0a5d-9392-444f-8d12-c08d09ab853e"
-                  name="Quiz"
+                  Id="8f402341-67d4-40c1-a28c-706c62dd6c62"
+                  name="Answer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ecfabf51-4965-4ba8-b96a-a3fbc2aba08a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a65be095-9fc3-468f-a82b-5fbc3a218c12"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -825,6 +1019,81 @@
                 LastKnownLocation="Modelling.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="6c99b27a-f73c-459d-ac02-012d87b64996"
+            name="QuizId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cee0de53-18d1-4973-be73-4aaff93dddc2"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cb07fc4-e4c5-4230-be95-88b9cceb969f">
+                    <propertyInstance
+                      Id="c6f647e8-f1d3-4d7a-8c80-68e988cad5c5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef1a1126-586b-4c5e-92b2-3cb7efb7dae3">
+                    <propertyInstance
+                      Id="01aede29-1d29-4a49-856f-078b41d015bf"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a40862d3-eb17-4c36-a7e1-9c22f2bbd9d3">
+                    <propertyInstance
+                      Id="b32e9e6b-dd89-460f-9447-3b3a1b59d2d5"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dd5461e-6bbb-4330-a4df-67ba2fdf10d5">
+                    <propertyInstance
+                      Id="688c113a-e9ec-439f-b185-a4378e46e8fe"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c7e390c-88a5-4d49-8a92-1d42039a791a">
+                    <propertyInstance
+                      Id="bf0f7f2c-8ec9-4894-90c3-fb39a8f42ea5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d5358cc-bbe7-4938-a7f5-edd4bcff5b81">
+                    <propertyInstance
+                      Id="b3c9993b-12ee-4ef6-8502-ec0c4ab2d9dd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cda4f8b5-62cc-40d2-81b1-a8a01fdbeae3">
+                    <propertyInstance
+                      Id="ce1dde7f-58c1-4ebb-9f09-719d46622743"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97290184-7e59-4b93-9932-e24fd64a2292"
+                LastKnownName="int"
+                LastKnownLocation="Modelling.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -878,60 +1147,6 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <targetEnds>
-          <association
-            Id="d0049f9a-6f80-4933-9e55-d56ccc2fd64e"
-            isDerived="false"
-            sourceEndRoleName="Answer"
-            targetEndRoleName="Question"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="c896c210-4558-4e0a-a26a-1dd89c3ed5b9"
-              LastKnownName="Question"
-              LastKnownLocation="Package_2047.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="50e8925f-4be9-4fd8-adb9-1169074bb2ae"
-                  name="Answer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="aefacdac-b925-4ecc-bf0a-03cbd2bce577"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="2e39837a-f5b5-4151-be51-06ac64429ff7"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d75200e3-da87-4b4c-9c76-6ef13b039b5c"
-                  name="Question"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="1562a7f6-2352-4b3d-b13a-40254aaf1f76"
@@ -1157,6 +1372,75 @@
                 LastKnownName="int"
                 LastKnownLocation="Modelling.uml" />
             </type_NamedElement>
+          </property>
+          <property
+            Id="74c9c6d0-2663-424c-89fb-58ce73b0ee4d"
+            name="QuestionId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f325f119-fc17-4e1e-a661-b0be4e5a0022"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c29a4648-f17c-4c52-a92e-7f9edaca8337">
+                    <propertyInstance
+                      Id="2eafbdee-a0c5-4751-b67e-28260700216d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="259f620a-2a2e-4bd6-b462-8502cb488338">
+                    <propertyInstance
+                      Id="975b0d7b-cc8c-4c1e-82cc-cb2b9c63edad"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31669337-8bca-4eaa-8666-8fe524b7e0fd">
+                    <propertyInstance
+                      Id="53017a66-3b64-4df3-8971-834c9eecc269"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daadab8c-c80f-4472-b5fe-90b3ad1e5a1b">
+                    <propertyInstance
+                      Id="a4cd51a7-fc5c-4a71-b694-cf6c1a4f653a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55054311-9a44-4102-99b3-655bf38e4309">
+                    <propertyInstance
+                      Id="5bcadeda-129f-42c5-ab9f-52c30a3c5dc1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b56e99e-a2ce-44f4-97ed-f823d0a8fc1f">
+                    <propertyInstance
+                      Id="8320693a-0fcc-46a8-aecf-e82ec2ee62f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a21c95c5-1798-433d-a672-4916f44e4d8e">
+                    <propertyInstance
+                      Id="c25238fc-8764-43c0-adb6-6da081fa9f6b"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </property>
         </ownedAttributesInternal>
       </class>

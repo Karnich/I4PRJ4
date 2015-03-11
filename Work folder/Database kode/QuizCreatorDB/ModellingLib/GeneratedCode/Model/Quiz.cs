@@ -25,6 +25,18 @@ namespace Model
 			set;
 		}
 
+		public virtual List<Question> Question
+		{
+			get;
+			set;
+		}
+
+		public virtual List<QuizTagRelation> QuizTagRelation
+		{
+			get;
+			set;
+		}
+
 	}
 }
 
