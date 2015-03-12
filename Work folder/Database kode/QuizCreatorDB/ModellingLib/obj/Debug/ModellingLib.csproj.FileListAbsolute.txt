@@ -1,0 +1,4 @@
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\bin\Debug\ModellingLib.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\bin\Debug\ModellingLib.pdb
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.pdb

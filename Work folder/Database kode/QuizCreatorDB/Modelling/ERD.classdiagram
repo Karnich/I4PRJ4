@@ -1129,6 +1129,9 @@
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
                   <elementDefinition Id="74c9c6d0-2663-424c-89fb-58ce73b0ee4d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ce66323-1765-40e3-aa31-0d44327c425a" LastKnownName="int" />
+                  </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
             </class>
@@ -1136,6 +1139,11 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="5ce66323-1765-40e3-aa31-0d44327c425a" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="97290184-7e59-4b93-9932-e24fd64a2292" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="673184e5-7f10-4ea2-bbe5-164989757753" name="Modelling">
     <elementDefinition Id="62af663f-9a9c-431a-bf8a-04513dc34ce2" />

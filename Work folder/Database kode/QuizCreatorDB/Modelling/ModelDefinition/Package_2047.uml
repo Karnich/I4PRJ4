@@ -1441,6 +1441,12 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97290184-7e59-4b93-9932-e24fd64a2292"
+                LastKnownName="int"
+                LastKnownLocation="Modelling.uml" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
       </class>

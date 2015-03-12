@@ -25,7 +25,7 @@ namespace Model
 			set;
 		}
 
-		public virtual List<QuizTagRelation> QuizTagRelation
+		public virtual IEnumerable<QuizTagRelation> QuizTagRelation
 		{
 			get;
 			set;

@@ -31,7 +31,7 @@ namespace Model
 			set;
 		}
 
-		public virtual List<Answer> Answer
+		public virtual IEnumerable<Answer> Answer
 		{
 			get;
 			set;

@@ -3,3 +3,7 @@ G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\bin\Debug
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\bin\Debug\QuizCreatorDB.pdb
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\QuizCreatorDB.dll
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\QuizCreatorDB.pdb
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\Model.xml
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\refactor.xml
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\postdeploy.sql
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\QuizCreatorDB\obj\Debug\predeploy.sql

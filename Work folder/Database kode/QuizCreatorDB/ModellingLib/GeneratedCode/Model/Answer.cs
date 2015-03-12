@@ -31,7 +31,7 @@ namespace Model
 			set;
 		}
 
-		public virtual object QuestionId
+		public virtual int QuestionId
 		{
 			get;
 			set;
