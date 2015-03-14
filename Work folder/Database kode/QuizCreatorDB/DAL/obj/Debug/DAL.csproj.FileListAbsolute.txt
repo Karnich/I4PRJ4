@@ -5,3 +5,10 @@ G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\Modelling
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\ModellingLib.pdb
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.dll
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\bin\Debug\ClassLibrary1.dll
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\bin\Debug\ClassLibrary1.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\bin\Debug\ModellingLib.dll
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\bin\Debug\ModellingLib.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.dll
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.pdb

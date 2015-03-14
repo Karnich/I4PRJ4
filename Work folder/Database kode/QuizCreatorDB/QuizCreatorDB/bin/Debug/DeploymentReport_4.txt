@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Answer] (Table)
+       [dbo].[Question] (Table)
+       [dbo].[Quiz] (Table)
+       [dbo].[QuizTagRelation] (Table)
+       [dbo].[Tag] (Table)
+       [dbo].[fk_Answer] (Foreign Key)
+       [dbo].[fk_Question] (Foreign Key)
+       [dbo].[fk_QuizTagRelation] (Foreign Key)
+       [dbo].[fk_QuizTagRelation2] (Foreign Key)
+
+** Supporting actions

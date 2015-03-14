@@ -17,6 +17,7 @@ namespace DAL.IntegrationTestProgram
 
             Console.WriteLine("Inserting 3 Quizzes");
             Model.Quiz firstQuiz = new Model.Quiz{ QuizName = "FirstQuiz"};
+
             Console.WriteLine(firstQuiz.QuizName);
             Model.Quiz secondQuiz = new Model.Quiz { QuizName = "SecondQuiz" };
             Model.Quiz thirdQuiz = new Model.Quiz { QuizName = "ThirdQuiz" };

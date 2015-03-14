@@ -32,12 +32,12 @@ namespace Model
                 _conn.Open();
 
                 string insertStringParam;
-                //insertStringParam = @"INSERT INTO [Quiz] (QuizName)
-                                                 //   OUTPUT INSERTED.QuizId
-                                                   // VALUES (@quizName)";
+                insertStringParam = @"INSERT INTO [Quiz] (QuizName)
+                                        OUTPUT INSERTED.QuizId
+                                        VALUES (@quizName)";
 
-                insertStringParam = @"INSERT INTO [Quiz] (col2) 
-                                                    VALUES (@quizName)";
+//                insertStringParam = @"INSERT INTO [Quiz] (QuizName) 
+//                                                    VALUES (@quizName)";
 
                 //insertStringParam = @"INSERT INTO [Quiz] (QuizName) VALUES (@quizName); "
                                    // + "SELECT CAST(scope_identity() AS int)";
@@ -47,7 +47,7 @@ namespace Model
                     // Set parameters
                     cmd.Parameters.AddWithValue("@quizName", quiz.QuizName);
                     //var result = (int)cmd.ExecuteScalar();
-                    //quiz.QuizId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
+                    quiz.QuizId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
                     return quiz;
                 }
             }

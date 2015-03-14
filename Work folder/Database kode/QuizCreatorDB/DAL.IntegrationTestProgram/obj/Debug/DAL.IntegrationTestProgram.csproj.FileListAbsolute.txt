@@ -8,3 +8,13 @@ G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL.IntegrationTestProg
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.csprojResolveAssemblyReference.cache
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.exe
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\DAL.IntegrationTestProgram.exe.config
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.exe
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\DAL.IntegrationTestProgram.exe
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\DAL.IntegrationTestProgram.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\ClassLibrary1.dll
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\ModellingLib.dll
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\ClassLibrary1.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\bin\Debug\ModellingLib.pdb
+C:\Users\Bjørn\Desktop\QuizCreatorDB\DAL.IntegrationTestProgram\obj\Debug\DAL.IntegrationTestProgram.csprojResolveAssemblyReference.cache
