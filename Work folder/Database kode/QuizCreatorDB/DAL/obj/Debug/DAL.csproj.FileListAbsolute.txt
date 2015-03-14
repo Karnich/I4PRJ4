@@ -1,1 +1,7 @@
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\ClassLibrary1.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\ClassLibrary1.pdb
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\ModellingLib.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\bin\Debug\ModellingLib.pdb
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.dll
+G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\DAL\obj\Debug\ClassLibrary1.pdb

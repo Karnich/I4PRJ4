@@ -40,35 +40,174 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating [dbo].[Tag]...';
+PRINT N'Dropping [dbo].[fk_Questions]...';
 
 
 GO
-CREATE TABLE [dbo].[Tag] (
-    [TagId] INT           NOT NULL,
-    [Tag]   NVARCHAR (75) NOT NULL,
-    CONSTRAINT [pk_Tags] PRIMARY KEY CLUSTERED ([TagId] ASC),
-    UNIQUE NONCLUSTERED ([Tag] ASC),
-    UNIQUE NONCLUSTERED ([TagId] ASC)
+ALTER TABLE [dbo].[Question] DROP CONSTRAINT [fk_Questions];
+
+
+GO
+PRINT N'Dropping [dbo].[fk_QuizTagRelation]...';
+
+
+GO
+ALTER TABLE [dbo].[QuizTagRelation] DROP CONSTRAINT [fk_QuizTagRelation];
+
+
+GO
+PRINT N'Dropping [dbo].[fk_QuizTagRelation2]...';
+
+
+GO
+ALTER TABLE [dbo].[QuizTagRelation] DROP CONSTRAINT [fk_QuizTagRelation2];
+
+
+GO
+PRINT N'Dropping [dbo].[fk_Answers]...';
+
+
+GO
+ALTER TABLE [dbo].[Answers] DROP CONSTRAINT [fk_Answers];
+
+
+GO
+PRINT N'Starting rebuilding table [dbo].[Quiz]...';
+
+
+GO
+BEGIN TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SET XACT_ABORT ON;
+
+CREATE TABLE [dbo].[tmp_ms_xx_Quiz] (
+    [QuizId]   INT            IDENTITY (1, 1) NOT NULL,
+    [QuizName] NVARCHAR (MAX) NOT NULL,
+    UNIQUE NONCLUSTERED ([QuizId] ASC),
+    CONSTRAINT [tmp_ms_xx_constraint_pk_Quiz] PRIMARY KEY CLUSTERED ([QuizId] ASC)
 );
 
+IF EXISTS (SELECT TOP 1 1 
+           FROM   [dbo].[Quiz])
+    BEGIN
+        SET IDENTITY_INSERT [dbo].[tmp_ms_xx_Quiz] ON;
+        INSERT INTO [dbo].[tmp_ms_xx_Quiz] ([QuizId], [QuizName])
+        SELECT   [QuizId],
+                 [QuizName]
+        FROM     [dbo].[Quiz]
+        ORDER BY [QuizId] ASC;
+        SET IDENTITY_INSERT [dbo].[tmp_ms_xx_Quiz] OFF;
+    END
+
+DROP TABLE [dbo].[Quiz];
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_Quiz]', N'Quiz';
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_constraint_pk_Quiz]', N'pk_Quiz', N'OBJECT';
+
+COMMIT TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
 
 GO
-PRINT N'Creating [dbo].[fk_Answers]...';
+PRINT N'Starting rebuilding table [dbo].[Tag]...';
 
 
 GO
-ALTER TABLE [dbo].[Answers] WITH NOCHECK
-    ADD CONSTRAINT [fk_Answers] FOREIGN KEY ([QuestionId]) REFERENCES [dbo].[Question] ([QuestionId]) ON UPDATE CASCADE;
+BEGIN TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SET XACT_ABORT ON;
+
+CREATE TABLE [dbo].[tmp_ms_xx_Tag] (
+    [TagId] INT           IDENTITY (1, 1) NOT NULL,
+    [Tag]   NVARCHAR (75) NOT NULL,
+    UNIQUE NONCLUSTERED ([TagId] ASC),
+    UNIQUE NONCLUSTERED ([Tag] ASC),
+    CONSTRAINT [tmp_ms_xx_constraint_pk_Tag] PRIMARY KEY CLUSTERED ([TagId] ASC)
+);
+
+IF EXISTS (SELECT TOP 1 1 
+           FROM   [dbo].[Tag])
+    BEGIN
+        SET IDENTITY_INSERT [dbo].[tmp_ms_xx_Tag] ON;
+        INSERT INTO [dbo].[tmp_ms_xx_Tag] ([TagId], [Tag])
+        SELECT   [TagId],
+                 [Tag]
+        FROM     [dbo].[Tag]
+        ORDER BY [TagId] ASC;
+        SET IDENTITY_INSERT [dbo].[tmp_ms_xx_Tag] OFF;
+    END
+
+DROP TABLE [dbo].[Tag];
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_Tag]', N'Tag';
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_constraint_pk_Tag]', N'pk_Tag', N'OBJECT';
+
+COMMIT TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
 
 GO
-PRINT N'Creating [dbo].[fk_Questions]...';
+PRINT N'Starting rebuilding table [dbo].[Question]...';
 
 
 GO
-ALTER TABLE [dbo].[Question] WITH NOCHECK
-    ADD CONSTRAINT [fk_Questions] FOREIGN KEY ([QuizId]) REFERENCES [dbo].[Quiz] ([QuizId]) ON UPDATE CASCADE;
+BEGIN TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SET XACT_ABORT ON;
+
+CREATE TABLE [dbo].[tmp_ms_xx_Question] (
+    [QuestionId] INT            NOT NULL,
+    [Question]   NVARCHAR (MAX) NOT NULL,
+    [QuizId]     INT            NOT NULL,
+    UNIQUE NONCLUSTERED ([QuestionId] ASC),
+    CONSTRAINT [tmp_ms_xx_constraint_pk_Question] PRIMARY KEY CLUSTERED ([QuestionId] ASC)
+);
+
+IF EXISTS (SELECT TOP 1 1 
+           FROM   [dbo].[Question])
+    BEGIN
+        INSERT INTO [dbo].[tmp_ms_xx_Question] ([QuestionId], [Question], [QuizId])
+        SELECT   [QuestionId],
+                 [Question],
+                 [QuizId]
+        FROM     [dbo].[Question]
+        ORDER BY [QuestionId] ASC;
+    END
+
+DROP TABLE [dbo].[Question];
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_Question]', N'Question';
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_constraint_pk_Question]', N'pk_Question', N'OBJECT';
+
+COMMIT TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+
+GO
+PRINT N'Creating [dbo].[Answer]...';
+
+
+GO
+CREATE TABLE [dbo].[Answer] (
+    [AnswerId]   INT            NOT NULL,
+    [Answer]     NVARCHAR (MAX) NOT NULL,
+    [Correct]    TINYINT        NOT NULL,
+    [QuestionId] INT            NOT NULL,
+    CONSTRAINT [pk_Answer] PRIMARY KEY CLUSTERED ([AnswerId] ASC),
+    UNIQUE NONCLUSTERED ([AnswerId] ASC)
+);
 
 
 GO
@@ -90,6 +229,24 @@ ALTER TABLE [dbo].[QuizTagRelation] WITH NOCHECK
 
 
 GO
+PRINT N'Creating [dbo].[fk_Question]...';
+
+
+GO
+ALTER TABLE [dbo].[Question] WITH NOCHECK
+    ADD CONSTRAINT [fk_Question] FOREIGN KEY ([QuizId]) REFERENCES [dbo].[Quiz] ([QuizId]) ON UPDATE CASCADE;
+
+
+GO
+PRINT N'Creating [dbo].[fk_Answer]...';
+
+
+GO
+ALTER TABLE [dbo].[Answer] WITH NOCHECK
+    ADD CONSTRAINT [fk_Answer] FOREIGN KEY ([QuestionId]) REFERENCES [dbo].[Question] ([QuestionId]) ON UPDATE CASCADE;
+
+
+GO
 PRINT N'Checking existing data against newly created constraints';
 
 
@@ -98,13 +255,13 @@ USE [$(DatabaseName)];
 
 
 GO
-ALTER TABLE [dbo].[Answers] WITH CHECK CHECK CONSTRAINT [fk_Answers];
-
-ALTER TABLE [dbo].[Question] WITH CHECK CHECK CONSTRAINT [fk_Questions];
-
 ALTER TABLE [dbo].[QuizTagRelation] WITH CHECK CHECK CONSTRAINT [fk_QuizTagRelation];
 
 ALTER TABLE [dbo].[QuizTagRelation] WITH CHECK CHECK CONSTRAINT [fk_QuizTagRelation2];
+
+ALTER TABLE [dbo].[Question] WITH CHECK CHECK CONSTRAINT [fk_Question];
+
+ALTER TABLE [dbo].[Answer] WITH CHECK CHECK CONSTRAINT [fk_Answer];
 
 
 GO

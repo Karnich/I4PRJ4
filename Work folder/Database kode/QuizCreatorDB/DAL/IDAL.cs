@@ -31,9 +31,9 @@ namespace Model
         #endregion // Answer CRUD
 
         #region QuizTagRelation CRUD
-        QuizTagRelation InsertRelation(QuizTagRelation relation);
+        void InsertRelation(QuizTagRelation relation);
         void DeleteRelation(QuizTagRelation relation);
-        void UpdateRelation(QuizTagRelation relation);
+        void UpdateRelation(QuizTagRelation prevRelation, QuizTagRelation newRelation);
         QuizTagRelation GetRelationThroughTag(int tagId);
         QuizTagRelation GetRelationThroughQuiz(int QuizId);
         #endregion // QuizTagRelation CRUD
@@ -41,7 +41,9 @@ namespace Model
         #region Tag CRD
         Tag InsertTag(Tag t);
         void DeleteTag(int TagId);
-        Tag GetTag(int tagId);
+        void UpdateTag(Tag t);
+        Tag GetTagById(int tagId);
+        Tag GetTagByName(string name);
         #endregion // Tag CRD
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,9 +14,9 @@ namespace Model
         private SqlConnection _conn;
 
         public DAL()
-        {
-            _conn =
-                 new SqlConnection(@"Data Source=10.29.0.29;Integrated Security=False;User ID=F15I4PRJ4Gr3;Password=F15I4PRJ4Gr3;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+        {                              
+            _conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=QuizCreatorDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False");
+            //_conn = new SqlConnection(@"Data Source=10.29.0.29;Integrated Security=False;User ID=F15I4PRJ4Gr3;Password=F15I4PRJ4Gr3;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
         }
         #endregion // constructor
 
@@ -23,22 +24,30 @@ namespace Model
 
         public Quiz InsertQuiz(Quiz quiz)
         {
+            if (quiz == null)
+                throw new ArgumentNullException("quiz");
+
             try
             {
                 _conn.Open();
 
                 string insertStringParam;
-                insertStringParam = @"INSERT INTO [Quiz] (QuizName)
-                                                    OUTPUT INSERTED.QuizId
+                //insertStringParam = @"INSERT INTO [Quiz] (QuizName)
+                                                 //   OUTPUT INSERTED.QuizId
+                                                   // VALUES (@quizName)";
+
+                insertStringParam = @"INSERT INTO [Quiz] (col2) 
                                                     VALUES (@quizName)";
+
+                //insertStringParam = @"INSERT INTO [Quiz] (QuizName) VALUES (@quizName); "
+                                   // + "SELECT CAST(scope_identity() AS int)";
 
                 using (SqlCommand cmd = new SqlCommand(insertStringParam, _conn))
                 {
                     // Set parameters
                     cmd.Parameters.AddWithValue("@quizName", quiz.QuizName);
-
-                    // Update local person
-                    quiz.QuizId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
+                    //var result = (int)cmd.ExecuteScalar();
+                    //quiz.QuizId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
                     return quiz;
                 }
             }
@@ -381,47 +390,306 @@ namespace Model
         #endregion // Answer CRUD
 
         #region QuizTagRelation CRUD
-        public QuizTagRelation InsertRelation(QuizTagRelation relation)
+        public void InsertRelation(QuizTagRelation relation)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conn.Open();
+
+                string insertStringParam;
+                insertStringParam = @"INSERT INTO [QuizTagRelation] (TagId, QuizId)
+                                                    VALUES (@tagId, @quizId)";
+
+                using (SqlCommand cmd = new SqlCommand(insertStringParam, _conn))
+                {
+                    // Set parameters
+                    cmd.Parameters.AddWithValue("@tagId", relation.TagId);
+                    cmd.Parameters.AddWithValue("@quizId", relation.QuizId);
+
+                    return;
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
         public void DeleteRelation(QuizTagRelation relation)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conn.Open();
+
+                const string deleteString = @"DELETE FROM QuizTagRelation
+                                                WHERE (Tagid = @tagId AND QuizId = @quizId)";
+
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn))
+                {
+                    cmd.Parameters.AddWithValue("@tagId", relation.TagId);
+                    cmd.Parameters.AddWithValue("@quizId", relation.QuizId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
-        public void UpdateRelation(QuizTagRelation relation)
+        public void UpdateRelation(QuizTagRelation prevRelation, QuizTagRelation newRelation)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Open the connection
+                _conn.Open();
+
+                // prepare command string
+                const string updateString = @"  UPDATE QuizTagRelation
+                                                SET TagId   = @newTagId,
+                                                    QuizId = @newQuizId
+                                                WHERE (QuizId = @prevQuizId) AND (TagId  = @prevTagId)";
+
+                using (SqlCommand cmd = new SqlCommand(updateString, _conn))
+                {
+                    // Get your parameters ready 
+                    cmd.Parameters.AddWithValue("@newTagId", newRelation.TagId);
+                    cmd.Parameters.AddWithValue("@newQuizId", newRelation.QuizId);
+                    cmd.Parameters.AddWithValue("@prevQuizId", prevRelation.QuizId);
+                    cmd.Parameters.AddWithValue("@prevTagId", prevRelation.TagId);
+
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
         public QuizTagRelation GetRelationThroughTag(int tagId)
         {
-            throw new NotImplementedException();
+            SqlDataReader rdr = null;
+
+            try
+            {
+                _conn.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM QuizTagRelation WHERE (TagId = @tagId)", _conn);
+
+                cmd.Parameters.AddWithValue("@tagId", tagId);
+
+                rdr = cmd.ExecuteReader();
+
+                // If no data is found
+                if (!rdr.Read()) return null;
+
+                Console.WriteLine(rdr[0]);
+                return new QuizTagRelation
+                {
+                    QuizId = (int)rdr["QuizId"],
+                    TagId = (int)rdr["TagId"],
+
+                };
+            }
+            finally
+            {
+                if (rdr != null)
+                    rdr.Close();
+
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
         public QuizTagRelation GetRelationThroughQuiz(int QuizId)
         {
-            throw new NotImplementedException();
+            SqlDataReader rdr = null;
+
+            try
+            {
+                _conn.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM QuizTagRelation WHERE (QuizId = @quizId)", _conn);
+
+                cmd.Parameters.AddWithValue("@quizId", QuizId);
+
+                rdr = cmd.ExecuteReader();
+
+                // If no data is found
+                if (!rdr.Read()) return null;
+
+                Console.WriteLine(rdr[0]);
+                return new QuizTagRelation
+                {
+                    QuizId = (int)rdr["QuizId"],
+                    TagId = (int)rdr["TagId"],
+
+                };
+            }
+            finally
+            {
+                if (rdr != null)
+                    rdr.Close();
+
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
         #endregion // QuizTagRelation CRUD
 
         #region Tag CRD
         public Tag InsertTag(Tag t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conn.Open();
+
+                string insertStringParam;
+                insertStringParam = @"INSERT INTO [Tag] (Tag)
+                                                    OUTPUT INSERTED.TagId
+                                                    VALUES (@text)";
+
+                using (SqlCommand cmd = new SqlCommand(insertStringParam, _conn))
+                {
+                    // Set parameters
+                    cmd.Parameters.AddWithValue("@text", t.Text);
+
+
+                    t.TagId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
+                    return t;
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
         public void DeleteTag(int TagId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conn.Open();
+
+                const string deleteString = @"DELETE FROM Tag
+                                                WHERE (TagId = @tagId)";
+
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn))
+                {
+                    cmd.Parameters.AddWithValue("@tagId", TagId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
 
-        public Tag GetTag(int tagId)
+        public void UpdateTag(Tag t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Open the connection
+                _conn.Open();
+
+                // prepare command string
+                const string updateString = @"  UPDATE Tag
+                                                SET Tag   = @text,
+                                                WHERE TagId = @tagId";
+
+                using (SqlCommand cmd = new SqlCommand(updateString, _conn))
+                {
+                    // Get your parameters ready 
+                    cmd.Parameters.AddWithValue("@text", t.Text);
+                    cmd.Parameters.AddWithValue("@answerId", t.TagId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
         }
-        #endregion // Tag CRD
+
+        public Tag GetTagById(int tagId)
+        {
+            SqlDataReader rdr = null;
+
+            try
+            {
+                _conn.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Tag WHERE (TagId = @tagId)", _conn);
+
+                cmd.Parameters.AddWithValue("@tagId", tagId);
+
+                rdr = cmd.ExecuteReader();
+
+                // If no data is found
+                if (!rdr.Read()) return null;
+
+                Console.WriteLine(rdr[0]);
+                return new Tag
+                {
+                    TagId = (int)rdr["TagId"],
+                    Text = (string)rdr["Tag"]
+                };
+            }
+            finally
+            {
+                if (rdr != null)
+                    rdr.Close();
+
+                if (_conn != null)
+                    _conn.Close();
+            }
+        }
+
+        public Tag GetTagByName(string tag)
+        {
+            SqlDataReader rdr = null;
+
+            try
+            {
+                _conn.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Tag WHERE (Tag = @tag)", _conn);
+
+                cmd.Parameters.AddWithValue("@tag", tag);
+
+                rdr = cmd.ExecuteReader();
+
+                // If no data is found
+                if (!rdr.Read()) return null;
+
+                Console.WriteLine(rdr[0]);
+                return new Tag
+                {
+                    TagId = (int)rdr["TagId"],
+                    Text = (string)rdr["Tag"]
+                };
+            }
+            finally
+            {
+                if (rdr != null)
+                    rdr.Close();
+
+                if (_conn != null)
+                    _conn.Close();
+            }
+        }
+        #endregion // Tag CRUD
     }
 }
