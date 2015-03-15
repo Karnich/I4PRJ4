@@ -20,6 +20,44 @@ namespace Model
         }
         #endregion // constructor
 
+        public void Reset()
+        {
+            try
+            {
+                _conn.Open();
+
+                string deleteString;
+                deleteString = @"TRUNCATE TABLE Answer ";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteNonQuery(); }
+
+                deleteString = @"TRUNCATE TABLE QuizTagRelation ";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteNonQuery(); }
+
+                deleteString = @"DELETE FROM Question ";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteNonQuery(); }
+
+                deleteString = @"DBCC CHECKIDENT (Question, RESEED, 0)";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteScalar(); }
+
+                deleteString = @"DELETE FROM Quiz ";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteNonQuery(); }
+
+                deleteString = @"DBCC CHECKIDENT (Quiz, RESEED, 0)";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteScalar(); }
+
+                deleteString = @"DELETE FROM Tag ";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteNonQuery(); }
+
+                deleteString = @"DBCC CHECKIDENT (Tag, RESEED, 0)";
+                using (SqlCommand cmd = new SqlCommand(deleteString, _conn)) { cmd.ExecuteScalar(); }
+            }
+            finally
+            {
+                if (_conn != null)
+                    _conn.Close();
+            }
+        }
+
         #region QuizTable
 
         public Quiz InsertQuiz(Quiz quiz)
@@ -75,7 +113,6 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new Quiz
                 {
                     QuizId = (int)rdr["QuizId"],
@@ -124,14 +161,14 @@ namespace Model
 
                 // prepare command string
                 const string updateString = @"  UPDATE Quiz
-                                                SET QuizName   = @quizName,
+                                                SET QuizName   = @quizName
                                                 WHERE QuizId = @quizId";
 
                 using (SqlCommand cmd = new SqlCommand(updateString, _conn))
                 {
                     // Get your parameters ready 
                     cmd.Parameters.AddWithValue("@quizName", q.QuizName);
-                    cmd.Parameters.AddWithValue("@QuizId", q.QuizId);
+                    cmd.Parameters.AddWithValue("@quizId", q.QuizId);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -191,9 +228,9 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new Question
                 {
+                    QuestionId = (int)rdr["QuestionId"],
                     Text = (string)rdr["Question"],
                     QuizId = (int)rdr["QuizId"],
                 };
@@ -241,7 +278,7 @@ namespace Model
                 // prepare command string
                 const string updateString = @"  UPDATE Question
                                                 SET Question   = @text,
-                                                    QuizId  = @quizId,
+                                                    QuizId  = @quizId
                                                 WHERE QuestionId = @questionId";
 
                 using (SqlCommand cmd = new SqlCommand(updateString, _conn))
@@ -283,7 +320,6 @@ namespace Model
                     cmd.Parameters.AddWithValue("@correct", a.Correct);
                     cmd.Parameters.AddWithValue("@questionId", a.QuestionId);
 
-                    // Update local person
                     a.AnswerId = (int)cmd.ExecuteScalar(); //Returns the identity of the new tuple/record
                     return a;
                 }
@@ -329,7 +365,7 @@ namespace Model
                 const string updateString = @"  UPDATE Answer
                                                 SET Answer   = @text,
                                                     Correct = @correct,
-                                                    QuestionId  = @questionId,
+                                                    QuestionId  = @questionId
                                                 WHERE AnswerId = @answerId";
 
                 using (SqlCommand cmd = new SqlCommand(updateString, _conn))
@@ -368,12 +404,11 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new Answer
                 {
                     AnswerId = (int)rdr["AnswerId"],
                     Text = (string)rdr["Answer"],
-                    Correct = (bool)rdr["Correct"],
+                    Correct = (byte)rdr["Correct"] > 0,
                     QuestionId = (int)rdr["QuestionId"]            
                 };
             }
@@ -405,8 +440,7 @@ namespace Model
                     // Set parameters
                     cmd.Parameters.AddWithValue("@tagId", relation.TagId);
                     cmd.Parameters.AddWithValue("@quizId", relation.QuizId);
-
-                    return;
+                    cmd.ExecuteScalar();
                 }
             }
             finally
@@ -489,7 +523,6 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new QuizTagRelation
                 {
                     QuizId = (int)rdr["QuizId"],
@@ -524,7 +557,6 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new QuizTagRelation
                 {
                     QuizId = (int)rdr["QuizId"],
@@ -604,14 +636,14 @@ namespace Model
 
                 // prepare command string
                 const string updateString = @"  UPDATE Tag
-                                                SET Tag   = @text,
+                                                SET Tag   = @text
                                                 WHERE TagId = @tagId";
 
                 using (SqlCommand cmd = new SqlCommand(updateString, _conn))
                 {
                     // Get your parameters ready 
                     cmd.Parameters.AddWithValue("@text", t.Text);
-                    cmd.Parameters.AddWithValue("@answerId", t.TagId);
+                    cmd.Parameters.AddWithValue("@tagId", t.TagId);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -640,7 +672,6 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new Tag
                 {
                     TagId = (int)rdr["TagId"],
@@ -674,7 +705,6 @@ namespace Model
                 // If no data is found
                 if (!rdr.Read()) return null;
 
-                Console.WriteLine(rdr[0]);
                 return new Tag
                 {
                     TagId = (int)rdr["TagId"],

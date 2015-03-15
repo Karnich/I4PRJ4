@@ -9,6 +9,8 @@ namespace Model
 {
     public interface IDAL
     {
+        void Reset();
+
         #region Quiz CRUD
         Quiz InsertQuiz(Quiz q);
         void DeleteQuiz(int QuizId);
