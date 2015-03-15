@@ -13,6 +13,9 @@ namespace Model
         #region Constructor and attributes
         private SqlConnection _conn;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public DAL()
         {                              
             _conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=QuizCreatorDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False");
@@ -20,6 +23,10 @@ namespace Model
         }
         #endregion // constructor
 
+        /// <summary>
+        /// Deletes all the data in the db and resets the seed
+        /// </summary>
+        /// <remarks>Mostly for testing purposes</remarks>
         public void Reset()
         {
             try
@@ -60,6 +67,10 @@ namespace Model
 
         #region QuizTable
 
+        /// <summary>
+        /// Inserts the Quiz given in the parameter list, into the db
+        /// </summary>
+        /// <returns>The same Quiz but with the QuizId property initialized</returns>
         public Quiz InsertQuiz(Quiz quiz)
         {
             if (quiz == null)
@@ -96,6 +107,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Quiz with the QuizId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found Quiz</returns>
         public Quiz GetQuiz(int id)
         {
             SqlDataReader rdr = null;
@@ -129,6 +144,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Removes the Quiz in the db, with the given QuizId
+        /// </summary>
         public void DeleteQuiz(int QuizId)
         {
             try
@@ -152,6 +170,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Quiz with the same QuizId as the one in the parameter list, and Updates it with the given Quiz from the parameter list
+        /// </summary>
         public void UpdateQuiz(Quiz q)
         {
             try
@@ -182,6 +203,10 @@ namespace Model
         #endregion // QuizTable
 
         #region QuestionTable
+        /// <summary>
+        /// Inserts the Question given in the parameter list, into the db
+        /// </summary>
+        /// <returns>The same Question but with the QuestionId property initialized</returns>
         public Question InsertQuestion(Question question)
         {
             try
@@ -211,6 +236,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Question with the QuestionId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found Question</returns>
         public Question GetQuestion(int id)
         {
             SqlDataReader rdr = null;
@@ -245,6 +274,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Removes the Question in the db, with the given QuestionId
+        /// </summary>
         public void DeleteQuestion(int  QuestionId)
         {
             try
@@ -268,6 +300,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Question with the same QuestionId as the one in the parameter list, and Updates it with the given Question from the parameter list
+        /// </summary>
         public void UpdateQuestion(Question q)
         {
             try
@@ -302,6 +337,10 @@ namespace Model
 
         #region Answer CRUD 
 
+        /// <summary>
+        /// Inserts the Answer given in the parameter list, into the db
+        /// </summary>
+        /// <returns>The same Answer but with the AnswerId property initialized</returns>
         public Answer InsertAnswer(Answer a)
         {
             try
@@ -331,6 +370,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Removes the Answer in the db, with the given AnswerId
+        /// </summary>
         public void DeleteAnswer(int AnswerId)
         {
             try
@@ -354,6 +396,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Answer with the same AnswerId as the one in the parameter list, and Updates it with the given Answer from the parameter list
+        /// </summary>
         public void UpdateAnswer(Answer a)
         {
             try
@@ -387,6 +432,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Answer with the AnswerId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found Answer</returns>
         public Answer GetAnswer(int AnswerId)
         {
             SqlDataReader rdr = null;
@@ -425,6 +474,9 @@ namespace Model
         #endregion // Answer CRUD
 
         #region QuizTagRelation CRUD
+        /// <summary>
+        /// Inserts the QuizTagRelation givne in the parameter list, into the db
+        /// </summary>
         public void InsertRelation(QuizTagRelation relation)
         {
             try
@@ -450,6 +502,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Removes the QuizTagRelation in the db, with the same tagId and quizId as the relation given in the parameter list
+        /// </summary>
         public void DeleteRelation(QuizTagRelation relation)
         {
             try
@@ -474,6 +529,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the QuizTagRelation matching the first QuizTagRelation in the parameter list, and Updates it to match the second QuizTagRelation in the parameter list
+        /// </summary>
         public void UpdateRelation(QuizTagRelation prevRelation, QuizTagRelation newRelation)
         {
             try
@@ -506,6 +564,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the QuizTagRelation with the TagId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found QuizTagRelation</returns>
         public QuizTagRelation GetRelationThroughTag(int tagId)
         {
             SqlDataReader rdr = null;
@@ -540,6 +602,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the QuizTagRelation with the QuizId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found QuizTagRelation</returns>
         public QuizTagRelation GetRelationThroughQuiz(int QuizId)
         {
             SqlDataReader rdr = null;
@@ -576,6 +642,10 @@ namespace Model
         #endregion // QuizTagRelation CRUD
 
         #region Tag CRD
+        /// <summary>
+        /// Inserts the Tag given in the parameter list, into the db
+        /// </summary>
+        /// <returns>The same Tag but with the TagId property initialized</returns>
         public Tag InsertTag(Tag t)
         {
             try
@@ -604,6 +674,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Removes the Tag in the db, with the given TagId
+        /// </summary>
         public void DeleteTag(int TagId)
         {
             try
@@ -627,6 +700,9 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Tag with the same TagId as the one in the parameter list, and Updates it with the given Tag from the parameter list
+        /// </summary>
         public void UpdateTag(Tag t)
         {
             try
@@ -655,6 +731,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Tag with the TagId matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found Tag</returns>
         public Tag GetTagById(int tagId)
         {
             SqlDataReader rdr = null;
@@ -688,6 +768,10 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Finds the Tag with the name matching the one given in the parameter list
+        /// </summary>
+        /// <returns>The found Tag</returns>
         public Tag GetTagByName(string tag)
         {
             SqlDataReader rdr = null;
