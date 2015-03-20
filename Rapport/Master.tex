@@ -1,44 +1,55 @@
-\input{preamble}
+\input{../Shared/preamble}
 \raggedbottom
 \begin{document}
 
-\include{filer/underskrifter}
+\input{../Shared/underskrifter}
+
+\input{filer/arbejdsfordeling}
+
+\input{filer/resume}
+\input{filer/abstract}
 
 % Indholdsfortegnelse
-\null\newpage % Indholdsfortegnelse skal starte på højre side
+\cleardoublepage % Indholdsfortegnelse skal starte på højre side
 \tableofcontents*
 
 % Ordliste
-\include{filer/ordliste}
+\input{../Shared/ordliste}
 
 % Indledning
-\include{filer/indledning}
+\input{filer/indledning}
 
-% Kravspec
-\include{filer/kravSpec}
+\input{filer/projektafgraensning}
 
-% Forundersøgelse
-\include{filer/forundersogelse}
+% Itteration 1
+\part{Iteration 1}
+\input{filer/iteration1}
 
-% Systemarkitektur
-\include{filer/systemarkitektur}
+%\part{Iteration 2}
+%\include{filer/iteration2}
 
-% Design
-\include{filer/design}
+% Projekt opfølgning
+\part{Projektforløb og opfølgning}
 
-% Implementering
-\include{filer/implementering}
+\input{filer/arbejdsproces}
 
-% Test
-\include{filer/test}
+\input{filer/udviklingsvaerktoejer}
 
-% Accepttestspec
-\include{filer/acceptTestSpec}
+% Fremtidigt arbejde
+\input{filer/fremtidigtarbejde}
+
+\input{filer/resultater}
+
+% Opnåede erfaringer
+\input{filer/erfaringer}
+
+% Konklutioner
+\input{filer/konklusion}
 
 % Litteraturliste
-\include{filer/litteraturliste}
+\input{../Shared/litteraturliste}
 
 % Billags-CD struktur
-\include{filer/cdindhold}
+\input{../Shared/cdindhold}
 
 \end{document}
