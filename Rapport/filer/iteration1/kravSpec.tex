@@ -1,14 +1,24 @@
 \chapter{Krav}
+Her følger de funktionelle og ikke-funktionelle krav til systemet for første iteration. Første iteration indeholder tre Use Cases som er de mest basale funktionaliteter i systemet. Muligheden for at oprette, finde og besvare en quiz.
+
+\section{Aktører}
+Tre aktører er identificeret til de nævnte UC. De er vist på figur \ref{figur:it1:UCDiagram}.
+
+\figur{0.8}{iteration1/UC-diagram}{Identificerede aktører og deres forbindelse til UC}{figur:it1:UCDiagram}
 
 \section*{Ikke-funktionelle krav}
-
 \subsubsection*{Brugbarhed}
-
-\subsubsection*{Pålidelighed}
+\begin{enumerate}
+	\item Programmet skal virke på følgende platforme
+	\subitem Mozilla Firefox 3.5 og nyere (PC og Mac)
+	\item Kun bogstaver, tal, mellemrum, skråstreger og bindestreger ved brugerindtastning
+understøttes (i UTF-8 formatering)
+	\item Quiz-navnelængde er minimum 1 og maksimalt 75 karakterer
+	\item Spørgsmål-navnelængde er minimum 1 og maksimalt 75 karakterer
+	\item Tags-navnelængde er minimum 1 og maksimalt 75 karakterer
+	\item Det er muligt at tilføje 0 til 10 tags til en Quiz
 
 \subsubsection*{Ydeevne}
+	\item Programmet skal kunne afvikles af minimum 10 samtidige brugere, som hver har 1 session åben
 
-\subsubsection*{Vedligeholdelse}
-
-\subsubsection*{Begrænsninger}
-
+\end{enumerate}
