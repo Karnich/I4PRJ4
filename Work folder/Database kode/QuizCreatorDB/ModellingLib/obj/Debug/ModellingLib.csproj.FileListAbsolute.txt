@@ -3,3 +3,8 @@ G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\bin\Debug\
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.dll
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.pdb
 G:\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.csprojResolveAssemblyReference.cache
+C:\Users\Jesper\Documents\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\bin\Debug\ModellingLib.dll
+C:\Users\Jesper\Documents\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\bin\Debug\ModellingLib.pdb
+C:\Users\Jesper\Documents\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.csprojResolveAssemblyReference.cache
+C:\Users\Jesper\Documents\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.dll
+C:\Users\Jesper\Documents\GitHub\I4PRJ4\Work folder\Database kode\QuizCreatorDB\ModellingLib\obj\Debug\ModellingLib.pdb
