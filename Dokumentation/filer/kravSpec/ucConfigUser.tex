@@ -1,0 +1,39 @@
+\uchead
+	{5} % UC-nummer
+	{Config User} % UC-navn
+	{Bruger vil ændre sine registrerede data} % Mål
+	{Bruger har trykket på Config User} % Initialisering
+	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
+	{} % Referencer
+	{} % Antal samtidige hændelser
+	{Bruger har ændret de ønskede data} % Efterfølgende tilstand
+
+% Tilføj items her. De placeres i hovedforløbet.
+% Referencer til punkter laves med \item\label{ucNAVNSomeItem}
+
+\item\label{ucConfigUserPresentData} Webserveren henter data for brugeren fra databaseserveren.
+
+\item Webserveren præsenterer data for brugeren.
+
+\item\label{ucConfigUserEditData} Bruger retter de ønskede data. \textbf{Undtagelse \ref{ucConfigUserEditData}}
+
+\item\label{ucConfigUserSaveData} Bruger vælger at gemme data. \textbf{Undtagelse \ref{ucConfigUserSaveData}}
+
+\item Webserveren gemmer de opdaterede data på databaseserveren.
+
+\item Gå til punkt \ref{ucConfigUserPresentData}.
+
+
+\ucdescriptionend % Slut på Hovedforløb
+
+\ucextension
+	{Bruger navigerer væk fra konfigurationssiden.}
+	{UC afsluttes.}
+	{\ref{ucConfigUserEditData}.a}
+
+\ucextension
+	{Bruger vælger at fortryde ændringerne.}
+	{Gå til punkt \ref{ucConfigUserPresentData}.}
+	{\ref{ucConfigUserSaveData}.a}
+
+\ucfoot{ucConfigUser} % Indsæt navn på UC til referencer
