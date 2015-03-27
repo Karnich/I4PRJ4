@@ -1,0 +1,67 @@
+\uchead
+	{8} % UC-nummer
+	{Config Quizzes} % UC-navn
+	{Bruger vil ændre data for en quiz oprettet af denne bruger} % Mål
+	{Bruger har trykket på Config Quizzes} % Initialisering
+	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
+	{} % Referencer
+	{} % Antal samtidige hændelser
+	{Bruger har ændret de ønskede data tilknyttet en quiz} % Efterfølgende tilstand
+
+% Tilføj items her. De placeres i hovedforløbet.
+% Referencer til punkter laves med \item\label{ucNAVNSomeItem}
+
+\item\label{ucConfigQuizzesPresentQuiz} Webserveren henter de quizzer der er tilknyttet brugeren fra databaseserveren.
+
+\item Webserveren præsenterer de fundede quizzer for brugeren.
+
+\item\label{ucConfigQuizzesSelectQuiz} Bruger kan trykke på et quiz-navn for at redigere eller på slet for at slette quizzen. \textbf{Undtagelse \ref{ucConfigQuizzesSelectQuiz}}
+
+\textbf{Tryk på quiz-navn}
+
+	\begin{enumerate}
+		\item Webserveren henter alle data for den valgte quiz på databaseserveren.
+		
+		\item Webserveren præsentere data for brugeren så de kan redigeres.
+		
+		\item Bruger retter de ønskede data.
+		
+		\item\label{ucConfigQuizzesSaveQuiz} Bruger vælger at gemme quizzen. \textbf{Undtagelse \ref{ucConfigQuizzesSaveQuiz}}
+		
+		\item Webserveren gemmer de opdaterede data på databaseserveren.
+		
+		\item Gå til punkt \ref{ucConfigQuizzesPresentQuiz}.
+		
+	\end{enumerate}
+
+\textbf{Tryk på slet}
+	
+	\begin{enumerate}
+		\item Webserveren beder bruger om en bekræftelse på sletningen.
+		
+		\item\label{ucConfigQuizzesDeleteConfirm} Bruger bekræfter sletningen. \textbf{Undtagelse \ref{ucConfigQuizzesDeleteConfirm}}
+		
+		\item Webserveren sletter quizzen og tilhørende spørgsmål og svar på databaseserveren.
+		
+		\item Gå til punkt \ref{ucConfigQuizzesPresentQuiz}.
+		
+	\end{enumerate}
+
+\ucdescriptionend % Slut på Hovedforløb
+
+\ucextension
+	{Bruger navigerer væk fra konfigurationssiden.}
+	{UC afsluttes}
+	{\ref{ucConfigQuizzesSelectQuiz}.a}
+
+\ucextension
+	{Bruger vælger at fortryde ændringerne.}
+	{Gå til punkt \ref{ucConfigQuizzesPresentQuiz}.}
+	{\ref{ucConfigQuizzesSaveQuiz}.a}
+
+\ucextension
+	{Bruger annulerer sletningen.}
+	{Gå til punkt \ref{ucConfigQuizzesPresentQuiz}.}
+	{\ref{ucConfigQuizzesDeleteConfirm}.a}
+
+\ucfoot{ucConfigQuizzes} % Indsæt navn på UC til referencer
