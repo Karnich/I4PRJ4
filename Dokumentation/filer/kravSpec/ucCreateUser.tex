@@ -1,0 +1,46 @@
+% Tabel header
+
+\uchead
+	{9}
+	{Create User}
+	{Bruger ønsker at oprette en brugerprofil.}
+	{Bruger trykker på ''Opret Bruger'' på brugergrænsefladen.}
+	{Bruger, Databaseserver og Webserver.}
+	{}
+	{1 pr. session.}
+	{Bruger bruger oprettet i systemet.}
+
+\item Bruger vælger at oprette en brugerprofil manuelt eller via facebook-login.
+
+\item Undtagelse [1.a] Bruger vælger facebook-login.
+
+\item Bruger tilføjer brugernavn.
+
+\item Undtagelse [2.a] Brugernavn eksisterer allerede i databasen.
+
+\item Bruger tilføjer fornavn, mellemnavn og efternavn.
+
+\item Bruger tilføjer email.
+
+\item Bruger tilføjer password.
+
+\item Bruger validerer password.
+
+\item Bruger gennemfører brugeroprettelse.
+
+\item Bruger oprettes i databasen og systemet.
+
+\ucdescriptionend
+
+\ucextension
+	{[1.a]}
+	{Bruger logger ind med facebook-login.}
+	{Oplysninger hentes fra brugers facebook-profil.}
+	{Use case fortsætter fra pkt. 8.}
+	
+\ucextension
+	{[2.a].}
+	{Bruger notificeres at brugernavn eksisterer.}
+	{Bruger vælger nyt brugernavn.}
+	{Use case fortsætter fra pkt. 3}
+		
