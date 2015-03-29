@@ -10,20 +10,34 @@
 
 \item Bruger vælger ''Take Quiz'' på brugergrænsefladen.
 
-\item Quiz hentes fra databsen.
+\item Quiz hentes fra databasen.
 
 \item\label{ucAnswerQuizPresent} Bruger præsenteres for spørgsmål.
 
-\item Bruger vælger en af svarmulighederne. 
+\item \label{ucAnswerQuizChooseAnswer} Bruger vælger en af svarmulighederne. 
+\textbf{Undtagelse \ref{ucAnswerQuizChooseAnswer}.a}
 
-\item Brugergrænsefladen viser det rigtige svar.
+\item Brugergrænsefladen viser det rigtige svar. ???
 
 \item\label{ucAnswerQuizEnd} Næste spørgsmål præsenteres for bruger \newline
 [Punkt \ref{ucAnswerQuizPresent} - \ref{ucAnswerQuizEnd} gentages indtil der ikke er flere spørgsmål i Quizzen]
+
+
+\item Bruger kan klikke frem og tilbage imellem spørgsmålene.
+
+\item Bruger afslutter Quiz.
+
 
 \item Bruger præsenteres for statistik der viser hvor mange spørgsmål der er besvaret korrekt.
 
 \item Bruger vælger at afslutte hvorved Quiz forlades
 
 \ucdescriptionend
+
+\ucextension
+	{Bruger går videre uden at vælge en af svarmulighederne.}
+	{Bruger bliver informeret om at det pågældende spørgsmål ikke endnu er besvaret.}
+	{\ref{ucAnswerQuizChooseAnswer}.a}
+	
+
 \ucfoot{AnswerQuiz}
