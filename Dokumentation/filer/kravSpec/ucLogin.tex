@@ -8,35 +8,49 @@
 	{Bruger, Databaseserver og Webserver.}
 	{}
 	{1 pr. session.}
-	{Bruger er logget ind.}
-
-\item Brugergrænsefladen præsentere en login knap som brugeren kan klikke på.
-
-\item \label{ucCreateQuizName} Bruger klikker på login knap.
-
-\item Bruger indtaster søgbare tags på Quiz.
-
-\item \label{ucCreateQuizQst} Bruger indtaster spørgsmål.
-
-\item Bruger indtaster svarmuligheder og angiver det korrekte svar.
-
-\item Bruger kan tilføje flere spørgsmål ved at trykke ''Create new question'', hvormed der hoppes til punkt \ref{ucCreateQuizQst}.
-
-\item \label{ucCreateQuizDone} Bruger trykker på ''Create'' knappen.
-\textbf{Undtagelse \ref{ucCreateQuizDone}.a} \textbf{Undtagelse \ref{ucCreateQuizDone}.b}
-
-\item \label{ucCreateQuizDB} Den pågælende quiz bliver tilføjet til databasen og UC afsluttes.
-
-\ucdescriptionend
-
-\ucextension
-	{Bruger vælger i løbet af use casens forløb at trykke ''Discard Quiz''.}
-	{Quizzen oprettes ikke, og use casen afsluttes.}
-	{\ref{ucCreateQuizDone}.a}
-	
-\ucextension
-	{De indtastede oplysninger om Quizzen er ikke i overensstemmelse med de ikke-funktionelle krav (se afsnit \ref{sec:nonFunctional}, side \pageref{sec:nonFunctional}).}
-	{Gå til UC1.\ref{ucCreateQuizName}}
-	{\ref{ucCreateQuizDone}.b}
+	{Bruger er logget ind.}	
+  
 		
-\ucfoot{CreateQuiz}
+\item\label{ucLoginPresentBox} Webserveren præsentere en login knap som brugeren kan klikke på.
+
+\item Bruger klikker på login knap.
+
+\item\label{ucLoginSelectMethod} Webserveren præsentere en login boks med mulighed for at skrive username og password, login via facebook eller register. \textbf{Undtagelse \ref{ucLoginSelectMethod}}
+
+\begin{enumerate}
+
+\item \textbf{Login med account}
+
+	\begin{enumerate}
+	
+		\item Bruger indtaster username og password og trykker på enter.
+		\item \label{ucLoginError}Webserveren validere brugerens data iforhold til dataen på databaseserveren.\textbf{Undtagelse \ref{ucLoginError}}
+		
+		\item Login boksen opdateres og viser nu at brugeren er logget ind.
+	
+		
+	\end{enumerate}
+
+
+\item \textbf{Login med facebook}
+	
+	\begin{enumerate}
+		\item Brugeren trykker på knappen Login with facebook.
+		
+		\item\label{ucLoginWithFacebookError} Login boksen opdateres og viser nu at brugeren er logget ind. \textbf{Undtagelse \ref{ucLoginWithFacebookError}}
+				
+	\end{enumerate}
+\end{enumerate}
+\ucdescriptionend % Slut på Hovedforløb
+	\ucextension
+	{Validering af login data fejlede. Login Boks opdateres med teksten Username or password incorrect.}
+	{UC afsluttes.}
+	{\ref{ucLoginError}}
+
+\ucextension
+	{Bruger er ikke logget ind på facebook. Bruger logger ind på facebook.}
+	{UC afsluttes.}
+	{\ref{ucLoginWithFacebookError}}
+
+
+\ucfoot{ucConfigQuizzes} % Indsæt navn på UC til referencer
