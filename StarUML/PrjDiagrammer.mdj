@@ -17670,19 +17670,25 @@
 									"fontColor": "#000000",
 									"font": "Arial;13;0",
 									"showShadow": true,
+<<<<<<< Updated upstream
 									"left": 708,
 									"top": 344,
 									"width": 145,
+=======
+									"left": 652,
+									"top": 342,
+									"width": 219,
+>>>>>>> Stashed changes
 									"height": 13,
 									"autoResize": false,
-									"alpha": -4.402880790627464,
-									"distance": 56.22277118748239,
+									"alpha": -4.243307035389087,
+									"distance": 73.43023900274328,
 									"hostEdge": {
 										"$ref": "AAAAAAFL1vCT2ApeuFM="
 									},
 									"edgePosition": 1,
 									"underline": false,
-									"text": "opretter en/søger efter en",
+									"text": "opretter en/søger efter en/konfigurerer",
 									"horizontalAlignment": 2,
 									"verticalAlignment": 5
 								},
@@ -21322,7 +21328,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFL1t3ncAMZFOk="
 									},
-									"name": "opretter en/søger efter en",
+									"name": "opretter en/søger efter en/konfigurerer",
 									"end1": {
 										"_type": "UMLAssociationEnd",
 										"_id": "AAAAAAFL1vCT1gpbp8g=",
