@@ -18,29 +18,24 @@
 
 \item \label{ucCreateQuizQst} Bruger indtaster spørgsmål.
 
-\item Bruger kan vælge at tilføje et billede til det pågældende spørgsmål.
+\item Bruger kan vælge at tilføje et billede til det pågældende spørgsmål ved at trykke på ''Gennemse...'' og vælge det ønskede billede.
 
-\item Bruger indtaster svarmuligheder og angiver det korrekte svar.
+\item \label{ucCreateQuizAns} Bruger indtaster svarmuligheder, angiver det/de korrekte svar, og tildeler point til de ønskede svarmuligheder.
 
-\item Bruger tilføjer et antal point til det pågældende spørgsmål.
+\item Bruger kan tilføje flere svarmuligheder ved at trykke ''Add answer'', hvormed punkt \ref{ucCreateQuizAns} gentages.
 
-\item Bruger kan tilføje flere spørgsmål ved at trykke ''Create new question'', hvormed der hoppes til punkt \ref{ucCreateQuizQst}.
+\item Bruger kan tilføje flere spørgsmål ved at trykke ''Add new question'', hvormed der hoppes til punkt \ref{ucCreateQuizQst}.
 
-\item \label{ucCreateQuizDone} Bruger trykker på ''Create'' knappen.
-\textbf{Undtagelse \ref{ucCreateQuizDone}.a} \textbf{Undtagelse \ref{ucCreateQuizDone}.b}
+\item \label{ucCreateQuizDone} Bruger trykker på ''Create Quiz'' knappen.
+\textbf{Undtagelse \ref{ucCreateQuizDone}.a}
 
 \item \label{ucCreateQuizDB} Webserveren gemmer quizzen på databaseserveren og UC afsluttes.
 
 \ucdescriptionend
 
 \ucextension
-	{Bruger vælger i løbet af use casens forløb at trykke ''Discard Quiz''.}
-	{Quizzen oprettes ikke, og use casen afsluttes.}
-	{\ref{ucCreateQuizDone}.a}
-	
-\ucextension
 	{De indtastede oplysninger om Quizzen er ikke i overensstemmelse med de ikke-funktionelle krav (se afsnit \ref{sec:nonFunctional}, side \pageref{sec:nonFunctional}).}
-	{Gå til UC1.\ref{ucCreateQuizName}}
-	{\ref{ucCreateQuizDone}.b}
+	{Gå til UC1 punkt \ref{ucCreateQuizName}}
+	{\ref{ucCreateQuizDone}.a}
 		
 \ucfoot{CreateQuiz}
