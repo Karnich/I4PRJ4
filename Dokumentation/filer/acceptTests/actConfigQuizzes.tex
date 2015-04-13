@@ -1,0 +1,51 @@
+\achead{8}{ConfigQuizzes}
+
+% Testpunkter
+% \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
+\acentry{1} % Test punkt
+		{
+		\begin{enumerate}
+			\item Udfør accepttesten UC6: Login
+			\item Udfør accepttesten UC1: Create Quiz test 2
+			\item Klikker på Brugernavn og vælg ''Config Quizzes''
+			\item Bruger trykker på quiznavn ''TestQuiz''
+			\item Tilføj ''1'' efter den eksisterende tekst i alle felter
+			\item Gem quiz
+			\item Indtast ''TestQuiz1'' i søgefelt
+			\item Klik på ''TestQuiz1''
+		\end{enumerate}
+		} % Test
+		{Indholdet af quizzen præsenteres med nyt indhold i alle felter} % Forventede resultat
+		{} % Resultat
+		{} % Godkendt/kommantar
+
+\acentry{2} % Test punkt
+		{
+		\begin{enumerate}
+			\item Udfør accepttesten UC6: Login
+			\item Udfør accepttesten UC1: Create Quiz test 2
+			\item Klikker på Brugernavn og vælg ''Config Quizzes''
+			\item Bruger trykker på quiznavn ''TestQuiz''
+			\item Indtast ''1'' i alle felter
+		\end{enumerate}
+		} % Test
+		{Alle felter markeres med fejl fordi inholdet er for kort} % Forventede resultat
+		{} % Resultat
+		{} % Godkendt/kommantar
+
+\acentry{3} % Test punkt
+		{
+		\begin{enumerate}
+			\item Udfør accepttesten UC6: Login
+			\item Udfør accepttesten UC1: Create Quiz test 2
+			\item Klikker på Brugernavn og vælg ''Config Quizzes''
+			\item Bruger trykker på slet ved siden af quiznavn ''TestQuiz''
+			\item Bekræft sletning
+			\item Indtast ''TestQuiz'' i søgefeltet
+		\end{enumerate}
+		} % Test
+		{Ingen resultater fundet} % Forventede resultat
+		{} % Resultat
+		{} % Godkendt/kommantar
+
+\acfoot{configQuizzes}
