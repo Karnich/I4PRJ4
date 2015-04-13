@@ -4,19 +4,19 @@
 	{4}
 	{Create User}
 	{Bruger ønsker at oprette en brugerprofil.}
-	{Bruger trykker på ''Opret Bruger'' på brugergrænsefladen.}
+	{Bruger trykker på ''Register'' på brugergrænsefladen.}
 	{Bruger, Databaseserver og Webserver.}
 	{}
 	{1 pr. session.}
 	{Bruger bruger oprettet i systemet.}
 
-\item Bruger vælger at oprette en brugerprofil manuelt eller via facebook-login.
+\item \label{ucCreateUserOptions} Bruger vælger at oprette en brugerprofil. \newline
+\textbf{Undtagelse \ref{ucCreateUserOptions}.a}
 
-\item Undtagelse [1.a] Bruger vælger facebook-login.
+\item \label{ucCreateUserAddUN} Bruger tilføjer brugernavn.
 
-\item Bruger tilføjer brugernavn.
-
-\item Undtagelse [2.a] Brugernavn eksisterer allerede i databasen.
+\item \label{ucCreateUserExists} Brugernavn eksisterer allerede i databasen. \newline
+\textbf{Undtagelse \ref{ucCreateUserExists}.a}
 
 \item Bruger tilføjer fornavn, mellemnavn og efternavn.
 
@@ -28,20 +28,26 @@
 
 \item Bruger gennemfører brugeroprettelse.
 
-\item Bruger oprettes i databasen og systemet.
+\item \label{ucCreateUserCreated} Bruger oprettes i databasen og systemet.
 
 \ucdescriptionend
 
+
+%fix extension så punkterne står ordentligt i PDF
 \ucextension
-	{[1.a]}
-	{Bruger logger ind med facebook-login.}
-	{Oplysninger hentes fra brugers facebook-profil.}
-	{Use case fortsætter fra pkt. 8.}
+	{Bruger vælger at logge ind via facebook}
+	{Bruger logger ind med facebook-login. \newline
+	\indent Oplysninger hentes fra brugers facebook-profil. \newline
+	\indent Gå til UC4 punkt \ref{ucCreateUserCreated}.
+	}
+	{\ref{ucCreateUserOptions}.a}
+
+	
 	
 \ucextension
-	{[2.a].}
-	{Bruger notificeres at brugernavn eksisterer.}
-	{Bruger vælger nyt brugernavn.}
-	{Use case fortsætter fra pkt. 3}
+	{Brugernavnet eksisterer allerede i databasen}
+	{Bruger notificeres at brugernavn eksisterer.\newline
+	Gå til UC4 punkt \ref{ucCreateUserAddUN}}
+	{\ref{ucCreateUserExists}.a}
 	
 \ucfoot{ucCreateUser} % Indsæt navn på UC til referencer
