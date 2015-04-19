@@ -1,9 +1,10 @@
 \section{Data View}
 
-Der er brug for at persistere informationer om Quiz, Questions, Answers og Tags. Dette har ført til ER-diagrammet som ses på \ref{fig:ERdiagram}. 
+Til systemet er der brug for at persistere data om brugere og indhold. For at give et overblik er opdelingen af tabeller i databasen indtegnet i et ER-diagram, som ses på figur \ref{fig:ERdiagram}.
+
 
 Kardinaliteten er anført i overensstemmelse med de ikke-funktionelle krav (se afsnit \ref{sec:nonFunctional} side \pageref{sec:nonFunctional}).
-Der ses på diagrammet at der er en mange-til-mange relation mellem Quiz og Tags, dette medfører at det er nødvendigt med en weak-entity, som håndterer relationen.
+Der ses på diagrammet at der er en mange-til-mange relation mellem  entiteterne Quiz og Tags samt AspNetUser og AspNetRoles, dette medfører at det er nødvendigt med en weak-entity, som håndterer relationen.
 
 \figur{0.5}{SystemArkitektur/ER_diagram}{ER diagram med Chen notation for databasen}{fig:ERdiagram}
 
