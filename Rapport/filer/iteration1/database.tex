@@ -5,7 +5,7 @@ Ingeniørhøjskolen Aarhus Universitet stillede en MSSQL server til rådighed so
 
 \figur{0.6}{iteration1/DataStructureTable_QuizCreator}{Oversigt over database entity's}{fig:databasedesign}
 
-For at overholde separation of concerns blev der lavet et Data Access Layer og en QuizModel. Data Access Layeret blev implementeret med ADO.NET frameworket, som muliggjorde at queries blev sendt til databasen. Dette Data Access Layer åbner forbindelsen til databasen når der var brugt for det, og lukkede den efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset Databaser.
+For at overholde separation of concerns blev der lavet et Data Access Layer og en QuizModel. Data Access Layeret blev implementeret med ADO.NET frameworket, som muliggjorde at queries blev sendt til databasen. Dette Data Access Layer åbner forbindelsen til databasen når der var brugt for det, og lukkede den efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset Databaser. QuizModel klassen er vores såkaldte "smarte lag" til databasen. Det sørger for at få samlede quizzer så de er komplette når en controller beder om dem. Ligeledes sørger de for at få gemt komplette quizzer ordentligt i databasen, igennem Data Access Layeret.
 
 
 
