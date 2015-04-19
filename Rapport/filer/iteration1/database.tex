@@ -1,0 +1,11 @@
+\chapter{Database}
+I denne iteration var der fokus på at få gemt brugerens oprettede quizzer, samt at kunne finde dem igen via dens tags som searchfunktionen vil søge på. 
+
+Ingeniørhøjskolen Aarhus Universitet stillede en MSSQL server til rådighed som blev brugt som database løsning. Database Schema blev lavet i DDS-lite, som er et udviklingsværktøj der blev introduceret i kurset Databaser. Schemaet indholdte en Quiz, Question, Answer, Tag og QuizTagRelation entity. QuizTagRelation entiten, er en mange-til-mange relation som kun indholder Quiz- og Tag-Id'er.
+
+\figur{0.6}{iteration1/DataStructureTable_QuizCreator}{Oversigt over database entity's}{fig:databasedesign}
+
+For at overholde separation of concerns blev der lavet et Data Access Layer og en QuizModel. Data Access Layeret blev implementeret med ADO.NET frameworket, som muliggjorde at queries blev sendt til databasen. Dette Data Access Layer åbner forbindelsen til databasen når der var brugt for det, og lukkede den efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset Databaser.
+
+
+
