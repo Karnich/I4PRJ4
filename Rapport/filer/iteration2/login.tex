@@ -1,0 +1,20 @@
+\chapter{Login system}
+
+I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kunne login med en email med tilhørende password, eller via facebook.
+
+\figur{0.8}{iteration2/login_skitse}{Login GUI skitse}{fig:loginSkitse}
+
+Login knappen aktivere en dropdown menu hvori man indtaster email og password. Som skitsen viser var det tænkt, at man brugte username og password. Men da vi valgte at registrerer brugere som logger ind med facebook. Blev det til email og password, da facebook APIet sender brugerens email, som vi så bruger til at registrer brugeren med i databasen. Login knappen er også flyttet til indersiden af search boxen istedet for ydersiden. Scriptet til dropdown menuen er skrevet i Javascript. Login funktionerne bruger Ajax med tilhørende API controllers til at logge brugerne ind.
+
+Login systemet bruger .NET's identity 2.0 framework til authorisering. Frameworket generere ligeledes nogle default database entitys som vi valgte at bruge i denne iteration for at spare tid. Når brugeren er autoriseret bliver der smidt en cookie hos clienten så han genkendes.
+
+
+\figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
+
+\textbf{Udfordringer:} 
+Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen Aarhus Universitet. 
+
+\begin{itemize}
+	\item Det første problem opstår da man forsøger at registrer den intere webservers URL på facebook. Da det jo er en intern IP adresse så vil facebook ikke godtage den. Dette problem står til at blive løst i en anden iteration. Muligvis med en Azure hosted webserver.
+	\item Det andet problem opstår ligeledes pga. den interne server. 10.29.10.30/QuizCreator er URL på vores hjemmeside når den er published. Ajax som kalder login controlleren tror at root er 10.29.10.30 istedet for at være 10.29.10.30/QuizCreator. Dette kan godt fixet, dog vil det kun virke på enten localhost eller den interne server. Her er løsningen igen en anden webserver.
+\end{itemize}

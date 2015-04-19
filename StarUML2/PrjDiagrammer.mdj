@@ -42221,25 +42221,26 @@
 											"model": {
 												"$ref": "AAAAAAFM0Gri5Tp9gzI="
 											},
-											"visible": false,
+											"visible": true,
 											"enabled": true,
 											"lineColor": "#000000",
 											"fillColor": "#ffffff",
 											"fontColor": "#000000",
 											"font": "Arial;13;0",
 											"showShadow": true,
-											"left": 526,
-											"top": 721,
-											"width": 0,
+											"left": 438,
+											"top": 759,
+											"width": 60,
 											"height": 13,
 											"autoResize": false,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"alpha": -0.8508061938763944,
+											"distance": 57.38466694161429,
 											"hostEdge": {
 												"$ref": "AAAAAAFM0Gri5jp/U5Y="
 											},
 											"edgePosition": 1,
 											"underline": false,
+											"text": "verificering",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -43303,6 +43304,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFM0F87eThVg1I="
 							},
+							"name": "verificering",
 							"source": {
 								"$ref": "AAAAAAFM0F+rPjitUQw="
 							},
