@@ -15,7 +15,7 @@ Login systemet bruger .NET's identity 2.0 framework til authorisering. Framework
 
 \figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
 
-Figur \ref{ref:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang en bruger benytter 'Login med Facebook' vil personen blive registreret i databasen. Brugeren kan derefter benytte sig af ''Account'' til at oprette et password og ændre username, så han en anden gang også kan login med den information i stedet for via facebook.
+Figur \ref{ref:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang en bruger benytter 'Login med Facebook' vil personen blive registreret i databasen. Brugeren kan derefter benytte sig af ''Account'' til at oprette et password, så han en anden gang også kan login med den information i stedet for via facebook. Dog bliver brugerens username i denne proces sat til at være facebook-kontoens email, og bør nok ændres til et unikt username.
 
 \textbf{Udfordringer:} 
 Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen Aarhus Universitet. 
