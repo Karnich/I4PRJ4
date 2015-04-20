@@ -14,13 +14,12 @@
 \textbf{Undtagelse \ref{ucCreateUserOptions}.a}
 
 \item \label{ucCreateUserAddUN} Bruger tilføjer brugernavn.
+\textbf{Undtagelse \ref{ucCreateUserAddUN}.a}
 
-\item \label{ucCreateUserExists} Brugernavn eksisterer allerede i databasen. \newline
-\textbf{Undtagelse \ref{ucCreateUserExists}.a}
+\item Bruger tilføjer fornavn og efternavn.
 
-\item Bruger tilføjer fornavn, mellemnavn og efternavn.
-
-\item Bruger tilføjer email.
+\item \label{ucCreateUserAddEmail} Bruger tilføjer email.
+\textbf{Undtagelse \ref{ucCreateUserAddEmail}.a}
 
 \item Bruger tilføjer password.
 
@@ -48,6 +47,14 @@
 	{Brugernavnet eksisterer allerede i databasen}
 	{Bruger notificeres at brugernavn eksisterer.\newline
 	Gå til UC4 punkt \ref{ucCreateUserAddUN}}
-	{\ref{ucCreateUserExists}.a}
+	{\ref{ucCreateUserAddUN}.a}
 	
+
+
+\ucextension
+	{Email eksisterer allerede i databasen}
+	{Bruger notificeres at email eksisterer.\newline
+	Gå til UC4 punkt \ref{ucCreateUserAddEmail}}
+	{\ref{ucCreateUserAddEmail}.a}
+		
 \ucfoot{ucCreateUser} % Indsæt navn på UC til referencer
