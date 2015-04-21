@@ -1,4 +1,4 @@
-\chapter{Login system}
+\section{Login system}
 
 I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kunne login med en email med tilhørende password, eller via facebook.
 
@@ -14,7 +14,7 @@ Login systemet bruger .NET's identity 2.0 framework til authorisering. Framework
 
 \figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
 
-Figur \ref{ref:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang facebook brugere bruger 'Login med Facebook' vil de blive registreret i databasen. De kan så benytte sig af "Account" til at oprette sig et password og ændre username, så de en anden gang også kan login med det information i stedet for via facebook.
+Figur \ref{fig:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang facebook brugere bruger 'Login med Facebook' vil de blive registreret i databasen. De kan så benytte sig af "Account" til at oprette sig et password og ændre username, så de en anden gang også kan login med det information i stedet for via facebook.
 
 \textbf{Udfordringer:} 
 Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen Aarhus Universitet. 
