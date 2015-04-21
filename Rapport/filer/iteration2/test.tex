@@ -1,2 +1,10 @@
 \section{Test}
 %Simpelt diagram fra Jenkins der viser udviklingen af antallet af tests. plus noget beskrivelse
+
+Efter iteration 2 er der kommet godt gang i Jenkins-serveren. Alle controllere har tilknyttet en række unit-tests for løbende at sikre at færdige funktioner ikke går i stykker når der tilføjes nye funktioner.
+På figur \ref{fig:iteration2:jenkins} er et udklip af de udførte tests for starten af projeketet og frem til slutningen af iteration 2.
+
+\figur{1}{iteration2/jenkins-tests}{Automatiskudførte tests på Jenkins-server for iteration 1 og 2}{fig:iteration2:jenkins}
+
+De skarpe dyk ved for eksempel build \#76 skyldes commits af kode som ikke kan buildes.
+Det kan også ses at en større ændring af eksisterende kode har resulteret i at omkring 20 tests ikke længere køres efter build \#76.
