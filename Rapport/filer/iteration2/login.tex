@@ -4,22 +4,23 @@ I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kun
 
 \figur{0.8}{iteration2/login_skitse}{Login GUI skitse}{fig:loginSkitse}
 
-Login knappen aktivere en dropdown menu hvori man indtaster email og password. Som skitsen viser var det tænkt, at man brugte username og password. Men da vi valgte at registrerer brugere som logger ind med facebook. Blev det til email og password, da facebook APIet sender brugerens email, som vi så bruger til at registrer brugeren med i databasen. Login knappen er også flyttet til indersiden af search boxen istedet for ydersiden. Scriptet til dropdown menuen er skrevet i Javascript. Login funktionerne bruger Ajax med tilhørende API controllers til at logge brugerne ind.
+Login knappen aktiverer en dropdown menu, hvori man indtaster email og password. Som skitsen viser var det tænkt, at man brugte username og password. Dog valgte vi at ændre identiteten fra username til email, på baggrund af facebook login. Facebook APIet sender brugerens email, som derefter bruges til at registrere brugeren med i databasen. Login knappen er også flyttet til indersiden af søgefeltet istedet for ydersiden. Scriptet til dropdown menuen er skrevet i JavaScript. Login funktionerne bruger Ajax med tilhørende API controllers til at logge brugeren ind.
 
 \figur{0.8}{iteration2/login_samlede}{Login GUI}{fig:loginSekvens}
-Figur \ref{fig:loginSekvens} illustrere hvordan login er blevet, hvor \ref{fig:loginSkitse} viser vores skitse. \\
 
-Login systemet bruger .NET's identity 2.0 framework til authorisering. Frameworket generere ligeledes nogle default database entitys som vi valgte at bruge i denne iteration for at spare tid. Når brugeren er autoriseret bliver der smidt en cookie hos clienten så han genkendes.
+Figur \ref{fig:loginSekvens} illustrerer hvordan login er blevet implementeret på siden, hvor \ref{fig:loginSkitse} viser det første udkast til designet. \\
+
+Login systemet bruger .NET's identity 2.0 framework til authorisering. Frameworket genererer ligeledes nogle default database-entities, som vi valgte at bruge i denne iteration for at spare tid. Når brugeren er autoriseret bliver der gemt en cookie hos clienten så den genkendes.
 
 
 \figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
 
-Figur \ref{fig:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang facebook brugere bruger 'Login med Facebook' vil de blive registreret i databasen. De kan så benytte sig af "Account" til at oprette sig et password og ændre username, så de en anden gang også kan login med det information i stedet for via facebook.
+Figur \ref{ref:loginDiagram} viser hvordan login sekvensen foregår bag facaden. Første gang en bruger benytter 'Login med Facebook' vil personen blive registreret i databasen. Brugeren kan derefter benytte sig af ''Account'' til at oprette et password, så han en anden gang også kan login med den information i stedet for via facebook. Dog bliver brugerens username i denne proces sat til at være facebook-kontoens email, og bør nok ændres til et unikt username.
 
 \textbf{Udfordringer:} 
 Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen Aarhus Universitet. 
 
 \begin{itemize}
-	\item Det første problem opstår da man forsøger at registrer den intere webservers URL på facebook. Da det jo er en intern IP adresse så vil facebook ikke godtage den. Dette problem står til at blive løst i en anden iteration. Muligvis med en Azure hosted webserver.
-	\item Det andet problem opstår ligeledes pga. den interne server. 10.29.10.30/QuizCreator er URL på vores hjemmeside når den er published. Ajax som kalder login controlleren tror at root er 10.29.10.30 istedet for at være 10.29.10.30/QuizCreator. Dette kan godt fixet, dog vil det kun virke på enten localhost eller den interne server. Her er løsningen igen en anden webserver.
+	\item Det første problem opstår da man forsøger at registrere den interne webservers URL på facebook. Da det jo er en intern IP adresse, vil facebook ikke godtage den. Dette problem står til at blive løst i en anden iteration. Muligvis med en Azure hosted webserver.
+	\item Det andet problem opstår ligeledes pga. den interne server. 10.29.10.30/QuizCreator er URL på vores hjemmeside når den er published. Ajax som kalder login controlleren tror at root er 10.29.10.30 istedet for at være 10.29.10.30/QuizCreator. Dette kan godt fixes, dog vil det kun virke på enten localhost eller den interne server. Her er løsningen igen en anden webserver.
 \end{itemize}
