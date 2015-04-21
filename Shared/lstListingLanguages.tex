@@ -1,0 +1,78 @@
+% ¤¤ SetColors ¤¤ %
+
+\definecolor{commentGreen}{RGB}{0, 100, 0}
+\definecolor{stringRed}{RGB}{163, 21, 21}
+\definecolor{keywordBlue}{RGB}{0, 0, 255}
+
+%% JavaScript
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{keywordBlue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{keywordBlue}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{commentGreen}\ttfamily,
+  stringstyle=\color{stringRed}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\newcommand{\lstsetjavascript}{
+	\lstset{
+	   language=JavaScript,
+	   extendedchars=true,
+	   basicstyle=\footnotesize\ttfamily,
+	   showstringspaces=false,
+	   showspaces=false,
+	   numbers=left,
+	   numberstyle=\footnotesize,
+	   numbersep=9pt,
+	   tabsize=2,
+	   breaklines=true,
+	   showtabs=false
+	}
+}
+%% End JavaScript
+
+%% C#
+\lstdefinelanguage{CSharp}{
+ morekeywords = {abstract,event,new,struct,as,explicit,%
+    null,switch,base,extern,object,this,bool,false,%
+    operator,throw,break,finally,out,true,byte,fixed,%
+    override,try,case,float,params,typeof,catch,for,%
+    private,uint,char,foreach,protected,ulong,checked,%
+    goto,public,unchecked,class,if,readonly,unsafe,%
+    const,implicit,ref,ushort,continue,in,return,using,%
+    decimal,int,sbyte,virtual,default,interface,sealed,%
+    volatile,delegate,internal,short,void,do,is,sizeof,%
+    while,double,lock,stackalloc,else,long,static,%
+    enum,namespace,string,partial},
+  morecomment = [l]{//},
+  morecomment = [l]{///},
+  morecomment = [s]{/*}{*/},
+  commentstyle=\color{commentGreen}\ttfamily,
+  stringstyle=\color{stringRed}\ttfamily,
+  morestring=[b]",
+  sensitive = true
+}
+
+\newcommand{\lstsetcsharp}{
+ \lstset{
+ 	   language=csharp,
+	   extendedchars=true,
+	   basicstyle=\footnotesize\ttfamily,
+	   showstringspaces=false,
+	   showspaces=false,
+	   numbers=left,
+	   numberstyle=\footnotesize,
+	   numbersep=9pt,
+	   tabsize=2,
+	   breaklines=true,
+	   showtabs=false
+ }
+}
+%% End C#
