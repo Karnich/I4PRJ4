@@ -1,5 +1,5 @@
 \section{Config og Create Quiz}
-Før vi gik i gang med at implementere use casen ''Config Quiz'' og ''Create Quiz'', havde vi gjort det klar hvordan den grafiske brugergræsneflade skulle se ud for de to. Opbygning skulle nemlig være identisk for de to, da de begge behandler en quiz. På figur \ref{fig:CreateQuizSkitse} ses en skitse for hvordan vi ville have GUI til at se ud, og på figur \ref{fig:CreateQuizEndeligt} ses den grafiske brugerflade for Create Quiz. Det ses at i den nuværende iteration ikke er blevet tilføjet mulighed for at bladre gennem spørgsmålene, men blot får dem listet ud efter hindanden.
+Før vi gik i gang med at implementere use casen ''Config Quiz'' og ''Create Quiz'', havde vi gjort det klart hvordan den grafiske brugergræsneflade skulle se ud for de to. Opbygning skulle nemlig være identisk for de to, da de begge behandler en quiz. På figur \ref{fig:CreateQuizSkitse} ses en skitse for hvordan vi ville have GUI til at se ud, og på figur \ref{fig:CreateQuizEndeligt} ses den grafiske brugerflade for Create Quiz. Det ses at i den nuværende iteration ikke er blevet tilføjet mulighed for at bladre gennem spørgsmålene, men blot får dem listet ud efter hindanden.
 
 \begin{minipage}{0.45\textwidth}
 \figur{0.9}{iteration2/CreateQuizSkitse.PNG}{Create og Config Quiz skitse}{fig:CreateQuizSkitse}
@@ -12,39 +12,5 @@ Før vi gik i gang med at implementere use casen ''Config Quiz'' og ''Create Qui
 
 Vi havde brug for at udvide funktionaliteten sådan at en bruger dynamisk kunne tilføje flere spørgsmål og svarmuligheder.
 
-For at gøre dette dynamisk anvendes en AJAX løsning, hvor nye inputfelter kan oprettes i browseren uden siden skal genindlæses.
-Selve AJAX delen er et simpelt javascript som tilgår en metode i en controller som returnerer den nødvendige HTML-kode til at redigere et spørgsmål eller svar. Denne returnerede HTML-kode indsættes efter de eksisterende svar eller spørgsmål.
-
-For at udnytte ASP.NETs evne til at arbejde på modeller redigeres navenene på alle inputfelterne så de svare til de navne der ville være hvis objekterne var oprettet i \verb+C#+.
-For eksempel, hvis en quiz har ét spørgsmål og der tilføjes et nyt, får det nye input-feltet til teksten navnet \verb+Questions[1].Text+.
-På denne måde kan den samlede håndtering af form-inputtet bruge ét argument som en \verb+Quiz+, i stedet for at skulle tage alle parametre ind én af gangen. Et udklip af koden er vist i listing \ref{lst:QuizzesJavascript}.
-
-På linje 2-5 er AJAX-kaldet. Hvis dette går godt udføres funktionen i linje 5. Her tilføjes HTML-koden fra controlleren en \verb+div+-container. Model-binding navnet konstrueres og tilføjes alle nye \verb+input+-tags. Til sidst returneres false, for at undgå at formens almindelige submit-action udføres.
-
-\lstsetjavascript
-\begin{lstlisting}[caption=JavaScript udklip til AJAX og model-binding håndtering ved indsættelse af nye spørgsmål, label=lst:QuizzesJavascript]
-$(document).on("click", "#addQuizQuestion", function() {
-    $.ajax({
-        url: this.href,
-        cache: false,
-        success: function(html) {
-            // Append new question form
-            $("#ConfigQuizzesQuestionsContainer").append(html);
-
-            /* Removed code for simplicity */
-			
-            // Create prepend string to fix object binding
-            var prePend = "Questions[" + (newCounter - 1) + "].";
-
-            // Get all input elements and prepend input names
-            $(".ConfigQuizzesQuestion:last input").each(function() {
-                var original = $(this).attr("name");
-                $(this).attr("name", prePend + original);
-            });
-            
-            /* Removed code for simplicity */
-        }
-    });
-    return false;
-});
-\end{lstlisting}
+For at gøre dette dynamisk anvendes en \verb+AJAX+ løsning, hvor nye inputfelter kan oprettes i browseren uden siden skal genindlæses.
+Selve \verb+AJAX+ delen er et simpelt javascript som tilgår en metode i en controller som returnerer den nødvendige \verb+HTML+-kode til at redigere et spørgsmål eller svar. Denne returnerede \verb+HTML+-kode indsættes efter de eksisterende svar eller spørgsmål. \verb+ASP.NET+ tilbyder en funktionalitet kaldet model binding, hvilket betyder at navnene på inputfelter indikerer deres relation til et objekt i controlleren. Dette gør det nemt at tilføje spørgsmål mv. og stadig kun have et arguement til controlleren.
