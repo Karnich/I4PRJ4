@@ -1,0 +1,30 @@
+% Tabel header
+
+\uchead
+	{9}
+	{Create Group}
+	{Bruger vil oprette en Group.}
+	{Bruger trykker på ''Create Group'' på brugergrænsefladen.}
+	{Bruger, Databaseserver og Webserver.}
+	{UC6}
+	{1 pr. session.}
+	{Bruger har oprettet en Group.}
+
+\item Webserveren præsenterer de forskellige konfigurationsmuligheder, som Bruger har til rådighed ved ''Create Group''.
+
+\item \label{ucCreateGroupName} Bruger indtaster navn på gruppen, og dette tilføjes automatisk som et søgbart tag til gruppen.
+
+\item Bruger indtaster søgbare tags Ved mere end 1 tag separares de med komma.
+
+\item Bruger trykker på Create knappen.
+
+\item Webserveren præsentere den nye gruppe.
+
+\ucdescriptionend
+
+\ucextension
+	{Det indtastede gruppe navn er allerede taget, indtast et andet.}
+	{Gå til UC9 punkt \ref{ucCreateGroupName}}
+	{\ref{ucCreateGroupName}.a}
+		
+\ucfoot{CreateGroup}

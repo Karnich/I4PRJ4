@@ -1,0 +1,38 @@
+% Tabel header
+
+\uchead
+	{11}
+	{Config Favorites}
+	{Bruger vil fjerne favoritter}
+	{Bruger trykker på ''Favorites'' på brugergrænsefladen}
+	{Bruger, Databaseserver og Webserver.}
+	{}
+	{1 pr. session.}
+	{Bruger har fjernet de ønskede favoritter}
+
+\item \label{ucConfigFavoritesNone} Webserveren præsenterer de  quizzer, som Bruger har markeret som favorit.
+\textbf{Undtagelse \ref{ucConfigFavoritesNone}.a}
+
+\item Bruger trykker på ''Remove favorite'' ikonet ved den quiz, der ønskes fjernet.
+
+\item \label{ucConfigFavoritesGrp}Bruger trykker på ''Groups'' for at se de grupper som er markeret som favorit.
+\textbf{Undtagelse \ref{ucConfigFavoritesGrp}.a}
+
+\item Bruger trykker på ''Remove favorite'' ikonet ved den gruppe, der ønskes fjernet.
+
+\item Brugeren er færdig med at fjerne favoritter og use casen afsluttes
+
+\ucdescriptionend
+
+\ucextension
+	{Bruger har ikke tilføjet nogle quizzer til favoritter.}
+	{Gå til UC11 punkt \ref{ucConfigFavoritesGrp}}
+	{\ref{ucConfigFavoritesNone}.a}
+		
+\ucextension
+			{Bruger har ikke tilføjet nogen grupper til favoritter.}
+	{Use casen afsluttes}
+	{\ref{ucConfigFavoritesGrp}.a}
+	
+		
+\ucfoot{CreateQuiz}

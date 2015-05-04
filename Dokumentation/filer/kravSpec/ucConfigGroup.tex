@@ -1,0 +1,34 @@
+\uchead
+	{5} % UC-nummer
+	{Config Group} % UC-navn
+	{Bruger kan slette og tilføje quizzer i gruppen, samt se en liste af medlemmer i gruppen} % Mål
+	{Bruger har trykket på Config Group} % Initialisering
+	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
+	{} % Referencer
+	{} % Antal samtidige hændelser
+	{Bruger har ændret eller slettet de ønskede quizzer} % Efterfølgende tilstand
+
+% Tilføj items her. De placeres i hovedforløbet.
+% Referencer til punkter laves med \item\label{ucNAVNSomeItem}
+
+\item Bruger vælger at konfigurere sine grupper.
+
+\item Bruger bliver præsenteret for sine grupper.
+
+\item\label{ucConfigGroupEditGroup} Bruger vælger den ønskede gruppe og for vist gruppens medlemmer, samt gruppens quizzer. \textbf{Undtagelse \ref{ucConfigGroupEditGroup}}
+
+\item Bruger kan vælge at slette eller tilføje quizzer til gruppen.
+
+\item Bruger gemmer sine ønskede ændringer.
+
+\item Ændringerne gemmes på databasen.
+
+
+\ucdescriptionend % Slut på Hovedforløb
+
+\ucextension
+	{Bruger navigerer væk fra konfigurationssiden.}
+	{UC afsluttes.}
+	{\ref{ucConfigGroupEditGroup}.a}
+
+\ucfoot{ucConfigGroup} % Indsæt navn på UC til referencer
