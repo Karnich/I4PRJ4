@@ -1,6 +1,6 @@
 \uchead
 	{2}
-	{Find Quiz}
+	{Search}
 	{Bruger vil finde en ønsket Quiz.}
 	{Bruger aktiverer søgefeltet på brugergrænsefladen.}
 	{Bruger, Databaseserver, Webserver.}
@@ -8,15 +8,14 @@
 	{1 pr. session.}
 	{Bruger har markeret den ønskede Quiz.}
 
-\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, som den ønskede Quiz har tilknyttet, og trykker på SØG knappen på brugergrænsefladen. 
+\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, som den ønskede quiz og groups er tilknyttet. 
 \textbf{Undtagelse \ref{ucFindQuizSearch}.a}
+\item Bruger trykker på SØG knappen på brugergrænsefladen.
+\item Websereveren søger efter quizzes og groups der matcher søgeargumenterne på databaseserveren.
 
-\item Websereveren søger efter quizzer der matcher søgeargumenterne på databaseserveren.
-
-\item \label{ucFindQuizNoResults} Webserveren præsenterer en række quizzer, som har tilknyttet de tags Bruger indtastede.
+\item \label{ucFindQuizNoResults} Webserveren præsenterer en række quizzer, som er tilknyttet de tags Bruger indtastede.
 \textbf{Undtagelse \ref{ucFindQuizNoResults}.a}
 
-\item Bruger markerer den ønskede quiz.
 
 \ucdescriptionend
 
