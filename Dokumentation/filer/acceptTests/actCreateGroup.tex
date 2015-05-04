@@ -1,45 +1,20 @@
-\achead{UC1}{Create Quiz}
+\achead{UC9}{Create Group}
 
 % Testpunkter
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
-\acentry{1}{\begin{enumerate}
-			\item Udfør alle interne tests i \textbf{Test 0: Generel InputTest} Generel InputTest udføres på de følgende tekstbokse:
-				\subitem Quizname
-				\subitem Tags
-				\subitem Question 1
-				\subitem Answer 1
-				\subitem Answer 2
-			\end{enumerate}		   	
-		   	}
-		   	{ Alle interne tests i Test 0 er gennemført og godkendt }{ - }{ - }
-
-
-\acentry{2}{ \begin{enumerate}
+\acentry{1}{ \begin{enumerate}
+			\item Udfør accepttesten UC6: Login
+			\item Udfør accepttesten UC1: Create Quiz
+			\item Bruger klikker på ''Group'' knappen. 
+			\item Brugeren klikker på ''Create new group''.
 			\item Indtast følgende værdier:
-			\subitem Quizname: \textbf{TestQuiz}.
-			\subitem Tags: \textbf{tag1}, \textbf{tag2}
-			\subitem Question 1: \textbf{Spørgsmål 1}
-			\subitem Answer 1: \textbf{Rigtigt svar} med check i boxen ''Correct answer'' og angiver points til 10.
-			\subitem Answer 2: \textbf{Forkert svar} uden check i boxen ''Correct answer'' og angiver points til 0.
-			\item Der trykkes på ''Create Quiz''.
+			\subitem Group Name: \textbf{TestGroupNavn1}
+			\subitem Tags: \textbf{tag1, tag2}
+			\item Ud for TestQuiz sættes der et flueben for at tilføje quizzen til gruppen.
+			\item Der trykkes på ''Create''.
 			\end{enumerate}
 			}
-			{Quiz med 1 spørgsmål indeholdende 2 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren.}{ - }{ - }
-
-\acentry{3}{ \begin{enumerate}
-			\item Indtast følgende værdier:
-			\subitem Quizname: \textbf{TestQuiz2}.
-			\subitem Tags: \textbf{tag2}, \textbf{tag3}
-			\subitem Question 1: \textbf{Spørgsmål 1}
-			\subitem Answer 1: \textbf{Rigtigt svar} med check i boxen ''Correct answer'' og angiver points til 10.
-			\subitem Answer 2: \textbf{Forkert svar} uden check i boxen ''Correct answer'' og angiver points til -5.
-			\item Der trykkes på ''Add Answer'', og følgende værdier indtastes:
-			\subitem Answer 3: \textbf{Semirigtigt svar} med check i boxen ''Correct answer'' og angiver points til 5.
-			\item Der trykkes på ''Gennemse...'' og en billedfil med navnet \textbf{billede.jpg} vælges.
-			\item Der trykkes på ''Create Quiz''.
-			\end{enumerate}
-			}
-			{Quiz med 1 spørgsmål indeholdende 3 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren samt stien til billedfilen. Billedfilen er uploadet til webserveren}{ - }{ - }
+			{Gruppen oprettet i databasen på database serveren.}{ - }{ - }
 
 \acfoot{createQuiz}
