@@ -1,0 +1,246 @@
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller}{}\section{Website.\+Controllers.\+Config\+Quizzes\+Controller Class Reference}
+\label{class_website_1_1_controllers_1_1_config_quizzes_controller}\index{Website.\+Controllers.\+Config\+Quizzes\+Controller@{Website.\+Controllers.\+Config\+Quizzes\+Controller}}
+
+
+Controller with responsibility for configurating existing quizzes  
+
+
+Inheritance diagram for Website.\+Controllers.\+Config\+Quizzes\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_website_1_1_controllers_1_1_config_quizzes_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a4c887ae9d12800436a571a58218a2e39}{Config\+Quizzes\+Controller} (\hyperlink{interface_website_1_1_controllers_1_1_i_quiz_model}{I\+Quiz\+Model} model=null)
+\begin{DoxyCompactList}\small\item\em Default constructor initializing local quizmodel \end{DoxyCompactList}\item 
+\hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a17d716c7fd5697f47c6b3c23a523797d}{Config\+Quizzes\+Controller} ()
+\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all quizzes created by the user logged in \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a69b93d9f1d3e5848b9d47e29e9958d5d}{Config\+Quiz} (int?\hyperlink{_facebook_8js_a9b3d01084d4285e8b0289ee3f959999b}{id})
+\begin{DoxyCompactList}\small\item\em Retrives quiz by I\+D from quiz model \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a587a4c1857e43211cad38f2b1ec59b9a}{Update\+Quiz} (\hyperlink{class_website_1_1_models_1_1_quiz}{Quiz} quiz)
+\begin{DoxyCompactList}\small\item\em Saves quiz in quiz model \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_af954aa7794ca62bd640354718700e466}{Confirm\+Delete\+Quiz} (int?\hyperlink{_facebook_8js_a9b3d01084d4285e8b0289ee3f959999b}{id})
+\begin{DoxyCompactList}\small\item\em Validate user login. Get quiz from quiz model and present Confirm\+Delete\+Quiz View \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a132629fe9e314e58b890f91bacbd30b2}{Delete\+Quiz} (int?\hyperlink{_facebook_8js_a9b3d01084d4285e8b0289ee3f959999b}{id})
+\begin{DoxyCompactList}\small\item\em Delete quiz if user is logged in \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_aabac3f775fc586b7d5c17cdcf5bada80}{Cancel\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Cancel deletion and redirect to \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index()} \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_aed0383db971c7c54a587cbdfaff1dcb1}{Blank\+Question\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Creates new question with two answers and editor for this \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a4f998720f2064ac7449a5a1fc4dd790b}{Blank\+Answer\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Creates new answer and editor for this \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller with responsibility for configurating existing quizzes 
+
+
+
+Definition at line 12 of file Config\+Quizzes\+Controller.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a4c887ae9d12800436a571a58218a2e39}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Config\+Quizzes\+Controller@{Config\+Quizzes\+Controller}}
+\index{Config\+Quizzes\+Controller@{Config\+Quizzes\+Controller}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Config\+Quizzes\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Config\+Quizzes\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Quiz\+Model}}]{model = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a4c887ae9d12800436a571a58218a2e39}
+
+
+Default constructor initializing local quizmodel 
+
+
+
+Definition at line 20 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a17d716c7fd5697f47c6b3c23a523797d}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Config\+Quizzes\+Controller@{Config\+Quizzes\+Controller}}
+\index{Config\+Quizzes\+Controller@{Config\+Quizzes\+Controller}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Config\+Quizzes\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Config\+Quizzes\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a17d716c7fd5697f47c6b3c23a523797d}
+
+
+Definition at line 25 of file Config\+Quizzes\+Controller.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a4f998720f2064ac7449a5a1fc4dd790b}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Blank\+Answer\+Editor@{Blank\+Answer\+Editor}}
+\index{Blank\+Answer\+Editor@{Blank\+Answer\+Editor}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Blank\+Answer\+Editor}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Blank\+Answer\+Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a4f998720f2064ac7449a5a1fc4dd790b}
+
+
+Creates new answer and editor for this 
+
+\begin{DoxyReturn}{Returns}
+Partial view with Answer editor
+\end{DoxyReturn}
+
+
+Definition at line 155 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_aed0383db971c7c54a587cbdfaff1dcb1}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Blank\+Question\+Editor@{Blank\+Question\+Editor}}
+\index{Blank\+Question\+Editor@{Blank\+Question\+Editor}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Blank\+Question\+Editor}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Blank\+Question\+Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_aed0383db971c7c54a587cbdfaff1dcb1}
+
+
+Creates new question with two answers and editor for this 
+
+\begin{DoxyReturn}{Returns}
+Partial view with Questions editor
+\end{DoxyReturn}
+
+
+Definition at line 138 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_aabac3f775fc586b7d5c17cdcf5bada80}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Cancel\+Deletion@{Cancel\+Deletion}}
+\index{Cancel\+Deletion@{Cancel\+Deletion}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Cancel\+Deletion}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Cancel\+Deletion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_aabac3f775fc586b7d5c17cdcf5bada80}
+
+
+Cancel deletion and redirect to \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index()} 
+
+\begin{DoxyReturn}{Returns}
+Redirect to \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index()}
+\end{DoxyReturn}
+
+
+Definition at line 129 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a69b93d9f1d3e5848b9d47e29e9958d5d}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Config\+Quiz@{Config\+Quiz}}
+\index{Config\+Quiz@{Config\+Quiz}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Config\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Config\+Quiz (
+\begin{DoxyParamCaption}
+\item[{int?}]{id}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a69b93d9f1d3e5848b9d47e29e9958d5d}
+
+
+Retrives quiz by I\+D from quiz model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Quiz I\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Editor view for the quiz. Redirects to \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index()} if id is null or non-\/positive
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_af954aa7794ca62bd640354718700e466}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Confirm\+Delete\+Quiz@{Confirm\+Delete\+Quiz}}
+\index{Confirm\+Delete\+Quiz@{Confirm\+Delete\+Quiz}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Confirm\+Delete\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Confirm\+Delete\+Quiz (
+\begin{DoxyParamCaption}
+\item[{int?}]{id}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_af954aa7794ca62bd640354718700e466}
+
+
+Validate user login. Get quiz from quiz model and present Confirm\+Delete\+Quiz View 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Quid\+Id for quiz to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Confirm\+Delete\+Quiz view
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a132629fe9e314e58b890f91bacbd30b2}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Delete\+Quiz@{Delete\+Quiz}}
+\index{Delete\+Quiz@{Delete\+Quiz}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Delete\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Delete\+Quiz (
+\begin{DoxyParamCaption}
+\item[{int?}]{id}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a132629fe9e314e58b890f91bacbd30b2}
+
+
+Delete quiz if user is logged in 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Quiz\+Id for quiz to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect to \hyperlink{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{Index()}
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Index@{Index}}
+\index{Index@{Index}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Index}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a6abb226f2d23960edce40ca08d9df013}
+
+
+Retrieves all quizzes created by the user logged in 
+
+\begin{DoxyReturn}{Returns}
+List of all quizzes
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Config\+Quizzes\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_config_quizzes_controller_a587a4c1857e43211cad38f2b1ec59b9a}{}\index{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}!Update\+Quiz@{Update\+Quiz}}
+\index{Update\+Quiz@{Update\+Quiz}!Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller@{Website\+::\+Controllers\+::\+Config\+Quizzes\+Controller}}
+\subsubsection[{Update\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Config\+Quizzes\+Controller.\+Update\+Quiz (
+\begin{DoxyParamCaption}
+\item[{{\bf Quiz}}]{quiz}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_config_quizzes_controller_a587a4c1857e43211cad38f2b1ec59b9a}
+
+
+Saves quiz in quiz model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quiz} & Updated quiz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to Index
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Config\+Quizzes\+Controller.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Controllers/\hyperlink{_config_quizzes_controller_8cs}{Config\+Quizzes\+Controller.\+cs}\end{DoxyCompactItemize}

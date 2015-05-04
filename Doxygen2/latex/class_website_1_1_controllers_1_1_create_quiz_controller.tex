@@ -1,0 +1,156 @@
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller}{}\section{Website.\+Controllers.\+Create\+Quiz\+Controller Class Reference}
+\label{class_website_1_1_controllers_1_1_create_quiz_controller}\index{Website.\+Controllers.\+Create\+Quiz\+Controller@{Website.\+Controllers.\+Create\+Quiz\+Controller}}
+
+
+Controller for the Create Quiz U\+C. Handling creation of a new quiz in the system.  
+
+
+Inheritance diagram for Website.\+Controllers.\+Create\+Quiz\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_website_1_1_controllers_1_1_create_quiz_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_ab90700b03df495b8feac4007988ef32f}{Create\+Quiz\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Creates new instance of object implementing the \hyperlink{interface_website_1_1_controllers_1_1_i_quiz_model}{I\+Quiz\+Model} interface \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_a068c6ffe4fbe169bf721c7eb6103b84d}{Index} ()
+\begin{DoxyCompactList}\small\item\em Controller intry method. Returns the Create\+Quiz view. \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_afa6a0dd88532f1590d1514889d81538e}{Save\+Quiz} (\hyperlink{class_website_1_1_models_1_1_quiz}{Quiz} quiz)
+\begin{DoxyCompactList}\small\item\em Validate inputs and save quiz in model. Return Home/\+Index view \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_a53fc25a2a1f5ab3b7b0e37d14191c3d8}{Discard\+Quiz} ()
+\begin{DoxyCompactList}\small\item\em Return Index view \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_a566fb35bcd9cd4ed56000b91e67229fc}{Blank\+Question\+Editor} ()
+\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_a8ee63fb5f50a07be75c1208e01eb095c}{Blank\+Answer\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Creates new answer and editor for this \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_website_1_1_controllers_1_1_i_quiz_model}{I\+Quiz\+Model} \hyperlink{class_website_1_1_controllers_1_1_create_quiz_controller_a34ae622cc632c2c3fc6ca3ed7d811f40}{i\+Quiz\+Model}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to model with methods for creation og quizzes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller for the Create Quiz U\+C. Handling creation of a new quiz in the system. 
+
+
+
+Definition at line 14 of file Create\+Quiz\+Controller.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_ab90700b03df495b8feac4007988ef32f}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Create\+Quiz\+Controller@{Create\+Quiz\+Controller}}
+\index{Create\+Quiz\+Controller@{Create\+Quiz\+Controller}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Create\+Quiz\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}Website.\+Controllers.\+Create\+Quiz\+Controller.\+Create\+Quiz\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_ab90700b03df495b8feac4007988ef32f}
+
+
+Creates new instance of object implementing the \hyperlink{interface_website_1_1_controllers_1_1_i_quiz_model}{I\+Quiz\+Model} interface 
+
+
+
+Definition at line 24 of file Create\+Quiz\+Controller.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_a8ee63fb5f50a07be75c1208e01eb095c}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Blank\+Answer\+Editor@{Blank\+Answer\+Editor}}
+\index{Blank\+Answer\+Editor@{Blank\+Answer\+Editor}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Blank\+Answer\+Editor}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Create\+Quiz\+Controller.\+Blank\+Answer\+Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_a8ee63fb5f50a07be75c1208e01eb095c}
+
+
+Creates new answer and editor for this 
+
+\begin{DoxyReturn}{Returns}
+Partial view with Answer editor
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Create\+Quiz\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_a566fb35bcd9cd4ed56000b91e67229fc}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Blank\+Question\+Editor@{Blank\+Question\+Editor}}
+\index{Blank\+Question\+Editor@{Blank\+Question\+Editor}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Blank\+Question\+Editor}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Create\+Quiz\+Controller.\+Blank\+Question\+Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_a566fb35bcd9cd4ed56000b91e67229fc}
+
+
+Definition at line 87 of file Create\+Quiz\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_a53fc25a2a1f5ab3b7b0e37d14191c3d8}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Discard\+Quiz@{Discard\+Quiz}}
+\index{Discard\+Quiz@{Discard\+Quiz}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Discard\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Create\+Quiz\+Controller.\+Discard\+Quiz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_a53fc25a2a1f5ab3b7b0e37d14191c3d8}
+
+
+Return Index view 
+
+
+
+Definition at line 82 of file Create\+Quiz\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_a068c6ffe4fbe169bf721c7eb6103b84d}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Index@{Index}}
+\index{Index@{Index}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Index}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Create\+Quiz\+Controller.\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_a068c6ffe4fbe169bf721c7eb6103b84d}
+
+
+Controller intry method. Returns the Create\+Quiz view. 
+
+
+
+Definition at line 32 of file Create\+Quiz\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_afa6a0dd88532f1590d1514889d81538e}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!Save\+Quiz@{Save\+Quiz}}
+\index{Save\+Quiz@{Save\+Quiz}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{Save\+Quiz}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Create\+Quiz\+Controller.\+Save\+Quiz (
+\begin{DoxyParamCaption}
+\item[{{\bf Quiz}}]{quiz}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_create_quiz_controller_afa6a0dd88532f1590d1514889d81538e}
+
+
+Validate inputs and save quiz in model. Return Home/\+Index view 
+
+
+
+Definition at line 55 of file Create\+Quiz\+Controller.\+cs.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_create_quiz_controller_a34ae622cc632c2c3fc6ca3ed7d811f40}{}\index{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}!i\+Quiz\+Model@{i\+Quiz\+Model}}
+\index{i\+Quiz\+Model@{i\+Quiz\+Model}!Website\+::\+Controllers\+::\+Create\+Quiz\+Controller@{Website\+::\+Controllers\+::\+Create\+Quiz\+Controller}}
+\subsubsection[{i\+Quiz\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Quiz\+Model} Website.\+Controllers.\+Create\+Quiz\+Controller.\+i\+Quiz\+Model\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_website_1_1_controllers_1_1_create_quiz_controller_a34ae622cc632c2c3fc6ca3ed7d811f40}
+
+
+Interface to model with methods for creation og quizzes 
+
+
+
+Definition at line 19 of file Create\+Quiz\+Controller.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Controllers/\hyperlink{_create_quiz_controller_8cs}{Create\+Quiz\+Controller.\+cs}\end{DoxyCompactItemize}

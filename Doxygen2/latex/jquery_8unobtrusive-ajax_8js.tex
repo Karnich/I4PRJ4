@@ -1,0 +1,128 @@
+\hypertarget{jquery_8unobtrusive-ajax_8js}{}\section{C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Scripts/jquery.unobtrusive-\/ajax.js File Reference}
+\label{jquery_8unobtrusive-ajax_8js}\index{C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Scripts/jquery.\+unobtrusive-\/ajax.\+js@{C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Scripts/jquery.\+unobtrusive-\/ajax.\+js}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_a9c333dd3d8164cd24b4edbdd6576b806}{get\+Function} (code, arg\+Names)
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_ad0410b7b7ae61020ff51f7020ce1ce72}{is\+Method\+Proxy\+Safe} (method)
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_aa22cb291924253c2dbf908a3dc122653}{async\+On\+Before\+Send} (\hyperlink{_scripts_2jquery-1_810_82_8js_a0b7a5cb538ca9913b1b3b1c807ad06f0}{xhr}, method)
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_a236640e7112fe405e13b25712bb846a9}{async\+On\+Success} (element, \hyperlink{jquery_8unobtrusive-ajax_8min_8js_a8f172ae31c11770303ca0c4cb48ceb3a}{data}, content\+Type)
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_a82924e12632a0ef54c587ad18b96be1a}{async\+Request} (element, options)
+\item 
+function \hyperlink{jquery_8unobtrusive-ajax_8js_adf8db01fbef50de60d1968bb75c8181c}{validate} (\hyperlink{login_8js_acfb5ebf8920e47b6c6d297e6ca2a6ce0}{form})
+\item 
+\hyperlink{_facebook_8js_aa14f8e0338cced6720590fd2ea13bd4b}{document} \hyperlink{jquery_8unobtrusive-ajax_8js_a84fbab1d4fe452dbe44c7b5a4cdcd968}{on} (\char`\"{}click\char`\"{},\char`\"{}\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a9cf3d65797f4cbe9deaab01492290370}{a}\mbox{[}\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a8f172ae31c11770303ca0c4cb48ceb3a}{data}-\/\hyperlink{_scripts_2jquery_8validate_8js_a77004c0fdc08a5bc07afa0b099cdf6df}{ajax}=true\mbox{]}\char`\"{}, function(evt)\{\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a03e5bb88845031b7f017b0a5f0921d5b}{evt.\+prevent\+Default}();\hyperlink{jquery_8unobtrusive-ajax_8js_a82924e12632a0ef54c587ad18b96be1a}{async\+Request}(this,\{url\+:this.\+href, type\+:\char`\"{}G\+E\+T\char`\"{}, data\+:\mbox{[}$\,$\mbox{]}\});\})
+\item 
+\hyperlink{_facebook_8js_aa14f8e0338cced6720590fd2ea13bd4b}{document} \hyperlink{jquery_8unobtrusive-ajax_8js_a648b859bde60b7a95b18a751706aca83}{on} (\char`\"{}click\char`\"{},\char`\"{}\hyperlink{login_8js_acfb5ebf8920e47b6c6d297e6ca2a6ce0}{form}\mbox{[}\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a8f172ae31c11770303ca0c4cb48ceb3a}{data}-\/\hyperlink{_scripts_2jquery_8validate_8js_a77004c0fdc08a5bc07afa0b099cdf6df}{ajax}=true\mbox{]} \hyperlink{jquery_8unobtrusive-ajax_8min_8js_a22211e450825dd03852dfba097324407}{input}\mbox{[}type=image\mbox{]}\char`\"{}, function(evt)\{var name=evt.\+target.\+name, target=\$(evt.\+target), \hyperlink{login_8js_acfb5ebf8920e47b6c6d297e6ca2a6ce0}{form}=\$(target.\+parents(\char`\"{}form\char`\"{})\mbox{[}0\mbox{]}), offset=\hyperlink{_scripts_2jquery-1_810_82_8js_a4a9f594d20d927164551fc7fa4751a2f}{target.\+offset}();\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a8f172ae31c11770303ca0c4cb48ceb3a}{form.\+data}(data\+\_\+click, \mbox{[}\{name\+:name+\char`\"{}.x\char`\"{}, value\+:\+Math.\+round(evt.\+page\+X-\/offset.\+left)\},\{name\+:name+\char`\"{}.y\char`\"{}, value\+:\+Math.\+round(evt.\+page\+Y-\/offset.\+top)\}\mbox{]});\hyperlink{jquery_8unobtrusive-ajax_8min_8js_a01ac814366dcc0620423b5d8bb0d97b7}{set\+Timeout}(function()\{form.\+remove\+Data(data\+\_\+click);\}, 0);\})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jquery_8unobtrusive-ajax_8js_a2b1d6f9c448e3ce72f4e1865d6e38d2c}{j\+Query}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{jquery_8unobtrusive-ajax_8js_aa22cb291924253c2dbf908a3dc122653}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!async\+On\+Before\+Send@{async\+On\+Before\+Send}}
+\index{async\+On\+Before\+Send@{async\+On\+Before\+Send}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{async\+On\+Before\+Send}]{\setlength{\rightskip}{0pt plus 5cm}function async\+On\+Before\+Send (
+\begin{DoxyParamCaption}
+\item[{}]{xhr, }
+\item[{}]{method}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_aa22cb291924253c2dbf908a3dc122653}
+
+
+Definition at line 44 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+\hypertarget{jquery_8unobtrusive-ajax_8js_a236640e7112fe405e13b25712bb846a9}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!async\+On\+Success@{async\+On\+Success}}
+\index{async\+On\+Success@{async\+On\+Success}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{async\+On\+Success}]{\setlength{\rightskip}{0pt plus 5cm}function async\+On\+Success (
+\begin{DoxyParamCaption}
+\item[{}]{element, }
+\item[{}]{data, }
+\item[{}]{content\+Type}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_a236640e7112fe405e13b25712bb846a9}
+
+
+Definition at line 50 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+\hypertarget{jquery_8unobtrusive-ajax_8js_a82924e12632a0ef54c587ad18b96be1a}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!async\+Request@{async\+Request}}
+\index{async\+Request@{async\+Request}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{async\+Request}]{\setlength{\rightskip}{0pt plus 5cm}function async\+Request (
+\begin{DoxyParamCaption}
+\item[{}]{element, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_a82924e12632a0ef54c587ad18b96be1a}
+
+
+Definition at line 83 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+\hypertarget{jquery_8unobtrusive-ajax_8js_a9c333dd3d8164cd24b4edbdd6576b806}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!get\+Function@{get\+Function}}
+\index{get\+Function@{get\+Function}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{get\+Function}]{\setlength{\rightskip}{0pt plus 5cm}function get\+Function (
+\begin{DoxyParamCaption}
+\item[{}]{code, }
+\item[{}]{arg\+Names}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_a9c333dd3d8164cd24b4edbdd6576b806}
+Unobtrusive Ajax support library for j\+Query Copyright (C) Microsoft Corporation. All rights reserved. 
+
+Definition at line 28 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+\hypertarget{jquery_8unobtrusive-ajax_8js_ad0410b7b7ae61020ff51f7020ce1ce72}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!is\+Method\+Proxy\+Safe@{is\+Method\+Proxy\+Safe}}
+\index{is\+Method\+Proxy\+Safe@{is\+Method\+Proxy\+Safe}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{is\+Method\+Proxy\+Safe}]{\setlength{\rightskip}{0pt plus 5cm}function is\+Method\+Proxy\+Safe (
+\begin{DoxyParamCaption}
+\item[{}]{method}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_ad0410b7b7ae61020ff51f7020ce1ce72}
+
+
+Definition at line 40 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+\hypertarget{jquery_8unobtrusive-ajax_8js_a84fbab1d4fe452dbe44c7b5a4cdcd968}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!on@{on}}
+\index{on@{on}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}{\bf document} on (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}click\char`\"{}}]{, }
+\item[{\char`\"{}a\char`\"{}}]{\mbox{[}data-\/ajax=true\mbox{]}, }
+\item[{function(evt)\{{\bf evt.\+prevent\+Default}();{\bf async\+Request}(this,\{url\+:this.\+href, type\+:\char`\"{}G\+E\+T\char`\"{}, data\+:\mbox{[}$\,$\mbox{]}\});\}}]{}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_a84fbab1d4fe452dbe44c7b5a4cdcd968}
+\hypertarget{jquery_8unobtrusive-ajax_8js_a648b859bde60b7a95b18a751706aca83}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!on@{on}}
+\index{on@{on}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}{\bf document} on (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}click\char`\"{}}]{, }
+\item[{\char`\"{}form {\bf input}\char`\"{}}]{\mbox{[}data-\/ajax=true\mbox{]}\mbox{[}type=image\mbox{]}, }
+\item[{function(evt)\{var name=evt.\+target.\+name, target=\$(evt.\+target), {\bf form}=\$(target.\+parents(\char`\"{}form\char`\"{})\mbox{[}0\mbox{]}), offset={\bf target.\+offset}();{\bf form.\+data}(data\+\_\+click, \mbox{[}\{name\+:name+\char`\"{}.x\char`\"{}, value\+:\+Math.\+round(evt.\+page\+X-\/offset.\+left)\},\{name\+:name+\char`\"{}.y\char`\"{}, value\+:\+Math.\+round(evt.\+page\+Y-\/offset.\+top)\}\mbox{]});{\bf set\+Timeout}(function()\{form.\+remove\+Data(data\+\_\+click);\}, 0);\}}]{}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_a648b859bde60b7a95b18a751706aca83}
+\hypertarget{jquery_8unobtrusive-ajax_8js_adf8db01fbef50de60d1968bb75c8181c}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!validate@{validate}}
+\index{validate@{validate}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}function validate (
+\begin{DoxyParamCaption}
+\item[{}]{form}
+\end{DoxyParamCaption}
+)}\label{jquery_8unobtrusive-ajax_8js_adf8db01fbef50de60d1968bb75c8181c}
+
+
+Definition at line 131 of file jquery.\+unobtrusive-\/ajax.\+js.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{jquery_8unobtrusive-ajax_8js_a2b1d6f9c448e3ce72f4e1865d6e38d2c}{}\index{jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}!j\+Query@{j\+Query}}
+\index{j\+Query@{j\+Query}!jquery.\+unobtrusive-\/ajax.\+js@{jquery.\+unobtrusive-\/ajax.\+js}}
+\subsubsection[{j\+Query}]{\setlength{\rightskip}{0pt plus 5cm}j\+Query}\label{jquery_8unobtrusive-ajax_8js_a2b1d6f9c448e3ce72f4e1865d6e38d2c}
+
+
+Definition at line 189 of file jquery.\+unobtrusive-\/ajax.\+js.
+

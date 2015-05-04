@@ -1,0 +1,164 @@
+\hypertarget{class_website_1_1_controllers_1_1_group_controller}{}\section{Website.\+Controllers.\+Group\+Controller Class Reference}
+\label{class_website_1_1_controllers_1_1_group_controller}\index{Website.\+Controllers.\+Group\+Controller@{Website.\+Controllers.\+Group\+Controller}}
+
+
+Controller to handle Groups  
+
+
+Inheritance diagram for Website.\+Controllers.\+Group\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_website_1_1_controllers_1_1_group_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_website_1_1_controllers_1_1_group_controller_a92bc4466c5fb4254dc762e593bfe194d}{Group\+Controller} ()
+\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_group_controller_a9d4ac2f3d61ab6f741cc2520688a20ea}{Join\+Group} (int grp\+Id)
+\begin{DoxyCompactList}\small\item\em Method to handle the Join\+Group Button \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_group_controller_a04a0523a86f0b656401cc867d9df53d2}{View\+Group} (int grp\+Id)
+\begin{DoxyCompactList}\small\item\em Method to view the group with a given grp\+Id \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_group_controller_a7df28fe4039208f948d71deaf217f5b8}{Create\+Group} ()
+\begin{DoxyCompactList}\small\item\em Sends an empty group to the view used for creating a new group. \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{class_website_1_1_controllers_1_1_group_controller_a00fb88c51b6fd9af76dacdc821f6ae11}{Save\+Group} (\hyperlink{class_website_1_1_models_1_1_group}{Group} grp, string tag\+String)
+\begin{DoxyCompactList}\small\item\em Adds the User as owner, and saves the group in the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_website_1_1_controllers_1_1_i_quiz_model}{I\+Quiz\+Model} \hyperlink{class_website_1_1_controllers_1_1_group_controller_a0df206ca548f0760256dd5ccb053f42d}{i\+Quiz\+Model}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to model with methods for creation og quizzes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller to handle Groups 
+
+
+
+Definition at line 20 of file Group\+Controller.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a92bc4466c5fb4254dc762e593bfe194d}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!Group\+Controller@{Group\+Controller}}
+\index{Group\+Controller@{Group\+Controller}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{Group\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}Website.\+Controllers.\+Group\+Controller.\+Group\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_group_controller_a92bc4466c5fb4254dc762e593bfe194d}
+
+
+Definition at line 27 of file Group\+Controller.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a7df28fe4039208f948d71deaf217f5b8}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!Create\+Group@{Create\+Group}}
+\index{Create\+Group@{Create\+Group}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{Create\+Group}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Group\+Controller.\+Create\+Group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_group_controller_a7df28fe4039208f948d71deaf217f5b8}
+
+
+Sends an empty group to the view used for creating a new group. 
+
+\begin{DoxyReturn}{Returns}
+Create\+Group view
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Group\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a9d4ac2f3d61ab6f741cc2520688a20ea}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!Join\+Group@{Join\+Group}}
+\index{Join\+Group@{Join\+Group}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{Join\+Group}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Group\+Controller.\+Join\+Group (
+\begin{DoxyParamCaption}
+\item[{int}]{grp\+Id}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_group_controller_a9d4ac2f3d61ab6f741cc2520688a20ea}
+
+
+Method to handle the Join\+Group Button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grp\+Id} & Group Id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View\+Group view
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Group\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a00fb88c51b6fd9af76dacdc821f6ae11}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!Save\+Group@{Save\+Group}}
+\index{Save\+Group@{Save\+Group}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{Save\+Group}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Group\+Controller.\+Save\+Group (
+\begin{DoxyParamCaption}
+\item[{{\bf Group}}]{grp, }
+\item[{string}]{tag\+String}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_group_controller_a00fb88c51b6fd9af76dacdc821f6ae11}
+
+
+Adds the User as owner, and saves the group in the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grp} & Group object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View\+Group view
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Group\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a04a0523a86f0b656401cc867d9df53d2}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!View\+Group@{View\+Group}}
+\index{View\+Group@{View\+Group}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{View\+Group}]{\setlength{\rightskip}{0pt plus 5cm}Action\+Result Website.\+Controllers.\+Group\+Controller.\+View\+Group (
+\begin{DoxyParamCaption}
+\item[{int}]{grp\+Id}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_group_controller_a04a0523a86f0b656401cc867d9df53d2}
+
+
+Method to view the group with a given grp\+Id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grp\+Id} & Group Id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View\+Group view
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Group\+Controller.\+cs.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_group_controller_a0df206ca548f0760256dd5ccb053f42d}{}\index{Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}!i\+Quiz\+Model@{i\+Quiz\+Model}}
+\index{i\+Quiz\+Model@{i\+Quiz\+Model}!Website\+::\+Controllers\+::\+Group\+Controller@{Website\+::\+Controllers\+::\+Group\+Controller}}
+\subsubsection[{i\+Quiz\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Quiz\+Model} Website.\+Controllers.\+Group\+Controller.\+i\+Quiz\+Model\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_website_1_1_controllers_1_1_group_controller_a0df206ca548f0760256dd5ccb053f42d}
+
+
+Interface to model with methods for creation og quizzes 
+
+
+
+Definition at line 25 of file Group\+Controller.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Controllers/\hyperlink{_group_controller_8cs}{Group\+Controller.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{class_website_1_1_controllers_1_1_login_controller}{}\section{Website.\+Controllers.\+Login\+Controller Class Reference}
+\label{class_website_1_1_controllers_1_1_login_controller}\index{Website.\+Controllers.\+Login\+Controller@{Website.\+Controllers.\+Login\+Controller}}
+
+
+Controller with responsibility for logging users in and out  
+
+
+Inheritance diagram for Website.\+Controllers.\+Login\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_website_1_1_controllers_1_1_login_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_website_1_1_controllers_1_1_login_controller_a635f20be57cc6bda2319cbd682e8b8f6}{Login} (\hyperlink{class_website_1_1_controllers_1_1temp_user}{temp\+User} \hyperlink{jquery_8unobtrusive-ajax_8min_8js_a22211e450825dd03852dfba097324407}{input})
+\begin{DoxyCompactList}\small\item\em Checks the identity database to see if password and username match. If succesfull, a cookie is made \end{DoxyCompactList}\item 
+void \hyperlink{class_website_1_1_controllers_1_1_login_controller_acd61a9feab4ae21195bc64fc8b220f9a}{Logout} ()
+\begin{DoxyCompactList}\small\item\em Removes the authorization cookie and the user is logged out. \end{DoxyCompactList}\item 
+bool \hyperlink{class_website_1_1_controllers_1_1_login_controller_a0049c343d18bab0da7d8fb5ba1d35a9a}{Facebook\+Login} (\hyperlink{class_website_1_1_controllers_1_1temp_user}{temp\+User} \hyperlink{jquery_8unobtrusive-ajax_8min_8js_a22211e450825dd03852dfba097324407}{input})
+\begin{DoxyCompactList}\small\item\em After facebook A\+P\+I has returned user information. Method checks if he is already registered. If he is, he is logged in. If he isnt, he should be registrered as a user with email and username = firstname \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller with responsibility for logging users in and out 
+
+
+
+Definition at line 15 of file Login\+Controller.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_website_1_1_controllers_1_1_login_controller_a0049c343d18bab0da7d8fb5ba1d35a9a}{}\index{Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}!Facebook\+Login@{Facebook\+Login}}
+\index{Facebook\+Login@{Facebook\+Login}!Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}}
+\subsubsection[{Facebook\+Login}]{\setlength{\rightskip}{0pt plus 5cm}bool Website.\+Controllers.\+Login\+Controller.\+Facebook\+Login (
+\begin{DoxyParamCaption}
+\item[{{\bf temp\+User}}]{input}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_login_controller_a0049c343d18bab0da7d8fb5ba1d35a9a}
+
+
+After facebook A\+P\+I has returned user information. Method checks if he is already registered. If he is, he is logged in. If he isnt, he should be registrered as a user with email and username = firstname 
+
+\begin{DoxyReturn}{Returns}
+True if he is logged in, False if not
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Login\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_login_controller_a635f20be57cc6bda2319cbd682e8b8f6}{}\index{Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}!Login@{Login}}
+\index{Login@{Login}!Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}}
+\subsubsection[{Login}]{\setlength{\rightskip}{0pt plus 5cm}bool Website.\+Controllers.\+Login\+Controller.\+Login (
+\begin{DoxyParamCaption}
+\item[{{\bf temp\+User}}]{input}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_login_controller_a635f20be57cc6bda2319cbd682e8b8f6}
+
+
+Checks the identity database to see if password and username match. If succesfull, a cookie is made 
+
+\begin{DoxyReturn}{Returns}
+True if user was logged in, false if not
+\end{DoxyReturn}
+
+
+Definition at line 23 of file Login\+Controller.\+cs.
+
+\hypertarget{class_website_1_1_controllers_1_1_login_controller_acd61a9feab4ae21195bc64fc8b220f9a}{}\index{Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}!Logout@{Logout}}
+\index{Logout@{Logout}!Website\+::\+Controllers\+::\+Login\+Controller@{Website\+::\+Controllers\+::\+Login\+Controller}}
+\subsubsection[{Logout}]{\setlength{\rightskip}{0pt plus 5cm}void Website.\+Controllers.\+Login\+Controller.\+Logout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_website_1_1_controllers_1_1_login_controller_acd61a9feab4ae21195bc64fc8b220f9a}
+
+
+Removes the authorization cookie and the user is logged out. 
+
+
+
+Definition at line 45 of file Login\+Controller.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lasse/\+Documents/\+M\+E\+G\+A/4. Semester/\+P\+R\+J/quizcreator/\+Website/\+Controllers/\hyperlink{_login_controller_8cs}{Login\+Controller.\+cs}\end{DoxyCompactItemize}
