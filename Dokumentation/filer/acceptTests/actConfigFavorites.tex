@@ -4,35 +4,51 @@
 % Testpunkter
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
-\acentry{1}{\begin{enumerate}
-			\item Udfør accepttesten XX som tilføjer favorit-quiz.
-			\item Tryk på ''Favorites'' på brugergrænsefladen.
+\acentry{0.1}{\begin{enumerate}
+			\item Udfør accepttesten UC6: Login test 1 for at logge ind.
+			\item Udfør accepttesten UC2: Search test 1, som søger efter oprettet Quiz.
+			\item Tryk på favorit-ikonet til venstre for quizzens navn for at tilføje denne til brugerens favoritter.
 			\end{enumerate}		   	
 		   	}
-		   	{ Quizzen \textbf{NAVN FRA PUNKT1} vises som favorit }{ - }{ - }
+		   	{ Quizzen \textbf{TestQuiz} er gemt i databasen som favorit til brugeren. }{ - }{ - }
+		   	
+\acentry{0.2}{\begin{enumerate}
+			\item Udfør accepttesten UC6: Login test 1 for at logge ind.
+			\item Udfør accepttesten UC2: Search test 3 for at søge efter oprettet gruppe.
+			\item Tryk på favorit-ikonet til venstre for gruppens navn for at tilføje denne til brugerens favoritter.
+			\end{enumerate}		   	
+		   	}
+		   	{ Gruppen \textbf{X} er gemt i databasen som favorit til brugeren. }{ - }{ - }
+
+\acentry{1}{\begin{enumerate}
+			\item Udfør test 0.1 som tilføjer favorit-quiz.
+			\item Tryk på ''Favorites'' på brugergrænsefladen.
+\item Tryk på ''Quizzes'' på brugergrænsefladen.
+			\end{enumerate}		   	
+		   	}
+		   	{ Quizzen \textbf{TestQuiz} vises som favorit  }{ - }{ - }
 
 
 \acentry{2}{ \begin{enumerate}
 			\item Udfør test 1
-			\item Tryk på ''Remove favorite'' ikonet ud for quizzen \textbf{NAVN FRA TEST1}
+			\item Tryk på ''Remove favorite'' ikonet ud for quizzen \textbf{TestQuiz}
 			\end{enumerate}
 			}
-			{Quizzen \textbf{NAVN FRA TEST1} vises ikke længere i favorit-listen og er fjernet fra brugerens favoritter i databasen}{ - }{ - }
+			{Quizzen \textbf{TestQuiz} vises ikke længere i favorit-listen og er fjernet fra brugerens favoritter i databasen}{ - }{ - }
 
 
 \acentry{3}{ \begin{enumerate}
-			\item Udfør accepttesten XX som tilføjer en favorit-gruppe.
+			\item Udfør accepttesten 0.2 som tilføjer en favorit-gruppe.
 			\item Tryk på ''Favorites'' på brugergrænsefladen.
-			\item Tryk på ''Groups'' på favorit-viewet.
 			\end{enumerate}
 			}
-			{Gruppen \textbf{NAVN FRA PUNKT1} vises som favorit}{ - }{ - }
+			{Gruppen \textbf{X} vises som favorit}{ - }{ - }
 
 
 \acentry{4}{ \begin{enumerate}
 			\item Udfør test 3.
-			\item Tryk på ''Remove favorite'' ikonet ud for gruppen \textbf{NAVN FRA TEST3}
+			\item Tryk på ''Remove favorite'' ikonet ud for gruppen \textbf{X}
 			\end{enumerate}
 			}
-			{Gruppen \textbf{NAVN FRA TEST3} vises ikke længere i favorit-listen og er fjernet fra brugerens favoritter i databasen}{ - }{ - }
+			{Gruppen \textbf{X} vises ikke længere i favorit-listen og er fjernet fra brugerens favoritter i databasen}{ - }{ - }
 \acfoot{findQuiz}
