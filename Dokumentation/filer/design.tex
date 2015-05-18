@@ -24,7 +24,7 @@ Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at s
 \figur{0.8}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{Label}
 
 \subsubsection{Sekvensdiagram for CreateUser}
-Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen.
+Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: strin): IdentityResult, som kan bruges til at oprette brugere i et systemet.
 
 \figur{0.8}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{Label}
 
@@ -32,6 +32,16 @@ Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at o
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere sine oplysninger. Brugeren har mulighed for ændre sine data og så gemme ændringerne eller at annullere ændringerne.
 
 \figur{0.8}{Design/Sekvensdiagram_UC5}{Sekvensdiagram for use case 5}{Label}
+
+\subsubsection{Sekvensdiagram for Login}
+Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at logge ind i systemet. Her anvendes klasserne UserManager og AuthenticationManager fra Identity Framework 2.0, til genkendelse af brugere der ønsker at logge ind og til godkendelsesprocessen om en bruger eksisterer i systemet.
+
+\figur{0.8}{Design/Sekvensdiagram_UC6}{Sekvensdiagram for use case 6}{Label}
+
+\subsubsection{Sekvensdiagram for Logout}
+Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at logge ud af systemet.
+
+\figur{0.8}{Design/Sekvensdiagram_UC7}{Sekvensdiagram for use case 7}{Label}
 
 \subsubsection{Sekvensdiagram for ConfigQuizzes}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere sine quizzer. Brugeren bliver præsenteret for sine quizzer hvorefter denne har mulighed for enten at ændre på sine quizzer eller at slette en given quiz.
@@ -49,9 +59,15 @@ Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at k
 \figur{0.8}{Design/Sekvensdiagram_UC10}{Sekvensdiagram for use case 10}{Label}
 
 \subsubsection{Sekvensdiagram for ConfigFavorites}
-Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere på sine favoritter.Brugeren bliver præsenteret for sine favoritter hvorefter brugeren kan vælge at slette en eller flere favoritter.
+Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at slette af sine favoritter.Brugeren bliver præsenteret for sine favoritter hvorefter brugeren kan vælge at slette en eller flere favoritter.
 
 \figur{0.8}{Design/Sekvensdiagram_UC11}{Sekvensdiagram for use case 11}{Label}
+
+\subsubsection{Sekvensdiagram for ConfigFavorites}
+Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at tilføje en quiz eller gruppe til sine favoritter.
+
+\figur{0.8}{Design/Sekvensdiagram_UC11_Part2}{Sekvensdiagram for use case 11}{Label}
+
 
 \subsection{QuizModel}
 \input{filer/design/quizModel}
