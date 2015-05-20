@@ -207,10 +207,10 @@
 	%\afterpage{\blankpage}
 
 % ¤¤ Signaturelinjer ¤¤ %
-\newcommand*{\signature}[1]{%
+\newcommand*{\signature}[2]{%
     \par\noindent\makebox[8cm]{\hrulefill} %\hfill\makebox[2.0in]{\hrulefill} % Tilføj hvis dato skal med
 	\vspace{-2mm}    
-    \par\noindent\makebox[8cm][l]{#1}      %\hfill\makebox[2.0in][l]{Dato}
+    \par\noindent\makebox[8cm][l]{#1\hfill#2}      %\hfill\makebox[2.0in][l]{#2}
     \vspace*{5mm}
 }
 
