@@ -1,10 +1,11 @@
 \section{Aktører}
 
-Til applikationen QuizCreator indentificeres en række use cases samt aktører. Disses ses i \ref{fig:ucDiagram}, hvor primær aktører ses til venstre og sekundære aktører ses til højre. Følgende Use case diagrammet findes en beskrivelse over aktører, og derefter en gennemgang af hver use case. 
+Til applikationen Quiz Creator identificeres en række use cases samt aktører. Disses ses i \ref{fig:ucDiagram}, hvor primær aktører ses til venstre og sekundære aktører ses til højre. Følgende use case-diagrammet findes en beskrivelse over aktører, og derefter en gennemgang af hver use case. 
 
-\figur{0.8}{kravspec/UC-diagram}{Use Case-diagram med aktører}{fig:ucDiagram}
+\figur{0.8}{kravspec/UC-diagram}{Use case-diagram med aktører}{fig:ucDiagram}
 
 \subsection{Aktør-beskrivelse}
+Her følger en kort beskrivelse af de enkelte aktøre vist i use case diagrammet på figur \ref{fig:ucDiagram}.
 
 \begin{tabular}{|p{2cm}|p{12cm}|}
 
@@ -13,7 +14,7 @@ Til applikationen QuizCreator indentificeres en række use cases samt aktører. 
 \hline 
 \textbf{Type} & Primær aktør \\ 
 \hline 
-\textbf{Beskrivelse} & Bruger initierer alle tre use cases. Bruger kan oprette en Quiz, finde en Quiz og besvare en Quiz. Bruger identificeres ikke individuelt, men alle brugere af applikationen vil gå indenfor brugeren "Gæst"\\ 
+\textbf{Beskrivelse} & Bruger initierer alle use cases. Det er muligt at oprette en tilbagevendende bruger, eller anvende en midlertidig bruger.\\ 
 \hline 
 
 \end{tabular} 
@@ -25,7 +26,7 @@ Til applikationen QuizCreator indentificeres en række use cases samt aktører. 
 \hline 
 \textbf{Type} & Sekundær aktør \\ 
 \hline 
-\textbf{Beskrivelse} & En ekstern server, som gemmer og håndterer databaser.\\ 
+\textbf{Beskrivelse} & En server der kan tilgås fra webserveren og som gemmer og håndterer data i databaser.\\ 
 \hline 
 
 \end{tabular} 
@@ -37,7 +38,7 @@ Til applikationen QuizCreator indentificeres en række use cases samt aktører. 
 \hline 
 \textbf{Type} & Sekundær aktør \\ 
 \hline 
-\textbf{Beskrivelse} & Webserveren opbevarer og udleverer hjemmesidens data på internettet.\\ 
+\textbf{Beskrivelse} & En server der opbevarer og fremsender hjemmesidens data på internettet. Den udføre desuden kompileret kode i programmets back end og tilgår databaseserveren. \\ 
 \hline 
 
 \end{tabular} 
