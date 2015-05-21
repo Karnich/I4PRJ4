@@ -23,7 +23,6 @@
 \usepackage{float}							% Muliggoer eksakt placering af floats, f.eks. \begin{figure}[H]
 \usepackage{longtable}						% Tabeller over flere sider
 \usepackage[section]{placeins}
-%\usepackage{svg}	% Inkluder svg-filer
 
 % ¤¤ Matematik mm. ¤¤
 \usepackage{amsmath,amssymb,stmaryrd} 		% Avancerede matematik-udvidelser
@@ -37,6 +36,7 @@
 % ¤¤ Referencer og kilder ¤¤ %
 \usepackage[danish]{varioref}				% Muliggoer bl.a. krydshenvisninger med sidetal (\vref)
 \usepackage{natbib}							% Udvidelse med naturvidenskabelige citationsmodeller
+\usepackage{footnote}
 %\usepackage{xr}							% Referencer til eksternt dokument med \externaldocument{<NAVN>}
 %\usepackage{glossaries}					% Terminologi- eller symbolliste (se mere i Daleifs Latex-bog)
 
@@ -126,8 +126,8 @@
 	    \end{tabularx}
 	    \par\vskip-2.5mm\hrule
     \else
-	    \begin{tabularx}{\textwidth}{Xl}
-	    	{\parbox[b]{\linewidth}{\chaptitlefont ##1}} & \raisebox{-15pt}{\chapnumfont \thechapter}
+	    \begin{tabularx}{\textwidth}{l X}
+	    	\raisebox{-15pt}{\chapnumfont \thechapter} & {\parbox[b]{\linewidth}{\chaptitlefont ##1}}
 	    \end{tabularx}
 	    \par\vskip2mm\hrule
     \fi
