@@ -1,16 +1,14 @@
 \section{Logical View}\label{sec:LogicalView}
 Systemet udvikles på ASP.NET MVC-frameworket\footnote{\url{http://www.asp.net/mvc} Microsoft ASP.NET MVC}. Her inddeles systemet i tre lag, som vist på figur \ref{fig:logicalView}.
 
-\figur{0.8}{SystemArkitektur/LogicalView}{Logical View for systemets overordnede ansvar}{fig:logicalView}
+\figur{0.8}{SystemArkitektur/LogicalView}{Logical View for systemets overordnede arkitektur}{fig:logicalView}
 
-Model-laget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server\footnote{\url{http://www.microsoft.com/SQLServer} Microsoft SQL Server}.
+Model-laget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server\footnote{\url{http://www.microsoft.com/SQLServer} Microsoft SQL Server}. I model-laget gemmes også ViewModels, som er View-specifikke modeller. Disse er uafhængige af systemets logik, men bruges udelukkende som bindeled i mellem views og controllers, hvis den oprindelige model ikke er tilstrækkeligt.
 
-View-laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne.
+View-laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne til formatering af udseendet. I view-laget ligger også client side logik i form af javascripts.
 
-Controller-laget har ansvaret for business logic og håndterer UC-forløbene.
+Controller-laget har ansvaret for business logic og håndterer UC-forløbene. Systemet er udviklet til at have en controller per use case.
 
-På figur \ref{fig:logicalSD} er vist et simpelt system-sekvensdiagram for UC1.
+På figur \ref{fig:logicalSD} er vist et simpelt system-sekvensdiagram for UC1. Controlleren bliver aktiveret ved et request fra en client ud fra en given URL. Her efter udføre den de nødvendige funktionaliteter og returnere et givent view eller kalder en anden controller.
 
 \figur{1}{SystemArkitektur/SystemSD_UC1}{System-sekvensdiagram for UC1 Create Quiz}{fig:logicalSD}
-
-Controlleren for forløbet men også data udveksling i mellem de forskellige views og databasen.
