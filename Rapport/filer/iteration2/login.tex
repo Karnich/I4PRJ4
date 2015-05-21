@@ -4,7 +4,7 @@ I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kun
 
 \figur{0.8}{iteration2/login_skitse}{Login GUI skitse}{fig:loginSkitse}
 
-Login knappen aktiverer en dropdown menu, hvor i man indtaster email og password. Som skitsen viser var det tænkt, at man brugte username og password. Dog valgte vi at ændre identiteten fra username til email, på baggrund af Facebook-login. Facebook APIet sender brugerens email, som derefter bruges til at registrere brugeren i databasen. Login-knappen er også flyttet til indersiden af søgefeltet i stedet for ydersiden. Scriptet til dropdown menuen er skrevet i JavaScript. Login-funktionerne bruger AJAX med tilhørende API controllers til at logge brugeren ind.
+Login knappen aktiverer en dropdown menu, hvor i man indtaster email og password. Med facebook login knappen kan der logges ind uden at skulle indtaste nogle oplysninger, hvis man altså er logget ind på facebook. Hvis man ikke er logget ind på facebook vil facebooks API bede om at man logger ind på facebook. Scriptet til dropdown menuen er skrevet i JavaScript. Login-funktionerne bruger AJAX med tilhørende API controllers til at logge brugeren ind.
 
 \figur{0.8}{iteration2/login_samlede}{Login GUI}{fig:loginSekvens}
 
@@ -15,7 +15,7 @@ Login systemet bruger .NET's Identity 2.0 frameworket til autentificering. Frame
 
 \figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
 
-Figur \ref{fig:loginDiagram} viser hvordan loginsekvensen foregår bag facaden. Første gang en bruger benytter ''Login med Facebook'' vil personen blive registreret i databasen. Brugeren kan derefter benytte sig af ''Account'' til at oprette et password, så han en anden gang også kan logge ind med den information i stedet for at bruge Facebook. Dog bliver brugerens username i denne proces sat til at være Facebook-kontoens email, og bør nok ændres til et unikt username.
+Figur \ref{fig:loginDiagram} viser hvordan loginsekvensen foregår bag facaden. Første gang en bruger benytter ''Login med Facebook'' vil personen blive bedt om at indtaste username og password. Usernamet er bare brugerens navn udadtil på siden. Passwordet er for at brugeren en anden gang kan logge ind uden at benytte sig af facebook knappen. Der er implementeret fejlhåndtering af eventuelle serverfejl der kunne opstå. Hvis der opstår en serverfejl får brugeren en fejlmedelelse.
 
 \textbf{Udfordringer:} 
 Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen Aarhus Universitet. 
