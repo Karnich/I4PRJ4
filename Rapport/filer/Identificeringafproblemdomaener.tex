@@ -1,0 +1,34 @@
+\chapter{Identificering af problemdomæner}
+
+Domænemodellen er udviklet efter at den overordnede systemarkitektur er lagt på plads. Den fungerer som en visuel ordbog over projektet. De konceptuelle klasser er fundet ud fra aktør-diagrammet og desuden identificeret ud fra use casene. Ud fra domænemodellen kan man analysere sig nærmere ind på systemets problemdomæner.
+
+\figur{1.0}{Domaenemodel/DomainModelFinal}{Domænemodel over det samelde system}{Domainmodel}
+
+Ud fra ovenstående Domænemodel er der blevet identificeret følgende problemdomæner:
+
+\begin{itemize}
+	\item Webserver
+	\begin{itemize}
+		\item Webserver præsenterer brugergrænsefladen for bruger.
+	\end{itemize}
+	\item Brugergrænseflade
+	\begin{itemize}
+		\item Bruger interagerer med brugergrænsefladen.
+	\end{itemize}
+		\item Gruppe
+	\begin{itemize}
+		\item Bruger kan oprette en eller flere grupper. Hver gruppe kan indeholde en eller flere quizzer.
+	\end{itemize}
+		\item Quiz
+	\begin{itemize}
+		\item Bruger kan oprette en eller flere Quizzer Hver quiz har en eller flere spørgsmål.
+	\end{itemize}
+		\item Brugerprofil
+	\begin{itemize}
+		\item Bruger kan oprette sin egen brugerprofil.
+	\end{itemize}
+	\item Database
+	\begin{itemize}
+		\item Databasen gemmer quizzer, grupper og brugerprofiler.
+	\end{itemize}
+\end{itemize}
