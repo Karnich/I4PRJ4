@@ -1,4 +1,4 @@
-Mange forme på siden er udviklet til at kunne udvides dynamisk ved brug af AJAX og jQuery. I de controllere hvor funktionaliteten er nødvendig, som for eksempel CreateQuiz og ConfigQuiz, er der metoder som returnere den nødvendige HTML opbygning. Denne hentes med AJAX og indsættes på siden uden at hele siden behøver at loades igen.
+Formene i Create og Config Quiz er udviklet til at kunne udvides dynamisk ved brug af AJAX og jQuery. I controllerne CreateQuiz og ConfigQuiz, er der metoder som returnere den nødvendige HTML opbygning. Denne hentes med AJAX og indsættes på siden uden at hele siden behøver at loades igen.
 
 For at udnytte \verb+ASP.NET+s evne til at arbejde på modeller redigeres navenene på alle inputfelterne så de svare til de navne der ville være hvis objekterne var oprettet i \verb+C#+.
 For eksempel, hvis en quiz har ét spørgsmål og der tilføjes et nyt, får det nye input-felt, til teksten, navnet \verb+Questions[1].Text+.
