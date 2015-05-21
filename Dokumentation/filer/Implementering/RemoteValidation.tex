@@ -1,35 +1,6 @@
-Mange forme på siden er udviklet til at kunne udvides dynamisk ved brug af AJAX og jQuery. I de controllere hvor funktionaliteten er nødvendig, som for eksempel CreateQuiz og ConfigQuiz, er der metoder som returnere den nødvendige HTML opbygning. Denne hentes med AJAX og indsættes på siden uden at hele siden behøver at loades igen.
+\section{Remote Validation}
+Der er implementeret Remote Validation til at finde ud af om gruppe- og usernavne er taget eller ej. Dette fungere ved at viewet via model-binding kigger på Groupname og Username attributerne og ser at der er opsat remote validation til attributerne. Der bliver kaldt en validation metode i RemoteValidationControlleren som så finder ud af om det navn brugeren har indtastet, allerede er taget eller ej. Hvis navnet er ledigt returneres true og intet udskrives i viewet. Men hvis navnet er optaget returneres der false og den givne fejlbesked bliver udskrevet. Eksempel på en ErrorMessage kan ses på figur \ref{fig:remoteValidation}
 
-For at udnytte \verb+ASP.NET+s evne til at arbejde på modeller redigeres navenene på alle inputfelterne så de svare til de navne der ville være hvis objekterne var oprettet i \verb+C#+.
-For eksempel, hvis en quiz har ét spørgsmål og der tilføjes et nyt, får det nye input-felt, til teksten, navnet \verb+Questions[1].Text+.
-På denne måde kan den samlede håndtering af form-inputtet bruge ét argument af typen \verb+Quiz+, i stedet for at skulle tage alle parametre ind én af gangen. Et udklip af koden er vist i listing \ref{lst:QuizzesJavascript}.
+\figur{1.0}{Implementering/RemoteValidering}{Viser Remote Validation notation på modellen og funktionen den kalder}{fig:remoteValidation}
 
-På linje 2-5 er AJAX-kaldet. Hvis dette går godt udføres funktionen i linje 5. Her tilføjes HTML-koden fra controlleren en \verb+div+-container. Model-binding navnet konstrueres og tilføjes alle nye \verb+input+-tags. Til sidst returneres false, for at undgå at formens almindelige submit-action udføres.
-
-\lstsetjavascript
-\begin{lstlisting}[caption=JavaScript udklip til AJAX og model-binding håndtering ved indsættelse af nye spørgsmål, label=lst:QuizzesJavascript]
-$(document).on("click", "#addQuizQuestion", function() {
-    $.ajax({
-        url: this.href,
-        cache: false,
-        success: function(html) {
-            // Append new question form
-            $("#ConfigQuizzesQuestionsContainer").append(html);
-
-            /* Removed code for simplicity */
-			
-            // Create prepend string to fix object binding
-            var prePend = "Questions[" + (newCounter - 1) + "].";
-
-            // Get all input elements and prepend input names
-            $(".ConfigQuizzesQuestion:last input").each(function() {
-                var original = $(this).attr("name");
-                $(this).attr("name", prePend + original);
-            });
-            
-            /* Removed code for simplicity */
-        }
-    });
-    return false;
-});
-\end{lstlisting}
+På figur \ref{fig:remoteValidation} ses der implementeringen af remote validering til group name. [Remote ...] ligger i System.Web.Mvc.RemoteAttribute namespacet og er det som der kalder validerings metoden DoesGroupNameExist.
