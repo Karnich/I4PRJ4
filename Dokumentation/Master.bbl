@@ -1,0 +1,20 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gamma et~al.(2005)Gamma, Helm, , Johnson, and Vlissides]{gof}
+E.~Gamma, R.~Helm, , R.~Johnson, and J.~Vlissides.
+\newblock \emph{Design Patterns}.
+\newblock Addison Wesley, 2005.
+
+\bibitem[Wikipedia(2015)]{wikiSolid}
+Wikipedia.
+\newblock {SOLID (object-oriented design)}, 2015.
+\newblock URL
+  \url{http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)}.
+\newblock Accessed 21.05.2015.
+
+\end{thebibliography}
