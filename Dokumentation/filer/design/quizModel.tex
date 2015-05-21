@@ -1,4 +1,5 @@
 \section{QuizModel}
 
-QuizModel klassen skal håndtere snakken med Data access layeret. Under oprettelsen af applicationsmodellerne blev der fundet nogle metoder som controllerne kunne få brugt for. Nogle af disse metoder kræver meget kode som man gerne ville undgå at have i controllerne.
+I kravene for applikationen er identificeret mange entiteter som skal percisteres i databasen. For at give controllerne en  simpel adgang til disse funktionaliteter og samtidige abstrahere en del af ansvaret ud fra disse oprettes en facade til DAL. Dette er en design strategi beskrevet som Fa\c{c}ade Pattern i bogen Design Patterns\footnote{R.; Johnson R.; Vlissides J. Gamma, E.; Helm. \textit{Design Patterns}. Addison Wesley, 2005, s. 185-193}.
 
+Klassen bryder med Single Responsibility i SOLID-principperne\footnote{http://en.wikipedia.org/wiki/SOLID\_(object-oriented\_design)}, men da facaden betegnes som et interface til sub-modulet DAL er dette en acceptabel løsning.
