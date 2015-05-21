@@ -1,11 +1,23 @@
 \section{Krav}
 
-Der kom ikke nogle nye Use Cases i denne iteration. I stedet er de eksisterende udvidet med nye funktioner. De nye krav der gav ændringer var:
+I iteration 3 blev systemet udvidet med endnu en række features - derudover blev der viderudviklet på gamle features. Nye features bringer grupper og favoritter i spil, som er hhv. en måde at organisere quizzer og gemme quizzer og grupper til hurtig adgang.
+I starten af iterationen blev der opstillet en række krav til features:
 
 \begin{itemize}
-	\item Mulighed for at slette spørgsmål og svar i en eksisterende quiz
-	\item Mulighed for at tilføje quizzer og grupper til favoritter og grupper ved søgninger
-	\item Mulighed for at ændre, slette og tilføje billeder på spørgsmål i en eksisterende quiz
-	\item Mulighed for at ændrer eksisterende grupper
-	\item Mulighed for at tilføje egne quizzer til gruppe, når gruppen oprettes
+	\item Mulighed for at slette spørgsmål og svar i en eksisterende quiz.
+	\item Mulgihed for at kunne oprette gruppre og derefter kunne ændre i ejne oprettede grupper.
+	\item Søgning skal vise både grupper og quizzer med de søgte tags.
+	\item Mulighed for at tilføje quizzer og grupper til favoritter ved søgning.
+	\item Mulighed for at fjerne favoritgrupper og -quizzer.
+	\item Mulighed for at tilføje quizzer fra søgeresultater til grupper som brugeren har oprettet.
+	\item Mulighed for at tilføje, ændre og slette billeder på spørgsmål i en eksisterende quiz.
+	\item Mulighed for at tilføje egne quizzer til gruppe, når gruppen oprettes.
+\end{itemize}
+
+Disse krav resulterede i tre nye use cases, samt ændring i en use case:
+\begin{itemize}
+	\item UC2 Find Quiz ændres til UC2 Search
+	\item Ny use case: Create group
+	\item Ny use case: Config group
+	\item Ny use case: Config Favorites
 \end{itemize}
