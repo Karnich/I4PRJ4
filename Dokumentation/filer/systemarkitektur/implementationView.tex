@@ -4,8 +4,8 @@ Implementation View er en abstraktion af modulerne i systemet. På figur \ref{fi
 \figur{0.9}{SystemArkitektur/ImplementationView}{Implementation View af systemet med identificerede pakker og klasser}{fig:implementationView}
 
 View-pakken håndterer web-layoutet i form af HTML og CSS kode. Her styres præsentationens udseende.
-
-!.UI forklaring ud fra GUI skitse.!
+Hvert view, undtagen Layout, går ind og sætter indholdet i den dynamiske ramme set på figur \ref{fig:layoutGUI}. Viewet Layout er ansvarlig for at sætte den udenomstående GUI. I denne findes logik til at sætte menuen alt afhængig af om brugeren er logget ind eller ej.
+\figur{0.9}{SystemArkitektur/ImplementationViewGUI}{GUI layoutet er opdelt i en statisk og en dynamisk del, hvor den statiske del er sat af et layout view}{fig:layoutGUI}
 
 I controller-pakken ligger en klasse for hvert use case som håndterer de individuelle forløbshændelser og interaktionen i mellem Views og Model. Bemærk dog at UC for login og logout er slået sammen i én controller.
 
