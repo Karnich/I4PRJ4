@@ -1,24 +1,24 @@
 \section{Ikke-funktionelle krav}
 \label{sec:nonFunctional}
+
 \begin{enumerate}
 	\subsection*{Brugbarhed}
 	\item Programmet skal virke på følgende platforme
 	\begin{enumerate}
-		%\item Microsoft Internet Explorer 10 og nyere (PC)
-		\item Mozilla Firefox 3.5 og nyere (PC og Mac)
-		%\item Apple Safari 6 og nyere (Mac)
-		%\item Google Chrome 3.6 og nyere (PC og Mac)
+		\item Mozilla Firefox 38 og nyere (PC og Mac)
 	\end{enumerate}
 	
-	\item Kun bogstaver, tal, mellemrum, skråstreger og bindestreger ved brugerindtastning understøttes (i UTF-8 formatering)
-	\item Quiz-navnelængde er minimum 1 og maksimalt 75 karakterer
-	\item Spørgsmål-navnelængde er minimum 1 og maksimalt 75 karakterer
-	\item Tags-navnelængde er minimum 1 og maksimalt 75 karakterer 
-	\item Det er muligt at tilføje 0 til 10 tags til en Quiz
-	\item Password-længde er minimum 6 karakterer og maksimalt 75 karakterer
-	\item Username-længde er minimum 2 karakterer og maksimalt 75 karakterer
-	\item Username skal være unikt
-	\item Ved oprettelse af et spørgsmål skal længden af en svarmulighed være minimum 1 karakter 
+	\item Tekstlængder er begrænset som følger, i karakterer, bette tal inklusiv:
+	\subitem Quiz: 1 til 75
+	\subitem Spørgsmål: 1 til 75
+	\subitem Tags: 1 til 75 
+	\subitem Adgangskoder: 6 til 75
+	\subitem Brugernavne: 2 til 75
+	\subitem Svarmulighed: 1 til 5000
+	\item Det er muligt at tilføje tags til en quiz
+	\item Brugernavne skal være unikke
+	\item E-mails for brugere skal være unikke
+	
 	\subsection*{Ydeevne}
 	\item Programmet skal kunne afvikles af minimum 10 samtidige brugere, som hver har 1 session åben
 \end{enumerate}

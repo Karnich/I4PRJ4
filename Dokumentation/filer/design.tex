@@ -1,73 +1,66 @@
 \chapter{Design}
-Her følger en detaljeret beskrivelse af systemets design. Fra systemarkitekturen og UC-beskrivelserne genereres en række applikationsmodeller som viser kommunikationen i mellem systemets klasser og lag. Dette ender ud i et klassediagram hvor fra alle \verb+public+-metoder er vist.
+Her følger en detaljeret beskrivelse af systemets design. Fra systemarkitekturen og use case-beskrivelserne genereres en række sekvensdiagrammer som viser kommunikationen i mellem systemets klasser og lag. Der udvikles ikke komplete applikationsmodeller for de enkelte use cases, da der ikke er nogle state machines på websiden. Der er også en lille sammenhæng i mellem klasserne for hver UC hvorfor klassediagrammer for hvert UC også er udeladt.
 
-\section{Applikationsmodel}
-Her følger applikationsmodellerne for de enkelte Use Cases.
-Vi vælge kun at anvende sekvensdiagrammerne, da de er det mest værdifulde diagram til vores behov. 
-Når systemet er færdig udarbejdes et samlet klassediagram.
+\section{Sekvensdiagrammer}
 
-\subsection{Sekvensdiagrammer}
-
-\subsubsection{Sekvensdiagram for CreateQuiz}
+\subsection*{CreateQuiz}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at oprette en quiz i systemet. Som det fremgår af sekvensdiagrammet kan brugeren tilføje flere end et enkelt spørgsmål. Ydermere hvis brugeren fortryder oprettelse af quizzen, kan brugeren annullere ved DiscardQuiz().
 
 \figur{0.8}{Design/Sekvensdiagram_UC1}{Sekvensdiagram for use case 1}{Label}
 
-\subsubsection{Sekvensdiagram for Search}
+\subsection*{Search}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at søge efter en quiz eller gruppe .
 
 \figur{0.8}{Design/Sekvensdiagram_UC2}{Sekvensdiagram for use case 2}{Label}
 
-\subsubsection{Sekvensdiagram for AnswerQuiz}
+\subsection*{AnswerQuiz}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at svare på en quiz. Brugeren vælger den quiz som denne ønsker at svare på hvorefter der svares på det antal spørgsmål quizzen indeholder. Efter der er svaret på sidste spørgsmål bliver brugeren præsenteret for det resultat brugeren har opnået igennem quizzzen.
 
 \figur{0.8}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{Label}
 
-\subsubsection{Sekvensdiagram for CreateUser}
+\subsection*{CreateUser}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: strin): IdentityResult, som kan bruges til at oprette brugere i et systemet.
 
 \figur{0.8}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{Label}
 
-\subsubsection{Sekvensdiagram for ConfigUser}
+\subsection*{ConfigUser}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere sine oplysninger. Brugeren har mulighed for ændre sine data og så gemme ændringerne eller at annullere ændringerne.
 
 \figur{0.8}{Design/Sekvensdiagram_UC5}{Sekvensdiagram for use case 5}{Label}
 
-\subsubsection{Sekvensdiagram for Login}
+\subsection*{Login}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at logge ind i systemet. Her anvendes klasserne UserManager og AuthenticationManager fra Identity Framework 2.0, til genkendelse af brugere der ønsker at logge ind og til godkendelsesprocessen om en bruger eksisterer i systemet.
 
 \figur{0.8}{Design/Sekvensdiagram_UC6}{Sekvensdiagram for use case 6}{Label}
 
-\subsubsection{Sekvensdiagram for Logout}
+\subsection*{Logout}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at logge ud af systemet.
 
 \figur{0.8}{Design/Sekvensdiagram_UC7}{Sekvensdiagram for use case 7}{Label}
 
-\subsubsection{Sekvensdiagram for ConfigQuizzes}
+\subsection*{ConfigQuizzes}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere sine quizzer. Brugeren bliver præsenteret for sine quizzer hvorefter denne har mulighed for enten at ændre på sine quizzer eller at slette en given quiz.
 
 \figur{0.8}{Design/Sekvensdiagram_UC8}{Sekvensdiagram for use case 8}{Label}
 
-\subsubsection{Sekvensdiagram for CreateGroup}
+\subsection*{CreateGroup}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at oprette en gruppe. Brugeren har mulighed for at tilføje tags, gruppemedlemmer og quizzer til sin gruppe, hvorefter brugeren gemmer sin quiz i systemet.
 
 \figur{0.8}{Design/Sekvensdiagram_UC9}{Sekvensdiagram for use case 9}{Label}
 
-\subsubsection{Sekvensdiagram for ConfigGroup}
+\subsection*{ConfigGroup}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at konfigurere en af sine grupper. Brugeren bliver præsenteret for sine grupper, og der vælges hvilken gruppe der ønskes at konfigurere. Brugeren har mulighed for ændre på sin gruppe hvorefter brugeren kan vælge at gemme ændringerne eller at annullere disse.
 
 \figur{0.8}{Design/Sekvensdiagram_UC10}{Sekvensdiagram for use case 10}{Label}
 
-\subsubsection{Sekvensdiagram for ConfigFavorites}
+\subsection*{ConfigFavorites}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at slette af sine favoritter.Brugeren bliver præsenteret for sine favoritter hvorefter brugeren kan vælge at slette en eller flere favoritter.
 
 \figur{0.8}{Design/Sekvensdiagram_UC11}{Sekvensdiagram for use case 11}{Label}
 
-\subsubsection{Sekvensdiagram for ConfigFavorites}
+\subsection*{ConfigFavorites}
 Nedenstående sekvensdiagram beskriver forløbet for når en bruger ønsker at tilføje en quiz eller gruppe til sine favoritter.
 
 \figur{0.8}{Design/Sekvensdiagram_UC11_Part2}{Sekvensdiagram for use case 11}{Label}
 
-
-\subsection{QuizModel}
 \input{filer/design/quizModel}
