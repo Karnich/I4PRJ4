@@ -1,0 +1,5 @@
+\subsubsection{Config User}
+
+En bruger med en brugerprofil kan til hver en tid rekonfigurere sin profils informationer. Dog er det ikke muligt for en bruger at ændre sin brugernavn, "Username". Grunden til dette, er at de quizzer og grupper som en bruger opretter refererer til den pågældende brugers "Username". Dvs. når en bruger oprette en ny brugerprofil, vil det pågældende "Username" være lås til brugeren. 
+
+Hvis en bruger ønsker at ændre sin adgangskode, "Password", skal brugeren oplyse den nuværende aktiv adgangskode og derefter indtaste en ny adgangskode. For at ændre en brugers adgangskode anvendes ChangePassword() metoden fra UserManager klassen, som er en del af ASP.NET Identity framework. ChangePassword() metoden tager tre parameter, bruger ID, nuværende adgangskode og ny adgangskode. Men før der ændres på adgangskoden, skal der først tjekkes om brugerens input af det nuværende adgangskode er gyldig. Til det anvendes VerifyHashedPassword() metoden, som også er en del af UserManager klassen. VerifyHashedPassword() hasher brugerens input af nuværende adgangskode og sammenligner det med den nuværende originale hashed adgangskode. 
