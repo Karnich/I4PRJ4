@@ -6,26 +6,65 @@
 \acentry{1} % Test punkt
 		{
 		\begin{enumerate}
-			\item Brugeren klikker på ''Login''
-			\item Udfør accepttesten UC4: Create user
-			\item Brugeren indtaster Email, password og trykker på signin
-			\item Gem quiz
-			\item Indtast ''TestQuiz1'' i søgefelt
-			\item Klik på ''TestQuiz1''
+			\item Udfør accepttesten UC4: Create user test 1.
+			\item Klik på knappen ''Login'' i menuen.
+			\item Indtast \textbf{testmail@test.dk} i feltet for email, og \textbf{password} i feltet for password.
+			\item Tryk på knappen ''Sign in''.
 		\end{enumerate}
 		} % Test
-		{Login knappen er opdateret og fremstår nu som brugerens valgte display navn (email eller username). Brugeren er nu logget ind} % Forventede resultat
+		{Login knappen i menuen fremstår nu som \textbf{Testbruger1}. Brugeren er logget ind.} % Forventede resultat
 		{} % Resultat
 		{} % Godkendt/kommantar
 
-\acentry{2} % Test punkt
+\acentry{2}
 		{
 		\begin{enumerate}
-			\item Brugerne klikker på ''Login''
-			\item Brugeren klikker på facebook knappen ''Log in''
+			\item Udfør accepttesten UC4: Create user test 1.
+			\item Klik på knappen ''Login'' i menuen.
+			\item Indtast \textbf{testmail@test.dk} i feltet for email, og \textbf{notpassword} i feltet for password.
+			\item Tryk på knappen ''Sign in''.
+		\end{enumerate}
+		} {Der vises en fejlmeddelelse, og login er ikke givet.} %Forventet resultat
+		{} %Resultat
+		{} %Godkendt/kommentar
+
+\acentry{3}
+		{
+		\begin{enumerate}
+			\item Udfør accepttesten UC4: Create user test 1.
+			\item Klik på knappen ''Login'' i menuen.
+			\item Indtast \textbf{nottestmail@test.dk} i feltet for email, og \textbf{password} i feltet for password.
+			\item Tryk på knappen ''Sign in''.
+		\end{enumerate}
+		} {Der vises en fejlmeddelelse, og login er ikke givet.} %Forventet resultat
+		{} %Resultat
+		{} %Godkendt/kommentar
+
+\acentry{4} % Test punkt
+		{
+		\begin{enumerate}
+			\item \label{actLoginFacebook} Opret en facebook bruger på facebook.com.
+			\item Klik på knappen ''Login'' i menuen.
+			\item Klik på knappen ''Sign in'' med facebook logo i login-vinduet.
+			\item Indtast email og password til brugeren oprettet i punkt \ref{actLoginFacebook}
+			\item Tryk ''Log In'' i facebook vinduet.
+			\item Hvad skal der så ske? \fxnote{Lars: Ret dette punkt til, når man ved hvad der sker med facebook login}
 		\end{enumerate}
 		} % Test
-		{Login knappen er opdateret og fremstår nu som brugerens valgte display navn (email eller username). Brugeren er nu logget ind} % Forventede resultat
+		{Login knappen i menuen fremstår nu som \textbf{Testbruger1}.\fxnote{Lars: Ret navnet til i forhold til accepttesten}} % Forventede resultat
+		{} % Resultat
+		{} % Godkendt/kommantar
+
+\acentry{4} % Test punkt
+		{
+		\begin{enumerate}
+			\item Klik på knappen ''Login'' i menuen.
+			\item Klik på knappen ''Sign in'' med facebook logo i login-vinduet.
+			\item Indtast ugyldig email og password.
+			\item Tryk ''Log In'' i facebook vinduet.
+		\end{enumerate}
+		} % Test
+		{Der vises en fejlmeddelelse i facebook login vinduet. Brugeren er ikke logget ind. } % Forventede resultat
 		{} % Resultat
 		{} % Godkendt/kommantar
 
