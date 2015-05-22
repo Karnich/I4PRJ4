@@ -5,7 +5,7 @@
 % ¤¤ Oversaettelse og tegnsaetning ¤¤ %
 \usepackage[utf8]{inputenc}					% Input-indkodning af tegnsaet (UTF8)
 \usepackage[danish]{babel}					% Dokumentets sprog
-\usepackage[T1]{fontenc}						% Output-indkodning af tegnsaet (T1)
+\usepackage[T1]{fontenc}					% Output-indkodning af tegnsaet (T1)
 \usepackage{ragged2e,anyfontsize}			% Justering af elementer
 \usepackage{fixltx2e}						% Retter forskellige fejl i LaTeX-kernen				
 															
@@ -14,12 +14,12 @@
 %\usepackage{eso-pic}						% Tilfoej billedekommandoer paa hver side
 %\usepackage{wrapfig}						% Indsaettelse af figurer omsvoebt af tekst. \begin{wrapfigure}{Placering}{Stoerrelse}
 \usepackage{multirow}                		% Fletning af raekker og kolonner (\multicolumn og \multirow)
-\usepackage{multicol}         	        		% Muliggoer output i spalter
+\usepackage{multicol}         	        	% Muliggoer output i spalter
 \usepackage{rotating}						% Rotation af tekst med \begin{sideways}...\end{sideways}
 \usepackage{colortbl} 						% Farver i tabeller (fx \columncolor og \rowcolor)
 \usepackage{xcolor}							% Definer farver med \definecolor. Se mere: http://en.wikibooks.org/wiki/LaTeX/Colors
-\usepackage{flafter}							% Soerger for at floats ikke optraeder i teksten foer deres reference
-\let\newfloat\relax 							% Justering mellem float-pakken og memoir
+\usepackage{flafter}						% Soerger for at floats ikke optraeder i teksten foer deres reference
+\let\newfloat\relax 						% Justering mellem float-pakken og memoir
 \usepackage{float}							% Muliggoer eksakt placering af floats, f.eks. \begin{figure}[H]
 \usepackage{longtable}						% Tabeller over flere sider
 \usepackage[section]{placeins}
@@ -37,8 +37,8 @@
 \usepackage[danish]{varioref}				% Muliggoer bl.a. krydshenvisninger med sidetal (\vref)
 \usepackage[round]{natbib}							% Udvidelse med naturvidenskabelige citationsmodeller
 \usepackage{footnote}
-%\usepackage{xr}								% Referencer til eksternt dokument med \externaldocument{<NAVN>}
-%\usepackage{glossaries}						% Terminologi- eller symbolliste (se mere i Daleifs Latex-bog)
+%\usepackage{xr}							% Referencer til eksternt dokument med \externaldocument{<NAVN>}
+%\usepackage{glossaries}					% Terminologi- eller symbolliste (se mere i Daleifs Latex-bog)
 
 % ¤¤ Misc. ¤¤ %
 \usepackage{listings}						% Placer kildekode i dokumentet med \begin{lstlisting}...\end{lstlisting}
@@ -92,7 +92,7 @@
 \captionnamefont{\small\bfseries\itshape}	% Opsaetning af tekstdelen ('Figur' eller 'Tabel')
 \captiontitlefont{\small}					% Opsaetning af nummerering
 \captiondelim{. }							% Seperator mellem nummerering og figurtekst
-\hangcaption									% Venstrejusterer flere-liniers figurtekst under hinanden
+\hangcaption								% Venstrejusterer flere-liniers figurtekst under hinanden
 \captionwidth{\linewidth}					% Bredden af figurteksten
 \setlength{\belowcaptionskip}{0pt}			% Afstand under figurteksten
 		
@@ -215,45 +215,44 @@
 }
 
 % ¤¤ Use case tableller ¤¤ %
-\newcommand*{\uchead}[9]{
+\newcommand*{\uchead}[8]{
 \begin{center} \centering 
-\begin{longtable}{|p{14.5cm}|}
+	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}
 	\hline
-		\textbf{UC#1: #2}
-		\\\hline
-	\endfirsthead
+		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\endfirsthead
 		
-		\multicolumn{1}{l}{...fortsat fra forrige side}
+		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline
+		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\endhead	
+		
+		\textbf{Mål}					&#3
 		\\\hline
-		\textbf{UC#1: #2}
+		\textbf{Initialisering}			&#4
 		\\\hline
-	\endhead	
-	
-	\begin{tabularx}{0.98\textwidth}{@{}l X@{}}
-			\textbf{Mål}						& #3 \\
-			\textbf{Initialisering}			& #4 \\
-			\textbf{Aktører og Stakeholders}	& #5 \\
-			\textbf{Precondition}			& #6 \\
-			\textbf{Referencer}				& #7 \\
-			\textbf{AASH}					& #8 \\
-			\textbf{Efterfølgende tilstand}	& #9
-	\end{tabularx}
-	\\\hline
-	\textbf{Hovedforløb}
-	\\\hline
-	\begin{enumerate}		
+		\textbf{Aktører og Stakeholders}&#5
+		\\\hline 
+		\textbf{Referencer}				&#6
+		\\\hline
+		\textbf{AASH}					&#7
+		\\\hline
+		\textbf{Efterfølgende tilstand}	&#8
+		\\\hline
+		\textbf{Hovedforløb}					
+			&
+		\begin{enumerate}
+		
 }
 
 % Tabel midte
 \newcommand*{\ucdescriptionend}{
-	\end{enumerate}
-	\\\hline
-	\textbf{Undtagelser}
-	\\\hline
+	\end{enumerate}\\
+	\hline
+	\textbf{Undtagelser}&
 }
 
 \newcommand*{\ucextension}[3]{
-	\begin{enumerate} [label=#3, leftmargin=10mm]
+	\begin{enumerate} [label=#3, leftmargin=7mm]
 		\item #1
 			\subitem #2
 	\end{enumerate}
