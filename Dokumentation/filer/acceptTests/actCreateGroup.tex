@@ -4,17 +4,51 @@
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
 \acentry{1}{ \begin{enumerate}
-			\item Udfør accepttesten UC6: Login
+			\item Udfør accepttesten UC6: Login test 1
 			\item Udfør accepttesten UC1: Create Quiz
-			\item Bruger klikker på ''Group'' knappen. 
-			\item Brugeren klikker på ''Create new group''.
+			\item Tryk på ''Groups'' knappen i menuen.
+			\item Tryk på knappen ''Create new group''.
 			\item Indtast følgende værdier:
 			\subitem Group Name: \textbf{TestGroupNavn1}
-			\subitem Tags: \textbf{tag1, tag2}
+			\subitem Tags: \textbf{tag1 tag2}
 			\item Ud for TestQuiz sættes der et flueben for at tilføje quizzen til gruppen.
-			\item Der trykkes på ''Create''.
+			\item Tryk på ''Create''.
 			\end{enumerate}
 			}
-			{Gruppen oprettet i databasen på database serveren.}{ - }{ - }
+			{Gruppen \textbf{TestGroupNavn1} er oprettet i databasen på database serveren.}{ - }{ - }
+
+\acentry{2}{ \begin{enumerate}
+			\item Udfør accepttesten UC6: Login test 1
+			\item Tryk på ''Groups'' knappen i menuen.
+			\item Tryk på knappen ''Create new group''.
+			\item Indtast følgende værdier:
+			\subitem Group Name: \textbf{TestGroupNavn2}
+			\subitem Tags: \textbf{tag1 tag2}
+			\item Tryk på ''Create''.
+			\end{enumerate}
+			}
+			{Gruppen \textbf{TestGroupNavn2} er  oprettet i databasen på database serveren.}{ - }{ - }
+
+\acentry{3}{ \begin{enumerate}
+			\item Udfør test 2
+			\item Tryk på ''Group'' knappen i menuen.
+			\item Tryk på knappen ''Create new group''.
+			\item Indtast følgende værdier:
+			\subitem Group Name: \textbf{TestGroupNavn2}
+			\end{enumerate}
+			}
+			{Der vises en fejlmeddelelse, da gruppens navn allerede findes i databasen}{ - }{ - }
+			
+\acentry{4}{ \begin{enumerate}
+			\item Udfør accepttesten UC6: Login test 1
+			\item Tryk på ''Groups'' knappen i menuen.
+			\item Tryk på knappen ''Create new group''.
+			\item Indtast følgende værdier:
+			\subitem Group Name: \textbf{TestGroupNavn3}
+			\subitem Tags: \textbf{tag1 tag2}
+			\item Tryk på linket ''Back''.
+			\end{enumerate}
+			}
+			{Gruppen \textbf{TestGroupNavn3} oprettes ikke i databasen på database serveren. Brugerens grupper vises igen.}{ - }{ - }
 
 \acfoot{createQuiz}
