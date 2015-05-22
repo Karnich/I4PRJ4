@@ -2,10 +2,11 @@
 	{8} % UC-nummer
 	{Config Quizzes} % UC-navn
 	{Bruger vil ændre data for en quiz oprettet af denne bruger} % Mål
-	{Bruger har trykket på Config Quizzes} % Initialisering
+	{Bruger har trykket på Quizzes og vælger at konfigurere en given quiz} % Initialisering
 	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
+	{Bruger er logget ind og bruger har ejerskab over quizzen} % Preconditions
 	{} % Referencer
-	{} % Antal samtidige hændelser
+	{1 pr. session} % Antal samtidige hændelser
 	{Bruger har ændret de ønskede data tilknyttet en quiz} % Efterfølgende tilstand
 
 % Tilføj items her. De placeres i hovedforløbet.
@@ -15,9 +16,9 @@
 
 \item Webserveren præsenterer de fundede quizzer for brugeren.
 
-\item\label{ucConfigQuizzesSelectQuiz} Bruger kan trykke på et quiz-navn for at redigere eller på slet for at slette quizzen. \textbf{Undtagelse \ref{ucConfigQuizzesSelectQuiz}}
+\item\label{ucConfigQuizzesSelectQuiz} Bruger kan vælge at redigere ved at trykke på redigeringslogo eller at slette ved at trykke på slettelogo for en given quiz. \textbf{Undtagelse \ref{ucConfigQuizzesSelectQuiz}}
 
-\textbf{Tryk på quiz-navn}
+\textbf{Tryk på redigeringslogo}
 
 	\begin{enumerate}
 		\item Webserveren henter alle data for den valgte quiz på databaseserveren.
@@ -34,7 +35,7 @@
 		
 	\end{enumerate}
 
-\textbf{Tryk på slet}
+\textbf{Tryk på slettelogo}
 	
 	\begin{enumerate}
 		\item Webserveren beder bruger om en bekræftelse på sletningen.
