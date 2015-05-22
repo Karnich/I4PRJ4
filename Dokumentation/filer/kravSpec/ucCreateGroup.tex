@@ -3,30 +3,35 @@
 \uchead
 	{9}
 	{Create Group}
-	{Bruger vil oprette en Group.}
-	{Bruger trykker på ''Group'' på brugergrænsefladen.}
+	{Bruger vil oprette en gruppe.}
+	{Bruger trykker på ''Groups'' på brugergrænsefladens menu.}
 	{Bruger, Databaseserver og Webserver.}
-	{UC6}
+	{UC6: Login}
 	{1 pr. session.}
-	{Bruger har oprettet en Group.}
-\item Brugeren trykker på ''Create Group''.
+	{Bruger har oprettet en gruppe.}
+\item Brugeren trykker på ''Create new group''.
 
-\item Webserveren præsenterer de forskellige konfigurationsmuligheder, som Bruger har til rådighed ved ''Create Group''.
+\item Webserveren præsenterer de forskellige konfigurationsmuligheder, som Bruger har til rådighed ved ''Create Group'':
 
-\item \label{ucCreateGroupName} Bruger indtaster navn på gruppen, og dette tilføjes automatisk som et søgbart tag til gruppen.
+\item \label{ucCreateGroupName} Bruger indtaster det ønskede navn på gruppen. \textbf{Undtagelse \ref{ucCreateGroupName}.a}
 
-\item Bruger indtaster søgbare tags Ved mere end 1 tag separares de med komma.
-\item Brugeren kan tilføje Quizzer han har oprettet.
+\item Bruger indtaster søgbare tags separeret med mellemrum.
+\item Brugeren kan tilføje sine ejne quizzer til gruppen ved at trykke på checkboksen for de ønskede quizzer.
 
-\item Bruger trykker på Create knappen.
+\item \label{ucCreateGroupCreate} Bruger trykker på ''Create'' knappen, hvorefter gruppen gemmes i databasen.
+\textbf{Untagelse \ref{ucCreateGroupCreate}.a}
 
-\item Webserveren præsentere den nye gruppe.
+\item Webserveren præsenterer den nye gruppe.
 
 \ucdescriptionend
 
 \ucextension
-	{Det indtastede gruppe navn er allerede taget, indtast et andet.}
-	{Gå til UC9 punkt \ref{ucCreateGroupName}}
+	{Der findes allerede en gruppe med det indtastede navn}
+	{Der vises en valideringsfejl. Gå til UC9 punkt \ref{ucCreateGroupName}}
 	{\ref{ucCreateGroupName}.a}
 		
+\ucextension
+	{Bruger trykker på ''Back'' linket.}
+	{Use casen afsluttes. Gruppen gemmes ikke og brugeren præsenteres for samme side, som når der trykkes på ''Groups'' på brugergrænsefladens menu.}
+	{\ref{ucCreateGroupCreate}.a}
 \ucfoot{CreateGroup}
