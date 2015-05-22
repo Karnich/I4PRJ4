@@ -12,45 +12,38 @@
 	{Bruger er logget ind.}	
   
 		
-\item\label{ucLoginPresentBox} Webserveren præsentere en login knap som brugeren kan klikke på.
-
-\item Bruger klikker på login knap.
-
-\item\label{ucLoginSelectMethod} Webserveren præsentere en login boks med mulighed for at skrive username og password, login via facebook eller register. \textbf{Undtagelse \ref{ucLoginSelectMethod}}
+\item Der vises en login boks med mulighed for at skrive email og password, oprette en ny bruger, samt muligheden for login via facebook. \textbf{Undtagelse \ref{ucLoginSelectMethod}}
 
 \begin{enumerate}
 
 \item \textbf{Login med account}
 
 	\begin{enumerate}
-	
-		\item Bruger indtaster username og password og trykker på enter.
-		\item \label{ucLoginError}Webserveren validere brugerens data iforhold til dataen på databaseserveren.\textbf{Undtagelse \ref{ucLoginError}}
-		
-		\item Login boksen opdateres og viser nu at brugeren er logget ind.
-	
-		
+		\item Bruger indtaster email og password til sin oprettede bruger og trykker på knappen ''Sign in'' som ikke indeholder et facebook logo.
+		\item \label{ucLoginError}Brugerens data valideres i forhold til data på databaseserveren.\textbf{Undtagelse \ref{ucLoginError}}
+		\item Brugerens brugernavn vises i stedet for ''login'' knappen i menuen.
+		\item Brugeren er logget ind og use casen afsluttes.
 	\end{enumerate}
-
-
+	
 \item \textbf{Login med facebook}
 	
 	\begin{enumerate}
-		\item Brugeren trykker på knappen Login with facebook.
-		
-		\item\label{ucLoginWithFacebookError} Login boksen opdateres og viser nu at brugeren er logget ind. \textbf{Undtagelse \ref{ucLoginWithFacebookError}}
+		\item Brugeren trykker på knappen ''Sign in'' med et facebook logo.
+		\item\label{ucLoginWithFacebookError} Brugerens brugernavn vises i stedet for ''login'' knappen i menuen. \textbf{Undtagelse \ref{ucLoginWithFacebookError}}
+		\item Brugeren er logget ind og use casen afsluttes.
 				
 	\end{enumerate}
 \end{enumerate}
+
 \ucdescriptionend % Slut på Hovedforløb
 	\ucextension
-	{Validering af login data fejlede. Login Boks opdateres med teksten Username or password incorrect.}
-	{UC afsluttes.}
+	{Validering af login data fejlede, og der vises en fejlmeddelelse til brugeren }
+	{Use casen afsluttes.}
 	{\ref{ucLoginError}}
 
 \ucextension
-	{Bruger er ikke logget ind på facebook. Bruger logger ind på facebook.}
-	{UC afsluttes.}
+	{Bruger er ikke logget ind på facebook. Brugeren indtaster sine facebook login oplysninger i et facebook-popup vindue.}
+	{Gå til UC6 punkt \ref{ucLoginWithFacebookError}.}
 	{\ref{ucLoginWithFacebookError}}
 
 
