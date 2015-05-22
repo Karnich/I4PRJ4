@@ -4,13 +4,14 @@
 	{4}
 	{Create User}
 	{Bruger ønsker at oprette en brugerprofil.}
-	{Bruger trykker på ''Login'' og vælger ''Register'' på brugergrænsefladen.}
+	{Bruger trykker på ''Register'' på brugergrænsefladen.}
 	{Bruger, Databaseserver og Webserver.}
 	{}
 	{1 pr. session.}
 	{Bruger bruger oprettet i systemet.}
 
-\item \label{ucCreateUserOptions} Bruger vælger at oprette en brugerprofil.
+\item \label{ucCreateUserOptions} Bruger vælger at oprette en brugerprofil. \newline
+\textbf{Undtagelse \ref{ucCreateUserOptions}.a}
 
 \item \label{ucCreateUserAddUN} Bruger tilføjer brugernavn.
 \textbf{Undtagelse \ref{ucCreateUserAddUN}.a}
@@ -22,12 +23,10 @@
 \textbf{Undtagelse \ref{ucCreateUserAddEmail}.a}
 
 \item Bruger tilføjer password.
-\textbf{Undtagelse \ref{ucCreateUserAddPassword}}
 
 \item Bruger validerer password.
 
 \item Bruger gennemfører brugeroprettelse.
-\textbf{Undtagelse \ref{ucCreateUserDiscard}}
 
 \item \label{ucCreateUserCreated} Bruger oprettes i databasen og systemet.
 
@@ -35,7 +34,16 @@
 
 
 %fix extension så punkterne står ordentligt i PDF
+\ucextension
+	{Bruger vælger at logge ind via facebook}
+	{Bruger logger ind med facebook-login. \newline
+	\indent Oplysninger hentes fra brugers facebook-profil. \newline
+	\indent Gå til UC4 punkt \ref{ucCreateUserCreated}.
+	}
+	{\ref{ucCreateUserOptions}.a}
 
+	
+	
 \ucextension
 	{Brugernavnet eksisterer allerede i databasen}
 	{Bruger notificeres at brugernavn eksisterer.\newline
@@ -49,16 +57,5 @@
 	{Bruger notificeres at email eksisterer.\newline
 	Gå til UC4 punkt \ref{ucCreateUserAddEmail}}
 	{\ref{ucCreateUserAddEmail}.a}
-
-
-\ucextension
-	{Password er ikke valid}
-	{Gå til UC4 punkt \ref{ucCreateUserAddPassword}}
-	{\ref{ucCreateUserAddPassword}.a}
-
-\ucextension
-	{Bruger annullerer brugeroprettelse}
-	{UC afbrydes}
-	{\ref{ucCreateUserDiscard}.a}
-			
+		
 \ucfoot{ucCreateUser} % Indsæt navn på UC til referencer
