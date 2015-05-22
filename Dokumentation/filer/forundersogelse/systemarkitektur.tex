@@ -1,0 +1,5 @@
+% Ret emne og skriv indhold
+\section{Systemarkitektur}
+
+% Indhold
+Applikationens systemarkitektur blev lagt først relativt tidligt i forløbet. Eftersom det er en GUI applikation gav det god mening at vælge en arkitektur som opdelte view-logikken fra bussiness logikken og data manipulationen. Der var her en række valgmuligheder at benytte, bl.a. MVC, MVVP og MVP. Disse 3 arkitekture ligner på mange punkter hinanden og fælles for dem er at de har et eller flere views som repræsentere brugerens adgang til systemet og et modellag som har til opgave at manipulere med dataene i systemet. Eftersom vi valgte at benytte ASP.net teknologien fra Microsoft var det oplagt at benytte MVC da Microsoft allerede bygget et af startprojekterne op omkring denne arkitektur. I denne arkitektur er hvert view knyttet til en controller (en controller kan dog godt knyttes til flere views) og ved integration med view-laget sendes request til den korrekte controller som sørger for at returnere korrekte view og kommunikere med modellaget. 
