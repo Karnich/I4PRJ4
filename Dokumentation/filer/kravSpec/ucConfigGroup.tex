@@ -1,28 +1,23 @@
 \uchead
 	{10} % UC-nummer
 	{Config Group} % UC-navn
-	{Bruger kan slette, ændre tilstand på quizzer i gruppen og slette, tilføje tags i gruppen} % Mål
-	{Bruger har trykket på ''Groups''} % Initialisering
+	{Bruger kan slette og tilføje quizzer i gruppen, samt se en liste af medlemmer i gruppen} % Mål
+	{Bruger har trykket på Config Group} % Initialisering
 	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
-	{Bruger er logget ind og ejer en gruppe} % Preconditions
 	{} % Referencer
-	{1 pr. session} % Antal samtidige hændelser
-	{Bruger har ændret eller slettet de ønskede quizzer og tags i en given gruppe} % Efterfølgende tilstand
+	{} % Antal samtidige hændelser
+	{Bruger har ændret eller slettet de ønskede quizzer} % Efterfølgende tilstand
 
 % Tilføj items her. De placeres i hovedforløbet.
 % Referencer til punkter laves med \item\label{ucNAVNSomeItem}
 
-\item Bruger trykker på redigeringslogoet for den gruppe der ønskes konfigureret.
+\item Bruger vælger at konfigurere sine grupper.
 
-\item\label{ucConfigGroupEditGroup} Bruger for vist gruppens navn, quizzer og tags, samt en liste over gruppens medlemmer. \textbf{Undtagelse \ref{ucConfigGroupEditGroup}}
+\item Bruger bliver præsenteret for sine grupper.
 
-\item Bruger kan vælge at ændre gruppenavn.
+\item\label{ucConfigGroupEditGroup} Bruger vælger den ønskede gruppe og for vist gruppens medlemmer, samt gruppens quizzer. \textbf{Undtagelse \ref{ucConfigGroupEditGroup}}
 
-\item Bruger kan ændre tags i gruppen.
-
-\item Bruger kan vælge at slette quizzer i gruppen.
-
-\item Bruger kan vælge at aktivere eller at deaktivere en given quiz.
+\item Bruger kan vælge at slette eller tilføje quizzer til gruppen.
 
 \item Bruger gemmer sine ønskede ændringer.
 
