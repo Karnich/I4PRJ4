@@ -1,32 +1,42 @@
 \uchead
 	{3}
 	{Answer Quiz}
-	{Bruger vil besvare en quiz.}
-	{Bruger har trykket på navnet på en quiz.}
+	{Bruger vil besvare en Quiz.}
+	{Bruger har markeret en Quiz.}
 	{Bruger, Databaseserver og Webserver.}
-	{Der findes mindst én quiz i databasen} % Preconditions
-	{UC1: Create Quiz}
+	{}
 	{1 pr. session.}
 	{Bruger har besvaret alle spørgsmål i en Quiz.}
 
-\item Bruger bliver præsenteret første spørgsmål i quizzen.
+\item Bruger trykker på navnet på den Quiz han vil besvare.
 
-\item \label{ucAnswerQuizChooseAnswer} Bruger vælger en af svarmulighederne.
-\item \label{ucAnswerQuizChooseQuestion} Bruger vælger en af følgende muligheder for at manøvrere i quizzens spørgsmål:
-\begin{itemize}
-	\item Tryk på spørgsmålsnummerne i page-indikatoren.
-	\item Tryk på ''Next'' og ''Previous'' knapperne.
-\end{itemize}
-\item \label{ucAnswerQuizShowQuestion} Det valgte spørgsmål vises for brugeren.
-\item Punkt \ref{ucAnswerQuizChooseAnswer} - \ref{ucAnswerQuizShowQuestion} gentages indtil Bruger har valgt en svarmulighed for alle spørgsmål.
-\item \label{ucAnswerQuizFinish} Bruger trykker på ''Finish Quiz'' for at indsende sine besvarelser. \textbf{Undtagelse \ref{ucAnswerQuizFinish}}
-\item Der præsenteres oplysninger om brugerens besvarelser i quizzen og use casen afsluttes.
+\item Webserveren henter Quiz fra databaseserveren.
+
+\item\label{ucAnswerQuizPresent} Webserveren præsenterer første spørgsmål.
+
+\item \label{ucAnswerQuizChooseAnswer} Bruger vælger en af svarmulighederne og trykker på ''next question''. 
+\textbf{Undtagelse \ref{ucAnswerQuizChooseAnswer}.a}
+
+
+\item\label{ucAnswerQuizEnd} Næste spørgsmål præsenteres for bruger \newline
+[Punkt \ref{ucAnswerQuizPresent} - \ref{ucAnswerQuizEnd} gentages indtil der ikke er flere spørgsmål i Quizzen]
+
+
+\item Bruger kan benytte process-blokkene i toppen af området på brugergrænsefladen til at skifte mellem spørgsmålene.
+
+\item Bruger afslutter Quiz.
+
+
+\item Webserveren præsenterer statistik der viser hvor mange spørgsmål der er besvaret korrekt og hvor mange point der er samlet ind.
+
+\item Bruger vælger at afslutte hvorved Quiz forlades
 
 \ucdescriptionend
 
 \ucextension
-	{Bruger har ikke valgt svarmuligher ved alle spørgsmål.}
-	{Der vises en fejlbesked. Gå til punk \ref{ucAnswerQuizChooseQuestion}.}
-	{\ref{ucAnswerQuizFinish}}
+	{Bruger går videre uden at vælge en af svarmulighederne.}
+	{Gå til UC3 punkt \ref{ucAnswerQuizEnd}}
+	{\ref{ucAnswerQuizChooseAnswer}.a}
+	
 
 \ucfoot{AnswerQuiz}
