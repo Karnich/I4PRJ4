@@ -1,11 +1,12 @@
 \uchead
 	{5} % UC-nummer
 	{Config User} % UC-navn
-	{Bruger vil ændre sine registrerede brugerdata} % Mål
-	{Bruger har trykket på ''Edit Account''} % Initialisering
+	{Bruger vil ændre sine registrerede data} % Mål
+	{Bruger har trykket på Config User} % Initialisering
 	{Bruger, Databaseserver og Webserver} % Aktærer og stakeholders
-	{} % Referencer
-	{1 pr. session} % Antal samtidige hændelser
+	{Bruger er logget ind} % Preconditions
+	{UC6: Login} % Referencer
+	{} % Antal samtidige hændelser
 	{Bruger har ændret de ønskede data} % Efterfølgende tilstand
 
 % Tilføj items her. De placeres i hovedforløbet.
@@ -21,6 +22,7 @@
 
 \item Webserveren gemmer de opdaterede data på databaseserveren.
 
+\item Gå til punkt \ref{ucConfigUserPresentData}.
 
 
 \ucdescriptionend % Slut på Hovedforløb
@@ -32,8 +34,7 @@
 
 \ucextension
 	{Bruger vælger at fortryde ændringerne.}
-	{Bruger trykker på ''Cancel'' \newline
-	UC afsluttes.}
+	{Gå til punkt \ref{ucConfigUserPresentData}.}
 	{\ref{ucConfigUserSaveData}.a}
 
 \ucfoot{ucConfigUser} % Indsæt navn på UC til referencer
