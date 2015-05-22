@@ -1,0 +1,45 @@
+\achead{UC5}{Config User}
+
+% Testpunkter
+% \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
+
+\acentry{1}{\begin{enumerate}
+			\item Udfør accepttest for UC4: Create User test 1 for at oprette en user.
+			\item Udfør accepttest for UC6: Login test 1
+			\item Tryk på "Login" og vælg "Account". 
+			\item Ændre "Fornavn", "Efternavn" og "Email": 
+			\subitem Fornavn: FornavnUser
+			\subitem Efternavn: EfternavnUser
+			\subitem Email: Nytestmail2@test.dk
+			\item Tryk på "Save".
+			\end{enumerate}		   	
+		   	}
+		   	{Brugeren har ændret sit Fornavn, Efternavn og Email. }{ - }{ - }
+
+
+\acentry{2}{\begin{enumerate}
+			\item Udfør test 1
+			\item Tryk på "Login" og vælg "Account".
+			\item Skift Password.
+			\subitem Current Password: abcdef
+			\subitem New Password: NyPassword
+			\subitem New PasswordConfirm: NyPassword
+			\item Tryk på "Change".
+			\end{enumerate}		   	
+		   	}
+		   	{ Bruger bliver informeret om at den nuværende password ikke er gyldigt. }{ - }{ - }
+
+
+\acentry{3}{\begin{enumerate}
+			\item Udfør test 1
+			\item Tryk på "Login" og vælg "Account".
+			\item Skift Password.
+			\subitem Current Password: password
+			\subitem New Password: NyPassword
+			\subitem New PasswordConfirm: NyPassword
+			\item Tryk på "Change".
+			\end{enumerate}		   	
+		   	}
+		   	{ Bruger bliver informeret om at Password er ændret.}{ - }{ - }
+
+\acfoot{configGroup}

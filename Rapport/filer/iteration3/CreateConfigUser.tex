@@ -1,0 +1,9 @@
+\section{Create User og Config User}
+%Problemer og kort om tilføjelser 
+
+Under denne iteration blev der tilføjet endnu to vigtige funktionaliteter - nemlig oprettelse af en bruger samt konfigurere en bruger. Til at håndtere brugerprofiler, har vi anvendt ASP.NET Identity framework 2.0. ASP.NET Identity er et bibliotek som har mange brugbare klasser, når det gælder håndtering af brugerprofiler. Klasser som gør det muligt at oprette en ny bruger med en bestemt adgangskode, slette en bruger, opdatere en bruger, ændre adgangskoden til en bruger, sende en E-mail og/eller SMS til en bruger og meget mere. Et argument for at anvende ASP.NET Identity framework, er at det selv sørger for at hashe brugerens adgangskode. 
+Forneden ses brugergrænsefladen for oprettelse af en bruger (Figur: \ref{CreateUserView}). 
+
+\figur{0.6}{iteration3/CreateUserView}{Create User View}{fig:CreateUserView}
+
+Når der oprettes en ny bruger, er der krav om at brugeren skal vælge en "Username" og "Password" samt oplyse et gyldigt "E-mail". Brugeren kan også udfylde "Firstnavn" og "Lastname", men det er ikke et krav. Brugeren kan til hver en tid rekonfigurere sin profil's informationer. Dog har vi valgt ikke at give brugeren lov til at ændre "Username". Dvs. når brugeren vælger en "Username" når der oprettes en ny bruger, vil det pågældende "Username" være lås til brugeren. 

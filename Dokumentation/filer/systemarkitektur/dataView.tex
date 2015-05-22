@@ -1,12 +1,21 @@
 \section{Data View}
 
-Til systemet bruges persistering af data vha en databse på en databseserver. De oprettede entiteter/tabeller ses på figur \ref{fig:DatabaseDiagram}. Diagrammet benytter relationship-notation i overensstemmelse med Microsoft SQL Management Studio 2014. % Kilde - https://msdn.microsoft.com/en-us/ms188251.aspx
-Designet er opbygget på baggrund af domænemodellen fra afsnit \ref{sec:Domainmodel}. Entiteterne er identificeret ud fra domæneklasserne fra domænemodellen, og der er oprettet weak-entities til entiteter med en mange-til-mange relation. Disse har ingen speciel notation på diagrammet, men består af entiteterne ''QuizGroup'', ''QuizTagRelation'', ''UserGroup'', ''TagGroup'' og ''AspNetUserRoles''. Disse weak entities bruges som en slags opslags-entitet, som holder primary key for de to entities den binder.
-I diagrammet ses en række entiteter, som alle starter med ''AspNet'', disse entiteter er skabt i forbindelse med oprettelsen af brugere og login, som benytter .NET Identity 2.0 Framework. 
-% Kilde - http://www.asp.net/identity
+Til systemet bruges persistering af data vha. en database på en databaseserver. De oprettede entiteter/tabeller ses på figur \ref{fig:DatabaseDiagram}. Diagrammet benytter relationship-notation i overensstemmelse med Microsoft SQL Management Studio 2014\footnote{https://msdn.microsoft.com/en-us/ms188251.aspx}.
 
-\figur{0.9}{SystemArkitektur/Dataview_Database_diagram}{Diagram over databasens design, som er brugt til systemet}{fig:DatabaseDiagram}
+Designet er opbygget på baggrund af domænemodellen fra afsnit \ref{sec:Domainmodel}, side \pageref{sec:Domainmodel}. Entiteterne er identificeret ud fra domæneklasserne fra domænemodellen, og der er oprettet weak entities til entiteter med en mange-til-mange relation. Disse har ingen speciel notation på diagrammet, men består af entiteterne:
 
-Et databasediagram indeholdende entiteter med over typer, keys og attributter ses i bilaget.
-% FIX REFERENCE TIL BILAG! INDSÆT TABEL I BILAG
+\begin{itemize}
+	\item\verb+QuizGroup+
+	\item\verb+QuizTagRelation+
+	\item\verb+UserGroup+
+	\item\verb+TagGroup+
+	\item\verb+AspNetUserRoles+
+\end{itemize}
 
+Disse weak entities bruges som en slags opslags-entitet, som er nødvendig ved mange til mange relationer. De holder primary key for de to entiteter den binder sammen.
+
+I diagrammet ses en række entiteter, som alle starter med ''\verb+AspNet+'', disse entiteter er skabt i forbindelse med oprettelsen af brugere og login, som benytter .NET Identity 2.0 Framework\footnote{http://www.asp.net/identity}.
+
+\figur{1}{SystemArkitektur/Dataview_Database_diagram}{Diagram over databasens design, som er brugt til systemet}{fig:DatabaseDiagram}
+
+Entiteternes attributter og typer kan ses i doxygen\fxnote{Lars: Indsæt link til doxygen ved dataview}.

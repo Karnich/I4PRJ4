@@ -4,35 +4,46 @@
 	{11}
 	{Config Favorites}
 	{Bruger vil fjerne favoritter}
-	{Bruger trykker på ''Favorites'' på brugergrænsefladen}
+	{Bruger trykker på ''Favorites'' på brugergrænsefladens menu}
 	{Bruger, Databaseserver og Webserver.}
 	{}
 	{1 pr. session.}
-	{Bruger har fjernet de ønskede favoritter}
+	{Brugerens favoritter indeholder ikke de fjernede favoritter.}
 
-\item \label{ucConfigFavoritesNone} Webserveren præsenterer de  quizzer, som Bruger har markeret som favorit.
+\item \label{ucConfigFavoritesNone} Webserveren præsenterer de  grupper, som Bruger har markeret som favorit.
 \textbf{Undtagelse \ref{ucConfigFavoritesNone}.a}
 
-\item Bruger trykker på ''Remove favorite'' ikonet ved den quiz, der ønskes fjernet.
+\item \label{ucConfigFavoritesViewGrp}Bruger trykker på ''Remove favorite'' ikonet ved den quiz, der ønskes fjernet.
+\textbf{Undtagelse \ref{ucConfigFavoritesViewGrp}.a}
 
-\item \label{ucConfigFavoritesGrp}Bruger trykker på ''Groups'' for at se de grupper som er markeret som favorit.
-\textbf{Undtagelse \ref{ucConfigFavoritesGrp}.a}
+\item \label{ucConfigFavoritesQuiz}Bruger trykker på ''Quizzes'' for at se de grupper som er markeret som favorit.
+\textbf{Undtagelse \ref{ucConfigFavoritesQuiz}.a}
 
-\item Bruger trykker på ''Remove favorite'' ikonet ved den gruppe, der ønskes fjernet.
+\item \label{ucConfigFavoritesViewQuiz}Bruger trykker på ''Remove favorite'' ikonet ved den quiz, der ønskes fjernet.
+\textbf{Undtagelse \ref{ucConfigFavoritesViewQuiz}.a}
 
 \item Brugeren er færdig med at fjerne favoritter og use casen afsluttes
 
 \ucdescriptionend
 
 \ucextension
-	{Bruger har ikke tilføjet nogle quizzer til favoritter.}
-	{Gå til UC11 punkt \ref{ucConfigFavoritesGrp}}
+	{Bruger har ikke tilføjet nogle grupper til favoritter. Og der vises ingen.}
+	{Gå til UC11 punkt \ref{ucConfigFavoritesQuiz}.}
 	{\ref{ucConfigFavoritesNone}.a}
 		
 \ucextension
-			{Bruger har ikke tilføjet nogen grupper til favoritter.}
-	{Use casen afsluttes}
-	{\ref{ucConfigFavoritesGrp}.a}
+	{Bruger trykker på gruppe-navnet}
+	{Use casen afsluttes og gruppen vises.}
+	{\ref{ucConfigFavoritesViewGrp}.a}		
+		
+\ucextension
+			{Bruger har ikke tilføjet nogen quizzer til favoritter. Og der vises ingen.}
+	{Use casen afsluttes.}
+	{\ref{ucConfigFavoritesQuiz}.a}
 	
+\ucextension
+	{Bruger trykker på quiz-navnet}
+	{Use casen afsluttes og UC3: Answer Quiz påbegyndes.}
+	{\ref{ucConfigFavoritesViewQuiz}.a}
 		
 \ucfoot{CreateQuiz}

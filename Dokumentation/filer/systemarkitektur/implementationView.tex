@@ -1,12 +1,14 @@
 \section{Implementation View}
 Implementation View er en abstraktion af modulerne i systemet. På figur \ref{fig:implementationView} er vist de identificerede pakker i systemet.
 
-\figur{0.9}{SystemArkitektur/ImplementationView}{Implementation View af systemet med identificerede pakker og klasser}{fig:implementationView}
+\figur{1.0}{SystemArkitektur/ImplementationView.pdf}{Implementation View af systemet med identificerede pakker og klasser}{fig:implementationView}
 
-View-pakken håndterer web-layoutet i form af HTML og CSS kode. Her styres præsentationens udseende.
+View-pakken håndterer web-layoutet i form af HTML og CSS kode. Her styres præsentationens udseende. Pakken indeholder også client side logik i form af Javascript-kode.
 
-!.UI forklaring ud fra GUI skitse.!
+Hvert view, undtagen Layout, går ind og sætter indholdet i den dynamiske ramme set på figur \ref{fig:layoutGUI}. Viewet Layout er ansvarlig for at sætte den udenomstående grafik. I denne findes logik til at sætte menuen alt afhængig af om brugeren er logget ind eller ej. En detaljeret beskrivelse af de enkelte views er i afsnit \ref{sec:views}, på side \pageref{sec:views}.
 
-I controller-pakken ligger en klasse for hvert use case som håndterer de individuelle forløbshændelser og interaktionen i mellem Views og Model. Bemærk dog at UC for login og logout er slået sammen i én controller.
+\figur{0.9}{SystemArkitektur/ImplementationViewGUI}{GUI er opdelt i en statisk og en dynamisk del, hvor den statiske del er sat af et layout view}{fig:layoutGUI}
 
-Model-pakken håndterer data. Både databaseadgang og repository (maybe) klasser for dataelemnterne.
+I controller-pakken ligger en klasse for hvert use case som håndterer de individuelle forløbshændelser og interaktionen i mellem Views og Model. Bemærk dog at UC for login og logout er slået sammen i én controller. 
+
+Model-pakken håndterer modelering af data der skal persisteres i databasen samt View Modeller, der er modificerede modeller som er specialiserede til et givent view.

@@ -1,0 +1,21 @@
+Til at dokumentere metoder og klasser, gøres der brug af Doxygen. Ved at tilføje tre skråstreger (///) over klasser og metoder, kan Doxygen generere en html side hvori beskrivelser og relationer er vist.
+På \ref{lst:doxygen} ses et eksempel på beskrivelse af en metode.
+
+\lstsetcsharp
+\begin{lstlisting}[caption=Eksempel på Doxygen notation, label=lst:doxygen]
+/// <summary>
+/// Get quiz by Id from QuizModel, aggregate tags to string and return ConfigQuiz view
+/// </summary>
+/// <param name="id">Quiz ID</param>
+/// <returns>Editor view for the quiz. Redirects to Index() if Id is null or non-positive</returns>
+public ActionResult ConfigQuiz(int? id)
+{
+	if (!User.Identity.IsAuthenticated)
+		return RedirectToAction("Index", "Home");
+	...
+}
+\end{lstlisting}
+
+På Cden følger der en html side under Doxygen, hvor dokumentationen præsenteres. På \ref{fig:doxygenhtml}, ses et screenshot af layoutet.
+
+\figur{0.6}{Implementering/DoxygenHtml.png}{Visning af Doxygen layout}{fig:doxygenhtml}

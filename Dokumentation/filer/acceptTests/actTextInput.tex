@@ -1,44 +1,48 @@
-\achead{0}{Generel InputTest}
+For den generelle input test gælder minimum og maksimum karakterlængder er som beskrevet i de ikke-funktionelle krav, afsnit \ref{sec:nonFunctional}, på side \pageref{sec:nonFunctional}.
+
+\achead{0}{Generel Input Test}
 
 % Testpunkter
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
 \acentry{1}{ \begin{enumerate}
 			\item Marker tekstboks.
-			\item Fjern markering uden at indtaste noget.
+			\item Indtast minimum antal \textbf{A} karakterer minus 1.
+			\item Fjern markering fra tekstboks.
 			\end{enumerate}
 			}
-			{Tekstboksens ramme bliver rød}{ - }{ - }
+			{Der udskrives fejlbesked}
+			{ - }
+			{ - }
 
 \acentry{2}{ \begin{enumerate}
 			\item Marker tekstboks.
-			\item Indtast \textbf{A}.
+			\item Indtast minimum antal \textbf{A} karakterer.
 			\item Fjern markering fra tekstboks.
 			\end{enumerate}
 			}
-			{Teksboksens ramme bliver grøn}{ - }{ - }
+			{Der udskrives ingen fejlbesked}
+			{ - }
+			{ - }
 			
 \acentry{3}{ \begin{enumerate}
 			\item Marker tekstboks.
-			\item Indtast 75 A'er: \textbf{AAAAAAAAAAAAAAAAAAAAA\newline AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\newline AAAAAAAAAAAAAAAAAAAAAAAA]}.
+			\item Indtast maksimalt antal \textbf{A} karakterer.
 			\item Fjern markering fra tekstboks.
 			\end{enumerate}
 			}
-			{Teksboksens ramme bliver grøn}{ - }{ - }
+			{Der udskrives ingen fejlbesked}
+			{ - }
+			{ - }
 			
 \acentry{4}{ \begin{enumerate}
 			\item Marker tekstboks.
-			\item Indtast 76 A'er: \textbf{AAAAAAAAAAAAAAAAAAAAA\newline AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\newline AAAAAAAAAAAAAAAAAAAAAAAAA]}.
-			\end{enumerate}
-			}
-			{Teksboksens ramme bliver rød}{ - }{ - }
-
-\acentry{5}{ \begin{enumerate}
-			\item Marker tekstboks.
-			\item Indtast \textbf{\%}.
+			\item Indtast maksimalt antal \textbf{A} plus 1.
 			\item Fjern markering fra tekstboks.
 			\end{enumerate}
 			}
-			{Teksboksens ramme bliver rød}{ - }{ - }
+			{Der udskrives fejlbesked}
+			{ - }
+			{ - }
 
 \acfoot{Generel InputTest}
