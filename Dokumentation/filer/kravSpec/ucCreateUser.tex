@@ -21,12 +21,12 @@
 \item \label{ucCreateUserAddEmail} Bruger tilføjer email.
 \textbf{Undtagelse \ref{ucCreateUserAddEmail}.a}
 
-\item Bruger tilføjer password.
+\item \label{ucCreateUserAddPassword} Bruger tilføjer adgangskode.
 \textbf{Undtagelse \ref{ucCreateUserAddPassword}}
 
-\item Bruger validerer password.
+\item Bruger validerer adgangskode.
 
-\item Bruger gennemfører brugeroprettelse.
+\item \label{ucCreateUserDiscard} Bruger gennemfører brugeroprettelse.
 \textbf{Undtagelse \ref{ucCreateUserDiscard}}
 
 \item \label{ucCreateUserCreated} Bruger oprettes i databasen og systemet.
@@ -54,9 +54,9 @@
 
 
 \ucextension
-	{Password er ikke valid}
+	{Adganskode er ikke valid}
 	{Gå til UC4 punkt \ref{ucCreateUserAddEmail}}
-	{\ref{ucCreateUserAddEmail}.a}
+	{\ref{ucCreateUserAddPassword}.a}
 
 
 
@@ -65,4 +65,4 @@
 	{UC afsluttes}
 	{\ref{ucCreateUserDiscard}.a}
 		
-\ucfoot{ucCreateUser} % Indsæt navn på UC til referencer
+\ucfoot{CreateUser} % Indsæt navn på UC til referencer
