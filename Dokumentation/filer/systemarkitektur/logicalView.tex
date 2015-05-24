@@ -1,9 +1,9 @@
 \section{Logical View}\label{sec:LogicalView}
-Systemet udvikles på ASP.NET MVC-frameworket\footnote{\url{http://www.asp.net/mvc} Microsoft ASP.NET MVC}. Her inddeles systemet i tre lag, som vist på figur \ref{fig:logicalView}.
+Systemet udvikles på ASP.NET MVC-frameworket \citep{aspnetmvcWeb}. Her inddeles systemet i tre lag, som vist på figur \ref{fig:logicalView}.
 
 \figur{0.8}{SystemArkitektur/LogicalView}{Logical View for systemets overordnede arkitektur}{fig:logicalView}
 
-Modellaget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server\footnote{\url{http://www.microsoft.com/SQLServer} Microsoft SQL Server}. I modellaget gemmes også ViewModels, som er View-specifikke modeller. Disse er uafhængige af systemets logik, men bruges udelukkende som bindeled i mellem views og controllers, hvis den oprindelige model ikke er tilstrækkeligt.
+Modellaget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server \citep{sqlserverWeb}. I modellaget gemmes også ViewModels, som er View-specifikke modeller. Disse er uafhængige af systemets logik, men bruges udelukkende som bindeled i mellem views og controllers, hvis den oprindelige model ikke er tilstrækkeligt.
 
 View laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne til formatering af udseendet. I view laget ligger også clientside logik i form af javascripts.
 
