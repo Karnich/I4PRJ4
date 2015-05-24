@@ -2,7 +2,7 @@ Formene i Create og Config quiz er udviklet til at kunne udvides dynamisk ved br
 
 For at udnytte \verb+ASP.NET+s evne til at arbejde på modeller redigeres navenene på alle inputfelterne så de svarer til de navne der ville være hvis objekterne var oprettet i \verb+C#+.
 For eksempel, hvis en quiz har ét spørgsmål og der tilføjes et nyt, får det nye input-felt, til teksten, navnet \verb+Questions[1].Text+.
-På denne måde kan den samlede håndtering af form-inputtet bruge ét argument af typen \verb+Quiz+, i stedet for at skulle tage alle parametre ind én af gangen. Et udklip af koden er vist i listing \ref{lst:QuizzesJavascript}.
+På denne måde kan den samlede håndtering af form-inputtet bruge ét argument af typen \verb+Quiz+, i stedet for at skulle tage alle parametre ind én af gangen. Et udklip af koden er vist i \lstlistingname \ref{lst:QuizzesJavascript}.
 
 På linje 2-5 er AJAX-kaldet. Hvis dette går godt udføres funktionen i linje 5. Her tilføjes HTML-koden fra controlleren en \verb+div+-container. Model-binding navnet konstrueres og tilføjes alle nye \verb+input+-tags. Til sidst returneres false, for at undgå at formens almindelige submit-action udføres.
 
