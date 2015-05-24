@@ -217,42 +217,46 @@
 % ¤¤ Use case tableller ¤¤ %
 \newcommand*{\uchead}[8]{
 \begin{center} \centering 
-	\begin{longtable}{|p{4.6cm}|p{9.4cm}|}
+	\begin{longtable}{|p{14cm}|}
 	\hline
-		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\textbf{UC#1: #2} \\
+		\hline
 		\endfirsthead
 		
-		\multicolumn{2}{l}{...fortsat fra forrige side} \\ \hline
-		\multicolumn{2}{|l|}{\textbf{UC#1: #2}} \\\hline
+		\multicolumn{1}{l}{...fortsat fra forrige side}\\ \hline
+		\textbf{UC#1: #2} \\\hline
 		\endhead	
 		
-		\textbf{Mål}					&#3
-		\\\hline
-		\textbf{Initialisering}			&#4
-		\\\hline
-		\textbf{Aktører og Stakeholders}&#5
-		\\\hline 
-		\textbf{Referencer}				&#6
-		\\\hline
-		\textbf{AASH}					&#7
-		\\\hline
-		\textbf{Efterfølgende tilstand}	&#8
+		\begin{tabularx}{0.94\textwidth}{@{}l X@{}}
+			\textbf{Mål}						&#3
+			\\
+			\textbf{Initialisering}			&#4
+			\\
+			\textbf{Aktører og Stakeholders}	&#5
+			\\
+			\textbf{Referencer}				&#6
+			\\
+			\textbf{AASH}					&#7
+			\\
+			\textbf{Efterfølgende tilstand}	&#8
+			\\
+		\end{tabularx}
 		\\\hline
 		\textbf{Hovedforløb}					
-			&
+		\\\hline
 		\begin{enumerate}
 		
 }
 
 % Tabel midte
 \newcommand*{\ucdescriptionend}{
-	\end{enumerate}\\
-	\hline
-	\textbf{Undtagelser}&
+	\end{enumerate}
+	\\\hline
+	\textbf{Undtagelser}
 }
 
 \newcommand*{\ucextension}[3]{
-	\begin{enumerate} [label=#3, leftmargin=7mm]
+	\begin{enumerate} [label=#3, leftmargin=10mm]
 		\item #1
 			\subitem #2
 	\end{enumerate}

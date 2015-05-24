@@ -1,7 +1,7 @@
 \section{Database}
 I denne iteration var der fokus på at få gemt brugerens oprettede quizzer, samt at kunne finde dem igen via quizzens tags, som searchfunktionen vil søge på.
 
-Ingeniørhøjskolen Aarhus Universitet stillede en MSSQL server til rådighed, som blev brugt som løsning til database problematikken. Denne databaseserver kræver dog at man er logget på skolens VPN for at have adgang til. I programmet DDS-lite, som blev introduceret i 4. semesterets databasekursus, udvikledes et ER-diagram (se \ref{fig:databasedesign}, som blev benyttet til at opsætte et databaseschema. Schemaet indholdte en Quiz, Question, Answer, Tag og QuizTagRelation entity. QuizTagRelation entiten, er en mange-til-mange relation som indeholder en hhv. Quiz- og TagId
+Ingeniørhøjskolen ved Aarhus Universitet stillede en MSSQL server til rådighed, som blev brugt som løsning til database problematikken. Denne databaseserver kræver dog at man er logget på skolens VPN for at have adgang til. I programmet DDS-lite, som blev introduceret i 4. semesterets databasekursus, udvikledes et ER-diagram (se \ref{fig:databasedesign}, som blev benyttet til at opsætte et databaseschema. Schemaet indholder en Quiz, Question, Answer, Tag og QuizTagRelation entity. QuizTagRelation entiteten, er en mange-til-mange relation som indeholder hhv. et Quiz- og TagId
 
 \figur{0.6}{iteration1/ER_Diagram_1}{ER-diagram over databasen i 1. iteration}{fig:databasedesign}
 

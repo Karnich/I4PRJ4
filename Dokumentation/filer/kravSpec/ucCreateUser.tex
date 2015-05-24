@@ -4,14 +4,13 @@
 	{4}
 	{Create User}
 	{Bruger ønsker at oprette en brugerprofil.}
-	{Bruger trykker på ''Register'' på brugergrænsefladen.}
+	{Bruger trykker på ''Login'' og vælger ''Register'' på brugergrænsefladen.}
 	{Bruger, Databaseserver og Webserver.}
 	{}
 	{1 pr. session.}
 	{Bruger bruger oprettet i systemet.}
 
 \item \label{ucCreateUserOptions} Bruger vælger at oprette en brugerprofil. \newline
-\textbf{Undtagelse \ref{ucCreateUserOptions}.a}
 
 \item \label{ucCreateUserAddUN} Bruger tilføjer brugernavn.
 \textbf{Undtagelse \ref{ucCreateUserAddUN}.a}
@@ -22,11 +21,13 @@
 \item \label{ucCreateUserAddEmail} Bruger tilføjer email.
 \textbf{Undtagelse \ref{ucCreateUserAddEmail}.a}
 
-\item Bruger tilføjer password.
+\item \label{ucCreateUserAddPassword} Bruger tilføjer adgangskode.
+\textbf{Undtagelse \ref{ucCreateUserAddPassword}}
 
-\item Bruger validerer password.
+\item Bruger validerer adgangskode.
 
-\item Bruger gennemfører brugeroprettelse.
+\item \label{ucCreateUserDiscard} Bruger gennemfører brugeroprettelse.
+\textbf{Undtagelse \ref{ucCreateUserDiscard}}
 
 \item \label{ucCreateUserCreated} Bruger oprettes i databasen og systemet.
 
@@ -34,14 +35,6 @@
 
 
 %fix extension så punkterne står ordentligt i PDF
-\ucextension
-	{Bruger vælger at logge ind via facebook}
-	{Bruger logger ind med facebook-login. \newline
-	\indent Oplysninger hentes fra brugers facebook-profil. \newline
-	\indent Gå til UC4 punkt \ref{ucCreateUserCreated}.
-	}
-	{\ref{ucCreateUserOptions}.a}
-
 	
 	
 \ucextension
@@ -57,5 +50,19 @@
 	{Bruger notificeres at email eksisterer.\newline
 	Gå til UC4 punkt \ref{ucCreateUserAddEmail}}
 	{\ref{ucCreateUserAddEmail}.a}
+
+
+
+\ucextension
+	{Adganskode er ikke valid}
+	{Gå til UC4 punkt \ref{ucCreateUserAddEmail}}
+	{\ref{ucCreateUserAddPassword}.a}
+
+
+
+\ucextension
+	{Bruger annullerer brugeroprettelse}
+	{UC afsluttes}
+	{\ref{ucCreateUserDiscard}.a}
 		
-\ucfoot{ucCreateUser} % Indsæt navn på UC til referencer
+\ucfoot{CreateUser} % Indsæt navn på UC til referencer
