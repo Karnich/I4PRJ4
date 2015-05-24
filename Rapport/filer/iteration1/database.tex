@@ -1,11 +1,12 @@
 \section{Database}
-I denne iteration var der fokus på at få gemt brugerens oprettede quizzer, samt at kunne finde dem igen via quizzens tags, som searchfunktionen vil søge på.
+I denne iteration var der fokus på at få gemt brugerens oprettede quizzer, samt at kunne finde dem igen via quizzens tags, som search-funktionen vil søge på.
 
-Ingeniørhøjskolen ved Aarhus Universitet stillede en MSSQL server til rådighed, som blev brugt som løsning til database problematikken. Denne databaseserver kræver dog at man er logget på skolens VPN for at have adgang til. I programmet DDS-lite, som blev introduceret i 4. semesterets databasekursus, udvikledes et ER-diagram (se \ref{fig:databasedesign}, som blev benyttet til at opsætte et databaseschema. Schemaet indholder en Quiz, Question, Answer, Tag og QuizTagRelation entity. QuizTagRelation entiteten, er en mange-til-mange relation som indeholder hhv. et Quiz- og TagId
+ASE stillede en MS SQL server \citep{sqlserverWeb} til rådighed, som blev brugt som løsning til database problematikken. Denne databaseserver er placeret på et internt netværk på ASE hvilket kræver at man er logget på ASE's VPN for at få adgang til den. I programmet DDS-Lite, som blev introduceret i 4. semesterets databasekursus I4DAB, udvikledes et ER-diagram, vist på figur \ref{fig:databasedesign}, som blev benyttet til at opsætte et databaseschema.
 
-\figur{0.6}{iteration1/ER_Diagram_1}{ER-diagram over databasen i 1. iteration}{fig:databasedesign}
+Schemaet indholder entiteterne Quiz, Question, Answer, Tag og QuizTagRelation. QuizTagRelation entiteten, er en mange-til-mange relation som indeholder hhv. et Quiz- og TagId
 
-For at overholde separation of concerns blev der lavet et Data Access Layer og en QuizModel. Data Access Layeret blev implementeret med ADO.NET frameworket, som muliggjorde at queries blev sendt til databasen. Dette Data Access Layer åbner forbindelsen til databasen når der var brug for det, og lukkede den efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset Databaser. QuizModel klassen er vores såkaldte "smarte lag" til databasen. Det sørger for at få samlede quizzer så de er komplette når en controller beder om dem. Ligeledes sørger de for at få gemt komplette quizzer ordentligt i databasen, igennem Data Access Layeret.
+\figur{0.7}{iteration1/ER_Diagram_1}{ER-diagram over databasen i 1. iteration}{fig:databasedesign}
 
+For at overholde princippet om separation of concerns, blev der lavet et DAL og en QuizModel. DAL blev implementeret med ADO.NET-frameworket, som muliggjorde at queries blev sendt til databasen. Dette DAL åbnede forbindelsen til databasen når der var brug for det, og lukkede den igen efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset I4DAB. 
 
-
+QuizModel-klassen er en facade-klasse i mellem DAL og controllerene. Her ligges logik som håndtere komplekse database-forespørgsler som når en komplet quiz skal hentes med tilhørende spørgsmål og svar. Det samme gælder når quizzer skal gemmes mv.
