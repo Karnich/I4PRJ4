@@ -1,19 +1,19 @@
 \uchead
 	{2}
 	{Search}
-	{Bruger vil finde en ønsket Quiz.}
+	{Bruger vil finde en ønsket quiz eller gruppe.}
 	{Bruger aktiverer søgefeltet på brugergrænsefladen.}
 	{Bruger, Databaseserver, Webserver.}
 	{}
 	{1 pr. session.}
 	{Bruger har markeret den ønskede Quiz.}
 
-\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, som den ønskede quiz og/eller groups er tilknyttet. 
+\item \label{ucFindQuizSearch} Bruger indtaster navnet på de tags, som den ønskede quiz og/eller gruppe er tilknyttet. 
 \textbf{Undtagelse \ref{ucFindQuizSearch}.a}
 \item Bruger trykker på SØG knappen på brugergrænsefladen.
-\item Websereveren søger efter quizzes og/eller groups der matcher søgeargumenterne på databaseserveren.
+\item Websereveren søger efter quizzes og grupper der matcher søgeargumenterne på databaseserveren.
 
-\item \label{ucFindQuizNoResults} Webserveren præsenterer en række quizzes og/eller groups, som er tilknyttet de tags Bruger indtastede.
+\item \label{ucFindQuizNoResults} Webserveren præsenterer en række quizzes og grupper, som er tilknyttet de tags Bruger indtastede.
 \textbf{Undtagelse \ref{ucFindQuizNoResults}.a}
 
 
@@ -25,7 +25,7 @@
 	{\ref{ucFindQuizSearch}.a}
 
 \ucextension
-	{Søgningen fandt ingen quizzes eller groups med de angivne tags.}
+	{Søgningen fandt ingen quizzes eller grupper med de angivne tags.}
 	{Gå til UC2.\ref{ucFindQuizSearch}}
 	{\ref{ucFindQuizNoResults}.a}
 				
