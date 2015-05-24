@@ -1,11 +1,11 @@
 \subsubsection{Search}
 
-På menubjælken er der et inputfelt hvor bruger kan søge efter quizzer og/eller grupper ved at indtaste ønskede søgeargument. Når bruger trykker på "SØG" knappen bliver bruger præsenteret for Search viewet. Search viewet viser en række quizzer og/eller grupper som matcher brugers søgeargument. Hvis ingen quiz eller gruppe blev fundet vil Search viewet informere bruger om det. 
+På menubjælken er der et inputfelt hvor bruger kan søge efter quizzer og/eller grupper ved at indtaste ønsket søgeargument. Når bruger trykker på "SØG" knappen bliver bruger præsenteret for Search viewet. Search viewet viser en række quizzer og/eller grupper som matcher brugers søgeargument. Hvis ingen quiz eller gruppe blev fundet vil Search viewet informere bruger om det. 
 
-Søgesystemet søger  efter quizzer og grupper som har tags der matcher søgeargumentet - quiz navn og gruppe navn indgår også som tag. Søgesystemet har en meget bredt søgning. Dvs. at så længe søgeargumentet indgår i en eller flere quizzer og/eller gruppers tags, vil de pågældende quizzer og/eller grupper bliver præsenteret på Search viewet. Fx hvis søgeargumentet er 'd', vil søgesystemet finde samlige quizzer og/eller grupper hvor 'd' indgår.  
+Søgesystemet søger  efter quizzer og grupper som har tags der matcher søgeargumentet - quiznavn og gruppenavn indgår også som tag. Søgesystemet har en meget bred søgning. Dvs. at så længe søgeargumentet indgår i en eller flere quizzer og/eller gruppers tags, vil de pågældende quizzer og/eller grupper bliver præsenteret på Search viewet. Fx hvis søgeargumentet er 'd', vil søgesystemet finde samlige quizzer og/eller grupper hvor 'd' indgår.  
 
 
-Search viewet består i princippet af to views. Et som viser alle de quizzer som matcher søgeargumentet og det andet viser grupperne. Til visning af de to views bruges bl.a. jQuery AJAX teknologien. Ved brug af jQuery AJAX kan der skiftes imellem de to views uden at hele web-applikationen bliver opdateret, fordi client-side sender og modtager data til og fra server-side asynkron, dvs. at der opdateres kun på det ændrede data og ikke hele web-applikationen. 
+Search viewet består i princippet af to views. Et som viser alle de quizzer som matcher søgeargumentet og det andet viser grupperne. Til visning af de to views bruges bl.a. jQuery AJAX teknologien. Ved brug af jQuery AJAX kan der skiftes imellem de to views uden at hele web applikationen bliver opdateret, fordi clientside sender og modtager data til og fra serverside asynkron, dvs. at der opdateres kun på det ændrede data og ikke hele web applikationen. 
 
 Figur \ref{fig:QuizView} viser viewet for Quizzes, og figur \ref{fig:GroupView} viser viewet for Groups. 
 
