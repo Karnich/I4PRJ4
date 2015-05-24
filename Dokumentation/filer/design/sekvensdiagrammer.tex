@@ -1,7 +1,7 @@
 \section{Sekvensdiagrammer}
 
 \subsection*{CreateQuiz}
-Sekvensdiagrammet vist i figur \ref{SD_UC1} beskriver forløbet for når en bruger ønsker at oprette en quiz i systemet. Som det fremgår af sekvensdiagrammet kan brugeren tilføje flere end et enkelt spørgsmål. Ydermere hvis brugeren fortryder oprettelse af quizzen, kan brugeren annullere ved DiscardQuiz().
+Sekvensdiagrammet vist i figur \ref{SD_UC1} beskriver forløbet for når en bruger ønsker at oprette en quiz i systemet. Som det fremgår af sekvensdiagrammet kan brugeren tilføje flere end et enkelt spørgsmål.
 
 \figur{1.2}{Design/Sekvensdiagram_UC1}{Sekvensdiagram for use case 1}{SD_UC1}
 
@@ -16,7 +16,7 @@ Sekvensdiagrammet vist i figur \ref{SD_UC3} beskriver forløbet for når en brug
 \figur{1.2}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{SD_UC3}
 
 \subsection*{CreateUser}
-Sekvensdiagrammet vist i figur \ref{SD_UC4} beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: strin): IdentityResult, som kan bruges til at oprette brugere i et systemet.
+Sekvensdiagrammet vist i figur \ref{SD_UC4} beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: string): IdentityResult, som kan bruges til at oprette brugere i et systemet.
 
 \figur{1.2}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{SD_UC4}
 

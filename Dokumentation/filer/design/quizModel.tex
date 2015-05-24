@@ -1,5 +1,5 @@
 \section{QuizModel}
 
-I kravene for applikationen er identificeret mange entiteter som skal percisteres i databasen. For at give controllerne en  simpel adgang til disse funktionaliteter og samtidige abstrahere en del af ansvaret ud fra disse oprettes en facade til DAL. Dette er en design strategi beskrevet som Fa\c{c}ade Pattern i bogen Design Patterns \citep[s. 186-]{gof}.
+I kravene for applikationen er der identificeret mange entiteter som skal persisteres i databasen. For at give controllerne en  simpel adgang til disse funktionaliteter og samtidige abstrahere en del af ansvaret ud fra disse, oprettes en facade til DAL. Dette er en designstrategi beskrevet som Fa\c{c}ade Pattern i bogen Design Patterns \citep[s. 186-]{gof}.
 
 Klassen bryder med Single Responsibility i SOLID-principperne \citep{wikiSolid}, men da facaden betegnes som et interface til sub-modulet DAL er dette en acceptabel løsning.
