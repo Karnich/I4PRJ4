@@ -3,12 +3,12 @@ Systemet udvikles på ASP.NET MVC-frameworket\footnote{\url{http://www.asp.net/m
 
 \figur{0.8}{SystemArkitektur/LogicalView}{Logical View for systemets overordnede arkitektur}{fig:logicalView}
 
-Model-laget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server\footnote{\url{http://www.microsoft.com/SQLServer} Microsoft SQL Server}. I model-laget gemmes også ViewModels, som er View-specifikke modeller. Disse er uafhængige af systemets logik, men bruges udelukkende som bindeled i mellem views og controllers, hvis den oprindelige model ikke er tilstrækkeligt.
+Modellaget har ansvaret for adgang til persisteret data. Her anvendes en databaseserver i form af Microsofts SQL Server\footnote{\url{http://www.microsoft.com/SQLServer} Microsoft SQL Server}. I modellaget gemmes også ViewModels, som er View-specifikke modeller. Disse er uafhængige af systemets logik, men bruges udelukkende som bindeled i mellem views og controllers, hvis den oprindelige model ikke er tilstrækkeligt.
 
-View-laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne til formatering af udseendet. I view-laget ligger også client side logik i form af javascripts.
+View laget håndterer den grafiske fremvisning for brugeren. Her anvendes HTML5 og CSS3 standarderne til formatering af udseendet. I view laget ligger også clientside logik i form af javascripts.
 
-Controller-laget har ansvaret for business logic og håndterer UC-forløbene. Systemet er udviklet til at have en controller per use case.
+Controller laget har ansvaret for business logik og håndterer UC-forløbene. Systemet er udviklet til at have en controller per use case.
 
-På figur \ref{fig:logicalSD} er vist et simpelt system-sekvensdiagram for UC1. Controlleren bliver aktiveret ved et request fra en client ud fra en given URL. Her efter udføre den de nødvendige funktionaliteter og returnere et givent view eller kalder en anden controller.
+På figur \ref{fig:logicalSD} er vist et simpelt systemsekvensdiagram for use case 1. Controlleren bliver aktiveret ved et request fra en client ud fra en given URL. Her efter udfører den de nødvendige funktionaliteter og returnerer et givent view eller kalder en anden controller.
 
-\figur{1}{SystemArkitektur/SystemSD_UC1}{System-sekvensdiagram for UC1 Create Quiz}{fig:logicalSD}
+\figur{1}{SystemArkitektur/SystemSD_UC1}{Systemsekvensdiagram for UC1 Create Quiz}{fig:logicalSD}
