@@ -1,1 +1,13 @@
 \chapter{Test}
+Sideløbende med applikationens udvikling er der udviklet en række unit- og integrations-tests til at sikre funktionaliteten er som forventet. Begrundelsen for dette er at applikationen udvikles agilt, hvilket betyder at der kommer tilføjelser til eksisterende kode over hele projektets levetid. For at sikre at nye tilføjelser ikke ændrer eller ødelægger eksisterende kode.
+
+Yderligere er anvendt en CI-Server. Denne er sat op til at bygge og teste projektet ved hvert commit af kode. På denne måde sikrer man at koden er uafhængig af den enkelte programmørs udviklingsmiljø, og får samtidig en række værktøjer til at overvåger fremgangen i applikationensudviklingen.
+
+ASE har stillet en server til rådighed med CI-programmet Jenkins \citep{jenkinsWeb}. Adgang til denne er på URL: \url{http://10.29.0.31:8080/job/I4PRJ4G3/}. Bemærk dog at man skal være logget på ASEs netværk enten direkte eller med VPN.
+
+Til at strukturere og effektivisere unit- og integrationstestene er anvendt NUnit \citep{nunitWeb} og NSubstitute \citep{nsubstituteWeb}. Sammen med unittestene har vi anvendt dotCover \citep{dotCoverWeb} til at lave coverage analysis. Dette er et redskab som sikrer at alle forgreninger i koden rammes i ens tests.
+
+Integrationstestene er lavet ud fra Collaboration-konceptet, hvor der tages udgangs punkt i use case-beskrivelserne. Her testes det at de enkelte moduler har den korrekte funktionalitet.
+For at udvælge de nødvendige tests udvikles et dependency-diagram der viser de enkelte klassers afhængigheder. På figur \ref{fig:dependencyDiagram} er vist diagrammet for applikationen.
+\fxnote{BS: Indsæt dependency diagram}
+%\figur{1}{Test/DependenciesDiagram}{Dependency diagram for applikationen der viser klassernes afhængigheder}{dependencyDiagram}
