@@ -1,6 +1,6 @@
 \subsubsection{Config Quizzes}
 
-Config Quizzes bruger de to samme partial views (Question og Answer) som Create Quiz viewet\fxnote{Lasse: Indsæt reference til screenshot fra Create Quiz}, så de to views er næsten identiske. Config Quiz giver mulighed for at rette i en quiz som den samme bruger selv har oprettet.
+Config Quizzes bruger de to samme partial views (Question og Answer) som Create Quiz viewet fra figur \ref{fig:ViewCreateQuiz}, så de to views er næsten identiske. Config Quiz giver mulighed for at rette i en quiz som den samme bruger selv har oprettet.
 
-Hvis et spørgsmål skal slettes, bliver der med JQuery sat "true" i et "hidden-input", og spørgsmålet bliver gemt. På denne måde kan der i controlleren tjekkes på om spørgsmålet har et "delete flag", og dermed slette spørgsmålet fra databasen.
+Hvis et spørgsmål skal slettes, bliver der med jQuery sat ''true'' i et ''hidden-input'', og spørgsmålet bliver gemt. På denne måde kan der i controlleren tjekkes på om spørgsmålet har et ''delete flag'', og dermed slette spørgsmålet fra databasen.
 Den samme fremgangsmåde er implementeret for svar og billeder.

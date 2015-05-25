@@ -1,10 +1,11 @@
 \subsubsection{Create Quiz}
-I Create Quiz viewet kan der oprettes en ny quiz. Viewet er delt op således at Question og Answer er to partialviews, som er fælles for Create Quiz og Config Quiz.
-\fxnote{Lasse: Indsæt billede af Create Quiz viewet, tilføj grafiske bokse der viser hvad der er partial view (Question, Answer)}
+I Create Quiz viewet kan der oprettes en ny quiz. Viewet er delt op således at Question og Answer er to partialviews, som er fælles for Create Quiz og Config Quiz. Viewet kan ses i figur \ref{fig:ViewCreateQuiz}. Her udgør Create Quiz viewet alt inden for den røde kasse. Herinde vises Question partial viewet inde i den gule kasse, mens Answer partial viewet ses inde i den grønne kasse.
 
-I Question partial viewet bliver der brugt Bootstrap paging, det fungere ved at alle divs bliver listet ud efter hinanden, men Bootstrap sørger for kun at vise det der har css-klassen "active" på sig.
+\figur{1}{Implementering/ViewCreateQuiz_2}{GUI til create quiz viewet med kasser, der opdeler viewet i partial views. Gul: Question partial view. Grøn: Answer partial view}{fig:ViewCreateQuiz}
+
+I Question partial viewet bliver der brugt Bootstrap paging, det fungere ved at alle divs bliver listet ud efter hinanden, men Bootstrap sørger for kun at vise det der har css-klassen ''active'' på sig.
 
 \subsubsection*{Dynamisk generering af inputfelter i forme}
 \input{filer/Implementering/Views/DynamiskeForme}
 \subsubsection*{Sletning af spørgsmål og svar}
-Udover dynamisk generering af spørgsmål og svar, kan de også slettes igen. Dette gøres med JQuery, hvor hele klientens html bliver manipuleret, og på den måde kan der vælges hvilke divs der skal være "hidden". Derudover skal der rettes i indekseringen af spørgsmål og svar, så ledes at hvis man sletter spørgsmål 1, skal spørgsmål 2 nu blive til nummer 1 osv.
+Udover dynamisk generering af spørgsmål og svar, kan de også slettes igen. Dette gøres med jQuery, hvor hele klientens HTML bliver manipuleret, og på den måde kan der vælges hvilke divs der skal være ''hidden''. Derudover skal der rettes i indekseringen af spørgsmål og svar, så ledes at hvis man sletter spørgsmål 1, skal spørgsmål 2 nu blive til nummer 1 osv.
