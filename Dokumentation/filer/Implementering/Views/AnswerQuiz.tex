@@ -1,4 +1,8 @@
 \subsubsection{Answer Quiz}
-I Answer Quiz, kan der markeres forskellige svar muligheder inden for hvert spørgsmål. Spørgsmålene bliver præsenteret med Bootstrap paging, således at der er en list af knapper hvor det ønskede spørgsmål i rækken kan vælges. Derudover kan der også bladres igennem spørgsmålene med en "Previous" og "Next" knap. Knapperne er tilkoblet en JQuery funktion der sætter en "active" klasse på det hhv. forrige og næste spørgsmåls div.
+I Answer Quiz, kan der markeres forskellige svar muligheder inden for hvert spørgsmål. Spørgsmålene bliver præsenteret med Bootstrap paging (se figur \ref{fig:viewAnswerQuiz1}, således at der er en list af knapper hvor det ønskede spørgsmål i rækken kan vælges. Derudover kan der også bladres igennem spørgsmålene med en "Previous" og "Next" knap. Knapperne er tilkoblet en jQuery funktion der sætter en "active" klasse på det hhv. forrige og næste spørgsmåls div.
 
-\fxnote{Lasse: Tilføje screenshot af Answer Quiz viewet}
+\figur{0.8}{Implementering/ViewAnswerQuiz_1}{GUI ved besvarelsen af en quiz}{fig:viewAnswerQuiz1}
+
+Brugeren afslutter quizbesvarelsen ved at trykke på knappen ''Finish Quiz'', som først bliver tilgængelig, når der er markeret en svarmulighed ved alle spørgsmål. Efter tryk på denne knap tages brugeren videre til resultatsiden, som ses i figur \ref{fig:viewAnswerQuiz2}. Her vises en opsummering af hvordan brugeren har klaret sig. Dette gøres ved at vise hvilke spørgsmål der er svaret rigtigt og forkert ved, samt antallet af point der er givet.
+
+\figur{0.8}{Implementering/ViewAnswerQuiz_2}{GUI ved resultatsiden efter besvarelsen af en quiz}{fig:viewAnswerQuiz2}
