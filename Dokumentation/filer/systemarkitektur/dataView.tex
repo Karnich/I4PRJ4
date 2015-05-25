@@ -1,6 +1,6 @@
 \section{Data View}
 
-Til systemet bruges persistering af data vha. en database på en databaseserver. De oprettede entiteter/tabeller ses på figur \ref{fig:DatabaseDiagram}. Diagrammet benytter relationship-notation i overensstemmelse med Microsoft SQL Management Studio 2014\footnote{https://msdn.microsoft.com/en-us/ms188251.aspx}.
+Til systemet bruges persistering af data vha. en database på en databaseserver. De oprettede entiteter/tabeller ses på figur \ref{fig:DatabaseDiagram}. Diagrammet benytter relationship-notation i overensstemmelse med Microsoft SQL Management Studio 2014 \citep{netidentityWeb}.
 
 Designet er opbygget på baggrund af domænemodellen fra afsnit \ref{sec:Domainmodel}, side \pageref{sec:Domainmodel}. Entiteterne er identificeret ud fra domæneklasserne fra domænemodellen, og der er oprettet weak entities til entiteter med en mange-til-mange relation. Disse har ingen speciel notation på diagrammet, men består af entiteterne:
 
@@ -14,8 +14,8 @@ Designet er opbygget på baggrund af domænemodellen fra afsnit \ref{sec:Domainm
 
 Disse weak entities bruges som en slags opslags-entitet, som er nødvendig ved mange til mange relationer. De holder primary keys for de to entiteter den binder sammen.
 
-I diagrammet på figur \ref{fig:DatabaseDiagram} ses en række entiteter, som alle starter med ''\verb+AspNet+'', disse entiteter er skabt i forbindelse med oprettelsen af brugere og login, som benytter .NET Identity 2.0 Framework\footnote{http://www.asp.net/identity}.
+I diagrammet på figur \ref{fig:DatabaseDiagram} ses en række entiteter, som alle starter med ''\verb+AspNet+'', disse entiteter er skabt i forbindelse med oprettelsen af brugere og login, som benytter .NET Identity 2.0 Framework \citep{netidentityWeb}.
 
 \figur{1}{SystemArkitektur/Dataview_Database_diagram}{Diagram over databasens design, som er brugt til systemet}{fig:DatabaseDiagram}
 
-Entiteternes attributter og typer kan ses i doxygen\fxnote{Lars: Indsæt link til doxygen ved dataview}.
+Entiteternes attributter og typer kan ses i Doxygen-dokumentation. Se afsnit \ref{chap:bilagsCD} på side \pageref{chap:bilagsCD}.
