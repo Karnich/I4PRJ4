@@ -9,4 +9,4 @@ Schemaet indholder entiteterne Quiz, Question, Answer, Tag og QuizTagRelation. Q
 
 For at overholde princippet om separation of concerns, blev der lavet et DAL og en QuizModel. DAL blev implementeret med ADO.NET-frameworket, som muliggjorde at queries blev sendt til databasen. Dette DAL åbnede forbindelsen til databasen når der var brug for det, og lukkede den igen efter operationen var blevet udført. ADO.NET blev valgt på baggrund af en introduktion i kurset I4DAB. 
 
-QuizModel-klassen er en facade-klasse i mellem DAL og controllerene. Her ligges logik som håndtere komplekse database-forespørgsler som når en komplet quiz skal hentes med tilhørende spørgsmål og svar. Det samme gælder når quizzer skal gemmes mv.
+QuizModel-klassen er en facade-klasse i mellem DAL og controllerene. Her lægges logik som håndterer komplekse database-forespørgsler, som når en komplet quiz skal hentes med tilhørende spørgsmål og svar. Det samme gælder, når quizzer skal gemmes mv.
