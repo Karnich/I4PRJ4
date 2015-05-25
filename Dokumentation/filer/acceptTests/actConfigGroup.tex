@@ -4,78 +4,48 @@
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
 \acentry{1}{\begin{enumerate}
-			\item Udfør accepttest for UC6: Login.
-			\item Udfør accepttest for UC9: Create Group.
-			\item Udfør accepttest for UC1: Create Quiz.
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg at konfigurere "TestGroup".
-			\item Vælg at slette "TestQuiz".
-			\item Bekræft sletning.
-			\item Gruppesiden opdateres og "TestQuiz" ses ikke længere i gruppen.
+			\item Udfør accepttest for UC6: Login test 1
+			\item Udfør accepttest for UC9: Create Group test 1
+			\item Udfør accepttest for UC1: Create Quiz test 2
+			\item Klik på ''Groups''.
+			\item Vælg at konfigurere ''TestGroupNavn1''.
+			\item Vælg at slette ''TestGroupNavn1''.
+			\item Gruppesiden opdateres
 			\end{enumerate}		   	
 		   	}
-		   	{ "TestQuiz" er blevet slettet fra gruppen. }{ - }{ - }
+		   	{ ''TestGroupNavn1'' er blevet slettet fra gruppen. }{ Som forventet }{ Godkendt }
 
 
 \acentry{2}{\begin{enumerate}
-			\item Udfør test 1
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg "TestGroup".
-			\item Vælg at tilføje en quiz.
-			\item Søg efter "TestQuiz".
-			\item Tilføj "TestQuiz".
-			\item Gruppesiden opdateres og "TestQuiz" ses nu i gruppen.
+			\item Udfør accepttest for UC6: Login test 1
+			\item Udfør accepttest for UC9: Create Group test 1
+			\item Udfør accepttest for UC1: Create Quiz test 2
+			\item Udfør accepttest for UC2: Search test 1
+			\item Klik på ''Add to group'' og vælg ''TestGroupNavn1''.
+			\item Klik på ''Groups''
+			\item Vælg ''TestGroupNavn1'' gruppen.
 			\end{enumerate}		   	
 		   	}
-		   	{ Bruger har tilføjet "TestQuiz" til gruppen. }{ - }{ - }
-
-
+		   	{ Bruger har tilføjet ''TestQuiz'' til gruppen. }{ Som forventet }{ Godkendt }
+		   	
 \acentry{3}{\begin{enumerate}
-			\item Udfør accepttest for UC6: Login.
-			\item Udfør accepttest for UC9: Create Group.
-			\item Udfør accepttest for UC1: Create Quiz.
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg "TestGroup".
-			\item Vælg at aktivere "TestQuiz".
-			\item Gem ændringer.
+			\item Udfør test 2.
+			\item Klik på blyanten ud for ''TestGroupNavn1''.
+			\item Sæt hak i feltet ud fro ''TestQuiz'' og tryk ''Update group''
 			\end{enumerate}		   	
 		   	}
-		   	{ Bruger har aktiveret "TestQuiz" i gruppen. }{ - }{ - }
-		   	
-		   	
-\acentry{4}{\begin{enumerate}
-			\item Udfør test 3.
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg "TestGroup".
-			\item Vælg at deaktivere "TestQuiz".
-			\item Gem ændringer.
-			\end{enumerate}		   	
-		   	}
-		   	{ Bruger har deaktiveret "TestQuiz" i gruppen. }{ - }{ - }
+		   	{ ''TestQuiz'' vises i listen af quizzer der kan tilføjes. }{ Som forventet }{ Godkendt }
 		   	
 
 \acentry{5}{\begin{enumerate}
-			\item Udfør accepttest for UC6: Login.
-			\item Udfør accepttest for UC9: Create Group.
-			\item Udfør accepttest for UC1: Create Quiz.
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg "TestGroup".
-			\item Tilføj tagget "NewTag" i tagfeltet.
-			\item Gem ændringer.
+			\item Udfør test 1.
+			\item Klik på blyanten ud for ''TestGroupNavn1''
+			\item Tilføj ''tag3'' i feltet ''Tags''.
+			\item Klik ''Update group''
+			\item Søg på ''tag3'' i søgefeltet
+			\item Klik på ''Groups''
 			\end{enumerate}		   	
 		   	}
-		   	{ Bruger har nu tilføjet tagget "NewTag" til gruppen. }{ - }{ - }
-		   	
-		   	
-\acentry{6}{\begin{enumerate}
-			\item Udfør test 5.
-			\item Vælg at konfigurere sine grupper.
-			\item Vælg "TestGroup".
-			\item Slet "NewTag" fra tagfeltet.
-			\item Gem ændringer.
-			\end{enumerate}		   	
-		   	}
-		   	{ Bruger har nu fjernet tagget "NewTag" fra gruppen. }{ - }{ - }
-		   	
-		   	
+		   	{ ''TestGroupNavn1'' fremgår i resultaterne med ''tag3'' }{ Som forventet }{ Godkendt }
+		   			   	
 \acfoot{ConfigGroup}
