@@ -1,0 +1,3 @@
+\section{Arkitektur}
+Applikationen skal være en webapplikation, hvorfor nogle overvejelser om hvilken arkitektur blev lavet i denne iteration.
+Microsoft tilbyder et framework kaldet ASP.NET MVC \citep{aspnetmvcWeb}. Dette har vi anvendt da det tilbyder en stærk funktionalitet og er bredt anvendt inden for webudvikling. Det bygger på Model-View-Controller-arkitekturen der deler funktionaliteten op i tre logiske lag. View-laget holder HTML-siderne og tilhørende CSS formatering. Den har også simpel viewafhængig logik, som f.eks. at skjule knapper hvis brugeren ikke er logget ind. Model-laget integrerer med Entity Frameworket \citep{entityFrameworkWeb} samt holder View-Modeller som er viewafhængige modeller. Controllerne styrer funktionaliteten for hver use case.
