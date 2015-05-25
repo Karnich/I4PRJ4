@@ -6,14 +6,14 @@ I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kun
 
 Login knappen aktiverer en dropdown menu, hvor i man indtaster email og password. Med facebook login knappen kan der logges ind uden at skulle indtaste nogle oplysninger, hvis man altså er logget ind på facebook. Hvis man ikke er logget ind på facebook vil facebooks API bede om at man logger ind på facebook. Scriptet til dropdown menuen er skrevet i JavaScript. Login-funktionerne bruger AJAX med tilhørende API controllers til at logge brugeren ind.
 
-\figur{0.8}{iteration2/login_samlede}{Login GUI}{fig:loginSekvens}
+\figur{0.8}{iteration2/login_samlede}{Den endelige Login GUI}{fig:loginSekvens}
 
 Figur \ref{fig:loginSekvens} illustrerer hvordan login er blevet implementeret på siden, hvor \ref{fig:loginSkitse} viser det første udkast til designet. \\
 
 Login systemet bruger .NET's Identity 2.0 frameworket til autentificering. Frameworket genererer ligeledes nogle default database-entities, som vi valgte at bruge i denne iteration for at spare tid. Når brugeren er autoriseret bliver der gemt en cookie hos klienten så denne genkendes.
 
 
-\figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
+\figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de to login metoder}{fig:loginDiagram}
 
 Figur \ref{fig:loginDiagram} viser hvordan loginsekvensen foregår bag facaden. Første gang en bruger benytter ''Login med Facebook'' vil personen blive bedt om at indtaste username og password. Usernamet er bare brugerens navn udadtil på siden. Passwordet er for at brugeren en anden gang kan logge ind uden at benytte sig af facebook knappen. Der er implementeret fejlhåndtering af eventuelle serverfejl der kunne opstå. Hvis der opstår en serverfejl får brugeren en fejlmedelelse.
 
