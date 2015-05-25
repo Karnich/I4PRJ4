@@ -4,7 +4,10 @@
 % \acentry{Test punkt iht. UC beskrivelse}{Test}{Forventet resultat}{Resultat}{Godkendt eller kommentar}
 
 \acentry{1}{\begin{enumerate}
-			\item Udfør alle interne tests i \textbf{Test 0: Generel InputTest} Generel InputTest udføres på de følgende tekstbokse:
+			\item Udfør accepttesten for UC4: Create User test 1, for at oprette en bruger.
+			\item Udfør acceptesten UC6: Login test 1 for at logge ind.
+			\item Tryk på ''Quizzes'' og derefter ''Create new quiz''.	
+			\item Udfør alle tests i \textbf{Test 0: Generel InputTest} Generel InputTest udføres på de følgende tekstbokse:
 				\subitem Quizname
 				\subitem Tags
 				\subitem Question 1
@@ -12,23 +15,24 @@
 				\subitem Answer 2
 			\end{enumerate}		   	
 		   	}
-		   	{ Alle interne tests i Test 0 er gennemført og godkendt }{ - }{ - }
+		   	{ Alle interne tests i Test 0 er gennemført og godkendt }{ Som forventet }{ Godkendt }
 
 
 \acentry{2}{ \begin{enumerate}
 			\item Udfør accepttesten for UC4: Create User test 1 for at oprette en user. 
 			\item Udfør accepttesten UC6: Login test 1 for at logge ind. 
-			\item Tryk på "Quizzes" og derefter vælg "Create new quiz". 
+			\item Tryk på ''Quizzes'' og derefter vælg ''Create new quiz''. 
 			\item Indtast følgende værdier:
 			\subitem Quizname: \textbf{TestQuiz}.
-			\subitem Tags: \textbf{tag1}, \textbf{tag2}
+			\subitem Tags: \textbf{tag1} \textbf{tag2}
 			\subitem Question 1: \textbf{Spørgsmål 1}
 			\subitem Answer 1: \textbf{Rigtigt svar} med check i boxen ''Correct answer'' og angiver points til 10.
 			\subitem Answer 2: \textbf{Forkert svar} uden check i boxen ''Correct answer'' og angiver points til 0.
+			\item Tryk på ''2'' i liste over spørgsmål og vælg ''Remove question''
 			\item Der trykkes på ''Create Quiz''.
 			\end{enumerate}
 			}
-			{Quiz med 1 spørgsmål indeholdende 2 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren.}{ - }{ - }
+			{Quiz med 1 spørgsmål indeholdende 2 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren.}{ Som forventet }{ Godkendt }
 
 \acentry{3}{ \begin{enumerate}
 			\item Udfør accepttesten for UC4: Create User test 1 for at oprette en user. 
@@ -40,12 +44,13 @@
 			\subitem Question 1: \textbf{Spørgsmål 1}
 			\subitem Answer 1: \textbf{Rigtigt svar} med check i boxen ''Correct answer'' og angiver points til 10.
 			\subitem Answer 2: \textbf{Forkert svar} uden check i boxen ''Correct answer'' og angiver points til -5.
-			\item Der trykkes på ''Add Answer'', og følgende værdier indtastes:
+			\item Der trykkes på ''Add new answer'', og følgende værdier indtastes:
 			\subitem Answer 3: \textbf{Semirigtigt svar} med check i boxen ''Correct answer'' og angiver points til 5.
 			\item Der trykkes på ''Gennemse...'' og en billedfil med navnet \textbf{billede.jpg} vælges.
+			\item Tryk på ''2'' i liste over spørgsmål og vælg ''Remove question''.
 			\item Der trykkes på ''Create Quiz''.
 			\end{enumerate}
 			}
-			{Quiz med 1 spørgsmål indeholdende 3 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren samt stien til billedfilen. Billedfilen er uploadet til webserveren}{ - }{ - }
+			{Quiz med 1 spørgsmål indeholdende 3 svarmuligheder med de indtastede navne og værdier er oprettet i databasen på database serveren samt stien til billedfilen. Billedfilen er uploadet til webserveren}{ Som forventet }{ Godkendt }
 
 \acfoot{CreateQuiz}
