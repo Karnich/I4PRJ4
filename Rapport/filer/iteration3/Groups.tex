@@ -8,10 +8,12 @@ I grupper kan brugere tilføje quizzer som har relevans indenfor et bestemt emne
 
 Meningen med grupper er at brugere kan samles og dele quizzer som de mener gruppens brugere kunne have interesse i.  Som nævnt kunne en gruppe indeholde quizzer specifikt til et emne, men man kunne også forstille sig en skolelærer der opretter en gruppe til 2.a og tilføjer quizzer til matematik, dansk, engelsk osv. Overordnet set er grupper altså blot et værktøj til enten at samle quizzer der har relevans for et bestemt emne eller samle brugere som quizzerne har relevans for.
 
-\figur{1}{iteration3/Group}{Create Group fra skitse til virkelighed}{fig:groupview}
+\figur{1}{iteration3/Group}{Create Group fra skitse til implementering}{fig:groupview}
 
 På figur \ref{fig:groupview} ses til venstre det udkast der blev lavet i starten af sprintet og til højre hvordan implementeringen af dette billede er blevet.
 
-En af udfordringerne ved group har været at få tjekket om det valgte gruppenavn allerede var taget eller ej. Dette blev løst med model-binding og Remote Validation. Remote Validation blev ligeledes tilføjet til  usernames så der heller ikke kunne oprettes brugere med ens username.
+Der er også mulighed for at konfigurerer sin gruppe når den er oprettet. Her er brugergrænsefladen næsten identisk med billedet for at oprette, dog kan man ikke ændre gruppens navn, da det er besluttet at denne er bindende ved oprettelsen.
 
-Mere information omkring Remote Validation, og hvordan det virker kan findes i dokumentationen under kapitel 7: Implementering
+En af udfordringerne ved grupper har været at få tjekket om det valgte gruppenavn allerede var taget eller ej. Dette blev løst med model-binding og Remote Validation. Remote Validation blev ligeledes tilføjet til brugernavne så der heller ikke kunne oprettes brugere med ens brugernavne.
+
+Mere information omkring hvordan Remote Validation virker, kan findes i dokumentationen under kapitel 7: Implementering
