@@ -10,14 +10,12 @@
 			\item Bruger klikker på ''Quizzes''
 			\item Bruger trykker på blyant logoet ud fra ''TestQuiz''
 			\item Tilføj ''1'' efter den eksisterende tekst i alle felter
-			\item Gem quiz
-			\item Indtast ''TestQuiz1'' i søgefelt
+			\item Klik på ''Save''
 			\item Klik på ''TestQuiz1''
 		\end{enumerate}
 		} % Test
 		{Indholdet af quizzen præsenteres med nyt indhold i alle felter} % Forventede resultat
-		{} % Resultat
-		{} % Godkendt/kommantar
+		{ Som forventet }{ Godkendt }
 
 \acentry{2} % Test punkt
 		{
@@ -26,12 +24,16 @@
 			\item Udfør accepttesten UC1: Create Quiz test 2
 			\item Bruger klikker på ''Quizzes''
 			\item Bruger trykker på blyant logoet ud fra ''TestQuiz''
-			\item Indtast ''1'' i alle felter
+			\item Udfør alle tests i \textbf{Test 0: Generel InputTest} for felterne:
+				\subitem QuizName
+				\subitem Tags
+				\subitem Question 1
+				\subitem Answer 1
+				\subitem Answer 2
 		\end{enumerate}
 		} % Test
-		{Alle felter markeres med fejl fordi inholdet er for kort} % Forventede resultat
-		{} % Resultat
-		{} % Godkendt/kommantar
+		{Alle interne tests i Test 0 er gennemført og godkendt} % Forventede resultat
+		{ Som forventet }{ Godkendt }
 
 \acentry{3} % Test punkt
 		{
@@ -45,7 +47,6 @@
 		\end{enumerate}
 		} % Test
 		{Ingen resultater fundet} % Forventede resultat
-		{} % Resultat
-		{} % Godkendt/kommantar
+		{ Som forventet }{ Godkendt }
 
 \acfoot{ConfigQuizzes}
