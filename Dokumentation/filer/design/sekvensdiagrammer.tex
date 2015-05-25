@@ -3,59 +3,59 @@
 \subsection*{CreateQuiz}
 Sekvensdiagrammet vist i figur \ref{SD_UC1} beskriver forløbet for når en bruger ønsker at oprette en quiz i systemet. Som det fremgår af sekvensdiagrammet kan brugeren tilføje flere end et enkelt spørgsmål.
 
-\figur{1.2}{Design/Sekvensdiagram_UC1}{Sekvensdiagram for use case 1}{SD_UC1}
+\figur{1}{Design/Sekvensdiagram_UC1}{Sekvensdiagram for use case 1}{SD_UC1}
 
 \subsection*{Search}
 Sekvensdiagrammet vist i figur \ref{SD_UC2} beskriver forløbet for når en bruger ønsker at søge efter en quiz eller gruppe .
 
-\figur{1.2}{Design/Sekvensdiagram_UC2}{Sekvensdiagram for use case 2}{SD_UC2}
+\figur{1}{Design/Sekvensdiagram_UC2}{Sekvensdiagram for use case 2}{SD_UC2}
 
 \subsection*{AnswerQuiz}
 Sekvensdiagrammet vist i figur \ref{SD_UC3} beskriver forløbet for når en bruger ønsker at svare på en quiz. Brugeren vælger den quiz som denne ønsker at svare på hvorefter der svares på det antal spørgsmål quizzen indeholder. Efter der er svaret på sidste spørgsmål bliver brugeren præsenteret for det resultat brugeren har opnået igennem quizzzen.
 
-\figur{1.2}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{SD_UC3}
+\figur{1}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{SD_UC3}
 
 \subsection*{CreateUser}
 Sekvensdiagrammet vist i figur \ref{SD_UC4} beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: string): IdentityResult, som kan bruges til at oprette brugere i et systemet.
 
-\figur{1.2}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{SD_UC4}
+\figur{1}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{SD_UC4}
 
 \subsection*{ConfigUser}
 Sekvensdiagrammet vis i figur \ref{SD_UC5} beskriver forløbet for når en bruger ønsker at konfigurere sine oplysninger. Brugeren har mulighed for ændre sine data og så gemme ændringerne.
 
-\figur{1.2}{Design/Sekvensdiagram_UC5}{Sekvensdiagram for use case 5}{SD_UC5}
+\figur{1}{Design/Sekvensdiagram_UC5}{Sekvensdiagram for use case 5}{SD_UC5}
 
 \subsection*{Login}
 Sekvensdiagrammet vist i figur \ref{SD_UC6} beskriver forløbet for når en bruger ønsker at logge ind i systemet. Her anvendes klasserne UserManager og AuthenticationManager fra Identity Framework 2.0, til genkendelse af brugere der ønsker at logge ind og til godkendelsesprocessen om en bruger eksisterer i systemet.
 
-\figur{1.2}{Design/Sekvensdiagram_UC6}{Sekvensdiagram for use case 6}{SD_UC6}
+\figur{1}{Design/Sekvensdiagram_UC6}{Sekvensdiagram for use case 6}{SD_UC6}
 
 \subsection*{Logout}
 Sekvensdiagrammet vist i figur \ref{SD_UC7} beskriver forløbet for når en bruger ønsker at logge ud af systemet.
 
-\figur{1.2}{Design/Sekvensdiagram_UC7}{Sekvensdiagram for use case 7}{SD_UC7}
+\figur{1}{Design/Sekvensdiagram_UC7}{Sekvensdiagram for use case 7}{SD_UC7}
 
 \subsection*{ConfigQuizzes}
 Sekvensdiagrammet i figur \ref{SD_UC8} beskriver forløbet for når en bruger ønsker at konfigurere sine quizzer. Brugeren bliver præsenteret for sine quizzer hvorefter denne har mulighed for enten at ændre på sine quizzer eller at slette en given quiz.
 
-\figur{1.2}{Design/Sekvensdiagram_UC8}{Sekvensdiagram for use case 8}{SD_UC8}
+\figur{1}{Design/Sekvensdiagram_UC8}{Sekvensdiagram for use case 8}{SD_UC8}
 
 \subsection*{CreateGroup}
 Sekvensdiagrammet i figur \ref{SD_UC9} beskriver forløbet for når en bruger ønsker at oprette en gruppe. Brugeren har mulighed for at tilføje tags, gruppemedlemmer og quizzer til sin gruppe, hvorefter brugeren gemmer sin quiz i systemet.
 
-\figur{1.2}{Design/Sekvensdiagram_UC9}{Sekvensdiagram for use case 9}{SD_UC9}
+\figur{1}{Design/Sekvensdiagram_UC9}{Sekvensdiagram for use case 9}{SD_UC9}
 
 \subsection*{ConfigGroup}
 Sekvensdiagrammet i figur \ref{SD_UC10} beskriver forløbet for når en bruger ønsker at konfigurere en af sine grupper. Brugeren bliver præsenteret for sine grupper, og der vælges hvilken gruppe der ønskes at konfigurere. Brugeren har mulighed for ændre på sin gruppe hvorefter brugeren kan vælge at gemme ændringerne.
 
-\figur{1.2}{Design/Sekvensdiagram_UC10}{Sekvensdiagram for use case 10}{SD_UC10}
+\figur{1}{Design/Sekvensdiagram_UC10}{Sekvensdiagram for use case 10}{SD_UC10}
 
 \subsection*{ConfigFavorites}
 Sekvensdiagrammet i figur \ref{SD_UC11_Part1} beskriver forløbet for når en bruger ønsker at slette af sine favoritter.Brugeren bliver præsenteret for sine favoritter hvorefter brugeren kan vælge at slette en eller flere favoritter.
 
-\figur{1.2}{Design/Sekvensdiagram_UC11}{Sekvensdiagram for use case 11}{SD_UC11_Part1}
+\figur{1}{Design/Sekvensdiagram_UC11}{Sekvensdiagram for use case 11}{SD_UC11_Part1}
 
 \subsection*{ConfigFavorites}
 Sekvensdiagrammet vist i figur \ref{SD_UC11_Part2} beskriver forløbet for når en bruger ønsker at tilføje en quiz eller gruppe til sine favoritter.
 
-\figur{1.2}{Design/Sekvensdiagram_UC11_Part2}{Sekvensdiagram for use case 11}{SD_UC11_Part2}
+\figur{1}{Design/Sekvensdiagram_UC11_Part2}{Sekvensdiagram for use case 11}{SD_UC11_Part2}

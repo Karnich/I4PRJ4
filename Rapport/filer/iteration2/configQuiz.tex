@@ -1,5 +1,5 @@
 \section{Config og Create Quiz}
-Før vi gik i gang med at implementere use casen ''Config Quiz'' og ''Create Quiz'', havde vi gjort det klart hvordan den grafiske brugergræsneflade skulle se ud for de to. Opbygning skulle nemlig være identisk for de to, da de begge behandler en quiz. På figur \ref{fig:CreateQuizSkitse} ses en skitse for hvordan vi ville have GUI til at se ud, og på figur \ref{fig:CreateQuizEndeligt} ses den grafiske brugerflade for Create Quiz. Det ses at i den nuværende iteration ikke er blevet tilføjet mulighed for at bladre gennem spørgsmålene, men blot får dem listet ud efter hinanden.
+Før vi gik i gang med at implementere use casene ''Config Quiz'' og ''Create Quiz'', havde vi gjort det klart hvordan den grafiske brugergræsneflade skulle se ud for de to. Opbygning skulle nemlig være identisk, da de begge behandler en quiz. På figur \ref{fig:CreateQuizSkitse} ses en skitse for hvordan vi ville have GUI til at se ud, og på figur \ref{fig:CreateQuizEndeligt} ses den grafiske brugerflade for Create Quiz. Det ses at i den nuværende iteration ikke er blevet tilføjet mulighed for at bladre gennem spørgsmålene, men blot får dem listet ud efter hinanden.
 
 \begin{minipage}{0.45\textwidth}
 \figur{0.9}{iteration2/CreateQuizSkitse.PNG}{Create og Config Quiz skitse}{fig:CreateQuizSkitse}
@@ -12,5 +12,5 @@ Før vi gik i gang med at implementere use casen ''Config Quiz'' og ''Create Qui
 
 Vi havde brug for at udvide funktionaliteten sådan at en bruger dynamisk kunne tilføje flere spørgsmål og svarmuligheder.
 
-For at gøre dette dynamisk anvendes en \verb+AJAX+ løsning, hvor nye inputfelter kan oprettes i browseren uden siden skal genindlæses.
-Selve \verb+AJAX+ delen er et simpelt javascript som tilgår en metode i en controller som returnerer den nødvendige \verb+HTML+-kode til at redigere et spørgsmål eller svar. Denne returnerede \verb+HTML+-kode indsættes efter de eksisterende svar eller spørgsmål. \verb+ASP.NET+ tilbyder en funktionalitet kaldet model binding, hvilket betyder at navnene på inputfelter indikerer deres relation til et objekt i controlleren. Dette gør det nemt at tilføje spørgsmål mv. og stadig kun have et argument til controlleren.
+For at gøre dette dynamisk anvendes en AJAX løsning, hvor nye inputfelter kan oprettes i browseren uden siden skal genindlæses.
+Selve AJAX delen er et simpelt javascript, som tilgår en metode i en controller som returnerer den nødvendige HTML-kode til at redigere et spørgsmål eller svar. Denne returnerede HTML-kode indsættes efter de eksisterende svar eller spørgsmål. ASP.NET tilbyder en funktionalitet kaldet model binding, hvilket betyder, at navnene på inputfelter indikerer deres relation til et objekt i controlleren. Dette gør det nemt at tilføje spørgsmål mv. og stadig kun have et argument til controlleren.

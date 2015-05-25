@@ -1,28 +1,30 @@
 \section{Udviklingsværktøjer} 
 
+Her følger en beskrivelse af de anvendte udviklingsværktøjer i projektet.
 
 \subsection*{IDE}
 \begin{itemize}
-  \item Visual Studio 2013 \ldots
+  \item Microsoft Visual Studio 2013 \ldots
 \end{itemize}
-Visual studio har været et oplagt valg at benytte som IDE, da det er dette, der er blevet benyttet på samtlige tidligere semestre og det er da også dette vi har benyttet på nuværende semester. Desuden var VS en naturlig flaskehals, da vi besluttede at benytte webmiljøet ASP.net til at udvikle applikationen i.
+Micosoft Visual Studio har været et oplagt valg at benytte som IDE, da det er dette, der er blevet benyttet på samtlige tidligere semestre og det er da også dette vi har benyttet på nuværende semesters kurser. Desuden var det et naturlig valg, da vi besluttede at benytte webmiljøet ASP.NET MVC \citep{aspnetmvcWeb} til at udvikle applikationen i.
 
 \subsection*{Frameworks} 
 \begin{itemize}
-  \item ASP.NET MVC
-  \item Entity Framework\ldots
+  \item Microsoft ASP.NET MVC
+  \item Microsoft Identity
+  \item Microsoft Entity Framework\ldots
 \end{itemize}
-MVC modellen har for alvor vist sin fulde styrke gennem dette semester. Model-view-controller modellen har gjort det muligt at arbejde og uddele opgaverne på tværs af gruppen således at nogle stod for frontend mens andre stod for backend uden at træde hinanden over fødderne.
+MVC modellen har for alvor vist sin fulde styrke gennem dette semester. Model-view-controller arkitekturen har gjort det muligt at arbejde og uddele opgaverne på tværs af gruppen således at nogle stod for front end mens andre stod for back end uden at træde hinanden over fødderne. Identity-frameworket har stået for brugeradministrationen og er integreret tæt sammen med MVC-strukturen.
 Entity Framework blev først benyttet ca. halvvejs gennem projektet, da det først var her vi fik oplæring i det. Dette ORM-framework har hjulpet gevaldigt og speedet udviklingen af databasens tabeller en hel del op.  
 
 \subsection*{Versionsstyring og Continous Intergration} 
 \begin{itemize}
-  \item GIT
+  \item Git
   \item Jenkins\ldots
 \end{itemize}
-Uden et versionstyrings værktøj ville det have været tæt på umuligt at arbejde så mange på projektet uden at have overwritede ændringer fra hinanden. Eftersom vi også fik oplæring i GIT var det derfor oplagt at benytte.
+Uden et versionstyringsværktøj ville det have været tæt på umuligt at arbejde så mange på projektet uden at have overskrevet ændringer fra hinanden. Desuden har vi anvendt Jenkins \citep{jenkinsWeb} som CI-server. Dette har fungeret godt og givet et godt overblik over kodebasens udvikling.
 
-\subsection*{Arbejdsprocess} 
+\subsection*{Arbejdsproces} 
 \begin{itemize}
   \item Scrum\ldots
 \end{itemize}
@@ -33,10 +35,10 @@ Scrum har alt i alt fungeret godt for gruppen, og det har bl.a. hjulpet os med a
   \item Redmine
   \item Microsoft Visio
   \item \LaTeX
-  \item DDS lite\ldots
+  \item DDS-lite\ldots
 \end{itemize}
-Redmine er blevet brugt som gruppens "scrum-forum" og det er her de enkelte sprints er blevet oprettet og tasks uddelegeret til gruppens medlemmer.
+Redmine er blevet brugt som gruppens ''scrum-forum'' og det er her de enkelte sprints er blevet oprettet og tasks uddelegeret til gruppens medlemmer.
 
-Gruppen vidste fra starten at der skulle oprettes mange modeller og figurer til projektet. I begyndelsen blev StarUML valgt, men da det ikke levede op til gruppens behov blev Microsoft Visio valgt istedet.
+Gruppen vidste fra starten at der skulle oprettes mange modeller og figurer til projektet. I begyndelsen blev StarUML valgt, men da det ikke levede op til gruppens behov blev Microsoft Visio valgt i stedet.
 
-Rapport og dokumentationen er skrevet i \LaTeX\ som er et kodebaseret tekstredigeringsværktøj. Dette er valgt fordi den kodebaserede måde at skrive på sikrer god integration med Git-styring.
+Rapporten og dokumentationen er skrevet i \LaTeX\ som er et kodebaseret tekstredigeringsværktøj. Dette er valgt fordi den kodebaserede måde at skrive på, sikrer god integration med Git-styring.
