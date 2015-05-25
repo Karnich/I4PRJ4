@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,15 +17,27 @@ Kohsuke Kawaguchi.
 \newblock URL \url{https://jenkins-ci.org}.
 \newblock Accessed 24.05.2015.
 
-\bibitem[Microsoft(2015{\natexlab{a}})]{msazureWeb}
+\bibitem[Microsoft(2014)]{aspnetmvcWeb}
 Microsoft.
-\newblock {Azure}, 2015{\natexlab{a}}.
+\newblock {ASP.NET MVC}, 2014.
+\newblock URL \url{http://www.asp.net/mvc}.
+\newblock Accessed 24.05.2015.
+
+\bibitem[Microsoft(2015{\natexlab{a}})]{entityFrameworkWeb}
+Microsoft.
+\newblock {Entity Framework}, 2015{\natexlab{a}}.
+\newblock URL \url{https://msdn.microsoft.com/da-dk/data/ef}.
+\newblock Accessed 25.05.2015.
+
+\bibitem[Microsoft(2015{\natexlab{b}})]{msazureWeb}
+Microsoft.
+\newblock {Azure}, 2015{\natexlab{b}}.
 \newblock URL \url{http://azure.microsoft.com/}.
 \newblock Accessed 24.05.2015.
 
-\bibitem[Microsoft(2015{\natexlab{b}})]{sqlserverWeb}
+\bibitem[Microsoft(2015{\natexlab{c}})]{sqlserverWeb}
 Microsoft.
-\newblock {SQL Server}, 2015{\natexlab{b}}.
+\newblock {SQL Server}, 2015{\natexlab{c}}.
 \newblock URL \url{http://www.microsoft.com/SQLServer}.
 \newblock Accessed 24.05.2015.
 
