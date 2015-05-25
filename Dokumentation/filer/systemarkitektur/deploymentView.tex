@@ -1,9 +1,9 @@
 \section{Deployment View}
-Systemet består af tre fysiske noder, som vist på figur \ref{fig:DeploymentView}. På Client-noden udføres den grafiske præsentation af HTML- og CSS-filerne samt clientside logik med JavaScript. Filerne tilgåes i en webbrowser.
+Systemet består af tre fysiske noder, som vist på figur \ref{fig:DeploymentView}. På Client-noden udføres den grafiske præsentation af HTML- og CSS-filerne samt client side logic med JavaScript. Filerne tilgås i en webbrowser.
 
-Webserveren genererer HTML- og CSS-filerne til Clienten. Den udfører også business logik og håndterer kommunikation med databaseserveren.
+Webserveren genererer HTML- og CSS-filerne til klienten. Den udfører også business logic og håndterer kommunikation med databaseserveren.
 Databaseserveren håndterer alle persisterede data i systemet.
-Bemærk at Webserver og Databaseserver ikke nødvendigvis er delt op i to fysiske noder. Dette er dog ikke væsentligt for implementeringen hvordan denne opdeling er.
+Bemærk at Webserver og Databaseserver ikke nødvendigvis er delt op i to fysiske noder. Det er dog ikke væsentligt for implementeringen hvordan denne opdeling er.
 
 Kommunikationen i mellem Client og Webserver sker over HTTP-protokollen og imellem Web- og Databaseserveren bruges SQL.
 
