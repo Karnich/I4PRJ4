@@ -1,13 +1,13 @@
 \section{Azure web- og database-server}
 %Problemer og kort om tilføjelser 
 
-Grundet tidligere problemer med den interne webserver blev der skiftes til Microsoft Azure server. Vi flyttede databaseserveren over på en Azure MS SQL database og flyttede ligeledes websitet over på en Azure webserver.
+I iteration 2 fandt vi ud af at Facebook-login muligheden ikke var funktionel når database- og webserveren var på ASE's interne netværk. Derfor skiftede vi til en Microsoft Azure server \citep{msazureWeb}. I samme omgang blev databaseserveren udskiftet med en Microsoft SQL Server \citep{sqlserverWeb} også tilgængelig igennem Azure.
 
 Fordele:
 \begin{itemize}
-	\item Brugeren udenfor det interne netværk kan tilgå websitet
+	\item Brugeren udenfor det interne netværk kan tilgå webapplikationen
 	\item Højere hastighed og dermed bedre brugeroplevelse
-	\item Facebook login virker (gør det ikke på interne netværk)
+	\item Facebook-login virker efter hensigten
 \end{itemize}
 
 Ulemper:
@@ -15,4 +15,4 @@ Ulemper:
 	\item Ikke gratis
 \end{itemize}
 
-Fordelene opvejer klart ulemperne. At brugere udefra kan tilgå hjemmesiden er selvfølgelig fundamental for projektet og vægter derfor rigtig højt.
+Fordelene opvejer klart ulemperne. At brugere udefra kan tilgå hjemmesiden er selvfølgelig fundamental for projektet og vægter derfor højest.
