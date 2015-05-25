@@ -16,17 +16,17 @@ Sekvensdiagrammet vist i figur \ref{SD_UC3} beskriver forløbet for når en brug
 \figur{1}{Design/Sekvensdiagram_UC3}{Sekvensdiagram for use case 3}{SD_UC3}
 
 \subsection*{CreateUser}
-Sekvensdiagrammet vist i figur \ref{SD_UC4} beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes UserManager-klassen, som er en del af Identity Framework 2.0. UserManager-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden Create(user: IdentityUsr, password: string): IdentityResult, som kan bruges til at oprette brugere i et systemet.
+Sekvensdiagrammet vist i figur \ref{SD_UC4} beskriver forløbet for når en bruger ønsker at oprette en brugerprofil i systemet. Brugeren indtaster sine oplysninger, hvorefter denne har mulighed for enten at gemme brugerprofilen i systemet eller at annullere oprettelsen. Til brugeroprettelse anvendes \verb+UserManager+-klassen, som er en del af Identity frameworket \citep{netidentityWeb}. \verb+UserManager+-klassen indeholder en række metoder til at oprette og genkende brugere. I dette tilfælde anvendes metoden \verb+Create(user: IdentityUsr, password: string): IdentityResult+, som kan bruges til at oprette brugere i et systemet.
 
 \figur{1}{Design/Sekvensdiagram_UC4}{Sekvensdiagram for use case 4}{SD_UC4}
 
 \subsection*{ConfigUser}
-Sekvensdiagrammet vis i figur \ref{SD_UC5} beskriver forløbet for når en bruger ønsker at konfigurere sine oplysninger. Brugeren har mulighed for ændre sine data og så gemme ændringerne.
+Sekvensdiagrammet vist på figur \ref{SD_UC5} beskriver forløbet for når en bruger ønsker at konfigurere sine oplysninger. Brugeren har mulighed for at ændre sine data og gemme ændringerne.
 
 \figur{1}{Design/Sekvensdiagram_UC5}{Sekvensdiagram for use case 5}{SD_UC5}
 
 \subsection*{Login}
-Sekvensdiagrammet vist i figur \ref{SD_UC6} beskriver forløbet for når en bruger ønsker at logge ind i systemet. Her anvendes klasserne UserManager og AuthenticationManager fra Identity Framework 2.0, til genkendelse af brugere der ønsker at logge ind og til godkendelsesprocessen om en bruger eksisterer i systemet.
+Sekvensdiagrammet vist i figur \ref{SD_UC6} beskriver forløbet for når en bruger ønsker at logge ind i systemet. Her anvendes klasserne \verb+UserManager+ og \verb+AuthenticationManager+ fra Identity frameworket \citep{msdnIdentityFrameworkWeb}, til genkendelse af brugere der ønsker at logge ind og til godkendelsesprocessen om en bruger eksisterer i systemet.
 
 \figur{1}{Design/Sekvensdiagram_UC6}{Sekvensdiagram for use case 6}{SD_UC6}
 
