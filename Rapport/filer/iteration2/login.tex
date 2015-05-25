@@ -1,26 +1,27 @@
 \section{Login system}
+\label{sec:LoginIT2}
 
-I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kunne logge ind med en email med tilhørende password, eller via Facebook.
+I denne iteration kom login-systemet på banen. Der blev valgt at man skulle kunne logge ind med en identitet med tilhørende adgangskode, eller via Facebook. Det første udkast til brugergrænsefladen for login ses på figur \ref{fig:loginSkitse}. Her ses det at man benytter et brugernavn, men grundet Facebook, er dette blevet ændret til email.
 
 \figur{0.8}{iteration2/login_skitse}{Login GUI skitse}{fig:loginSkitse}
 
-Login knappen aktiverer en dropdown menu, hvor i man indtaster email og password. Med facebook login knappen kan der logges ind uden at skulle indtaste nogle oplysninger, hvis man altså er logget ind på facebook. Hvis man ikke er logget ind på facebook vil facebooks API bede om at man logger ind på facebook. Scriptet til dropdown menuen er skrevet i JavaScript. Login-funktionerne bruger AJAX med tilhørende API controllers til at logge brugeren ind.
+Login knappen aktiverer en dropdown menu, hvor i man indtaster email og adgangskode. Med Facebook login knappen kan der logges ind uden at skulle indtaste nogle oplysninger, hvis man altså er logget ind på Facebook. Hvis man ikke er logget ind på facebook vil facebooks API bede om at man logger ind på Facebook. Scriptet til dropdown menuen er skrevet i JavaScript. Login-funktionerne bruger AJAX med tilhørende API controllers til at logge brugeren ind.
 
 \figur{0.8}{iteration2/login_samlede}{Login GUI}{fig:loginSekvens}
 
-Figur \ref{fig:loginSekvens} illustrerer hvordan login er blevet implementeret på siden, hvor \ref{fig:loginSkitse} viser det første udkast til designet. \\
+Figur \ref{fig:loginSekvens} illustrerer hvordan login blev implementeret på siden. Her udskiftes login knappen i menuen med brugerens brugernavn, hvor brugeren nu har muligheden for at konfigurere sine brugeroplysninger. 
 
-Login systemet bruger .NET's Identity 2.0 frameworket til autentificering. Frameworket genererer ligeledes nogle default database-entities, som vi valgte at bruge i denne iteration for at spare tid. Når brugeren er autoriseret bliver der gemt en cookie hos klienten så denne genkendes.
+Login systemet bruger .NET's Identity 2.0 frameworket til autentificering. Frameworket genererer ligeledes nogle default database-entities, som vi valgte at bruge i denne iteration for at spare tid. Disses kan ses i dokumentationens afsnit \fxnote{Lars: Indsæte reference til dokumentationens dataview afsnit}, hvor de alle indeholder ''AspNet'' i sit navn.  Når brugeren er autoriseret, bliver der gemt en cookie hos klienten så denne genkendes.
 
 
-\figur{0.8}{iteration2/ActivityDiagramLogin}{Activity diagram over de 2 login metoder}{fig:loginDiagram}
+\figur{0.8}{iteration2/ActivityDiagramLogin}{Aktivitetsdiagram over de to login metoder: Login med email og login med Facebook}{fig:loginDiagram}
 
-Figur \ref{fig:loginDiagram} viser hvordan loginsekvensen foregår bag facaden. Første gang en bruger benytter ''Login med Facebook'' vil personen blive bedt om at indtaste username og password. Usernamet er bare brugerens navn udadtil på siden. Passwordet er for at brugeren en anden gang kan logge ind uden at benytte sig af facebook knappen. Der er implementeret fejlhåndtering af eventuelle serverfejl der kunne opstå. Hvis der opstår en serverfejl får brugeren en fejlmedelelse.
+Figur \ref{fig:loginDiagram} viser hvordan loginsekvensen foregår bag facaden. Første gang en bruger benytter ''Login med Facebook'' vil personen blive bedt om at indtaste brugernavn og adgangskode. Brugernavnet vil kun fungere som brugerens navn/identitet udadtil på siden. Adgangskoden vil kunne bruges til at logge ind på siden uden at benytte Facebook login. Der er implementeret fejlhåndtering af eventuelle serverfejl der kunne opstå. Hvis der opstår en serverfejl, vil brugeren få en fejlmedelelse.
 
 \textbf{Udfordringer:} 
-Der opstod nogle udfordringer, da vi arbejdede på en intern webserver, som er stillet til rådighed af Ingeniørhøjskolen ved Aarhus Universitet. 
+Der opstod nogle udfordringer, da vi arbejdede på den interne webserver, som er stillet til rådighed af Ingeniørhøjskolen (IHA) ved Aarhus Universitet. 
 
 \begin{itemize}
-	\item Det første problem opstår da man forsøger at registrere den interne webservers URL på Facebook. Da webserveren har en intern IP-adresse på IHAs netværk, kan Facebooks servere ikke få adgang til denne. Dette problem står til at blive løst i en anden iteration. Muligvis med en Azure hosted webserver.
-	\item Det andet problem opstår ligeledes pga. den interne server. 10.29.10.30/QuizCreator er URL på vores hjemmeside når den er published. Ajax som kalder login controlleren tror at root er 10.29.10.30 istedet for at være 10.29.10.30/QuizCreator. Dette kan godt fixes, dog vil det kun virke på enten localhost eller den interne server. Her er løsningen igen en anden webserver.
+	\item Det første problem opstår, når man forsøger at registrere den interne webservers URL på Facebook. Da webserveren har en intern IP-adresse på IHAs netværk, kan Facebooks servere ikke få adgang til denne. Dette problem står til at blive løst i en anden iteration. Muligvis med en Azure hosted webserver.
+	\item Det andet problem opstår ligeledes pga. den interne server. 10.29.10.30/QuizCreator er den URL på vores hjemmeside tilgås fra, når den er published. AJAX, som kalder login controlleren, tror at root er 10.29.10.30 istedet for at være 10.29.10.30/QuizCreator. Dette kan godt fixes, dog vil det kun virke på enten localhost eller den interne server. Her er løsningen igen en anden webserver.
 \end{itemize}

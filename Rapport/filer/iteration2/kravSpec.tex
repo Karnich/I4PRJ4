@@ -1,12 +1,13 @@
 \section{Krav}
 %UC-diagram, kort prosa beskrivelse af de UC vi har taget med, Ikke funktionelle krav
-Til anden iteration i projektet skulle produktet udvides, og den mest logiske udvidelse ville være at tilføje brugere til systemet. I første iteration var intet personligt: Hvis man åbner websiden og opretter en quiz tilhører den ikke nogen, men alle kan se og besvare den.
-I anden iteration blev der lavet en liste over krav som gav anledning til nye use cases:
+I anden iteration i projektet skulle produktet udvides, og den mest logiske udvidelse ville være at tilføje brugere til systemet. I første iteration var intet personligt: Hvis man åbner websiden og opretter en quiz tilhører den ikke nogen, men alle kan se og besvare den, samtidig kunne man ikke ændre quizzen, hvis den blev oprettet med en fejl eller skulle udvides.
+I anden iteration blev der derfor lavet en liste over krav, som gav anledning til nye use cases:
 \begin{itemize}
 \item Det skal være muligt at registrere sig som bruger i systemet.
-\item Man skal kunne logge ind som bruger eller med sin facebook konto.
-\item Ændring af bruger-data som navn, password mm. skal kunne ændres af brugeren.
-\item Efter login skal man kunne administere de quizzer man har oprettet.
+\item Man skal kunne logge ind som bruger eller med sin Facebook konto.
+\item Bruger-data som navn, password mm. skal kunne ændres af brugeren.
+\item Brugernavn og email skal være unikke.
+\item Efter login skal man kunne administere de quizzer, som man har oprettet.
 \end{itemize}
 
 Derudover blev der opsat et par punkter, som medvirker ændringer i tidligere use cases:
@@ -18,11 +19,10 @@ Derudover blev der opsat et par punkter, som medvirker ændringer i tidligere us
 
 Disse krav medførte et opdateret use case diagram, som ses på figur \ref{fig:ucdiagramfinal}.
 
-
 \figur{1.0}{iteration2/UCdiagramFinal.PNG}{Use case diagram for iteration 2}{fig:ucdiagramfinal}
 
 \section{Ikke-funktionelle krav}
 Til denne iteration blev de ikke-funktionelle krav opdateret, så de passer bedre til virkelighedens brugsscanarier:
 Gældende for både quiznavn, spørgsmål, svarmuligheder og tags er nu begrænset til minimum 1 karakter for svarmuligheder og 2 for quiznavn og spørgsmål. Dette skyldes at test-input for disse har vist at det passer bedre til virkelighedens behov (f.eks. at kunne angive '1' som svar til spørgsmålet ''hvad er 4-3?''.
-Der er også oprettet ikke-funktionelle krav til tekstlængden på brugernavn og adgangskode, hhv. fra 2 til 75 karakterer og 2 til 75 karakterer. 
-Både brugernavne og emailadresser skal være unikke.
+Der er også oprettet ikke-funktionelle krav til tekstlængden på brugernavn og adgangskode, hhv. fra 2 til 75 karakterer og 6 til 75 karakterer. 
+Derudover skal både brugernavne og emailadresser skal være unikke.

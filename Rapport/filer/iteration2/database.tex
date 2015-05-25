@@ -3,14 +3,14 @@
 
 \textbf{Fokuspunkter:}
 	\begin{itemize}
-			\item Refaktorere Data Access Layeret 
-			\item Tilføje nye tabeller til den fysiske database
+			\item Refaktorere Data Access Layeret (DAL)
+			\item Tilføje nye entiteter til den fysiske database
 	\end{itemize}
 
 
-Under denne itation blev der gjort kendskab til Entity Framework, som er et Framework for ADO.NET og en af de mange Frameworks fra .NET. Entity Framework kan beskrives som et lag, der ligger oven på ADO.NET, som har det formål at skjule de fysiske database detaljer for programmøren. Hvis man sammenligner Entity Framework med ADO.NET, så har Entity Framework en lav kobling mellem koden og den fysiske database, da man ikke kan genfinde f.eks. kolonnenavne eller deres indbyrdes rækkefølge i koden, hvorimod i ADO.NET er der en høj kobling fordi der anvendes SQL som er et sprog der refererer direkte til den fysiske database. Fordelen ved at Anvende Entity Framework er at man som programmør arbejder på et højere abstraktion niveau, hvor man ikke har behov for at kende strukturen for den fysiske database. 
+Under denne itation blev der gjort kendskab til Entity Framework (EF) igennem semesterets kursus om databaser. Entity Framework er et Framework for ADO.NET og en af de mange Frameworks fra .NET. Entity Framework kan beskrives som et lag, der ligger oven på ADO.NET, som har til formål at skjule de fysiske database detaljer for programmøren. Hvis man sammenligner Entity Framework med ADO.NET, så har Entity Framework en lav kobling mellem koden og den fysiske database, da man ikke kan genfinde f.eks. kolonnenavne eller deres indbyrdes rækkefølge i koden. I ADO.NET er der derimod en høj kobling, da der anvendes SQL, som jo refererer direkte til den fysiske database. Fordelen ved at anvende Entity Framework er, at man som programmør arbejder på et højere abstraktionsniveau, hvor man ikke har behov for at kende strukturen for den fysiske database. 
 
-Ved brug af EF kan man skrive database applikationer uden at anvende SQL-sætninger, men i stedet skal man anvende LINQ, som er noget nemmere at bruge. Med de fordele Entity Framework tilbyder blev der taget det valg at refaktorere det daværende Data Access Layer fra at anvende ADO.NET til Entity Framework, og Quizmodel klassen omskrives til at bruge det nye Data Access Layer med Entity Framework. 
+Ved brug af EF kan man skrive database applikationer uden at anvende SQL-sætninger, men i stedet skal man anvende LINQ, som er noget nemmere at bruge. Med de fordele EF tilbyder, blev der taget det valg at refaktorere det daværende DAL fra at anvende ADO.NET til EF, og Quizmodel klassen omskrives til at bruge det nye DAL med EF. 
 
-Udover at refaktorere Data Access Layeret er der tilføjet nye tabeller til den fysiske database som skal gemme brugerdata. 
+Udover at refaktorere DALet er der tilføjet nye entiteter til den fysiske database som skal gemme brugerdata. Disse entiteter er genereret af ASP.NET identity 2.0 Framework, og beskrives nærmere i afsnit \ref{sec:LoginIT2}.
 
