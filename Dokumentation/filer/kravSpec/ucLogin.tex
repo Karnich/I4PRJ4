@@ -6,28 +6,29 @@
 	{Bruger ønsker at logge ind.}
 	{Bruger trykker på ''Login'' på brugergrænsefladen.}
 	{Bruger, Databaseserver og Webserver.}
-	{}
+	{Bruger har oprettet en bruger eller har en Facebook konto}
+	{UC9: Create User}
 	{1 pr. session.}
 	{Bruger er logget ind.}	
   
 		
-\item \label{ucLoginSelectMethod} Der vises en login boks med mulighed for at skrive email og password, oprette en ny bruger, samt muligheden for login via facebook. \textbf{Undtagelse \ref{ucLoginSelectMethod}}
+\item \label{ucLoginSelectMethod} Der vises en login boks med mulighed for at skrive emailadresse og adgangskode, oprette en ny bruger, samt muligheden for login via Facebook. \textbf{Undtagelse \ref{ucLoginSelectMethod}}
 
 \begin{enumerate}
 
 \item \textbf{Login med account}
 
 	\begin{enumerate}
-		\item Bruger indtaster email og password til sin oprettede bruger og trykker på knappen ''Sign in'' som ikke indeholder et facebook logo.
+		\item Bruger indtaster emailadresse og adgangskode til sin oprettede bruger og trykker på knappen ''Sign in'' som ikke indeholder et Facebook logo.
 		\item \label{ucLoginError}Brugerens data valideres i forhold til data på databaseserveren.\textbf{Undtagelse \ref{ucLoginError}}
 		\item Brugerens brugernavn vises i stedet for ''login'' knappen i menuen.
 		\item Brugeren er logget ind og use casen afsluttes.
 	\end{enumerate}
 	
-\item \textbf{Login med facebook}
+\item \textbf{Login med Facebook}
 	
 	\begin{enumerate}
-		\item Brugeren trykker på knappen ''Sign in'' med et facebook logo.
+		\item Brugeren trykker på knappen ''Sign in'' med et Facebook logo.
 		\item\label{ucLoginWithFacebookError} Brugerens brugernavn vises i stedet for ''login'' knappen i menuen. \textbf{Undtagelse \ref{ucLoginWithFacebookError}}
 		\item Brugeren er logget ind og use casen afsluttes.
 				
@@ -41,7 +42,7 @@
 	{\ref{ucLoginError}}
 
 \ucextension
-	{Bruger er ikke logget ind på facebook. Brugeren indtaster sine facebook login oplysninger i et facebook-popup vindue.}
+	{Bruger er ikke logget ind på Facebook. Brugeren indtaster sine Facebook login oplysninger i et Facebook-popup vindue.}
 	{Gå til UC6 punkt \ref{ucLoginWithFacebookError}.}
 	{\ref{ucLoginWithFacebookError}}
 
