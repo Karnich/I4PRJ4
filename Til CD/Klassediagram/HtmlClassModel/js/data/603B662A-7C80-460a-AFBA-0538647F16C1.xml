@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("0.2.1:1", "", "SqlServerTypes", "EARoot/EA2/EA1/EA23.htm", "175.png", "16", "0", "", "Logical diagram0","{3079D9CE-83B2-47ee-ADB7-4672D46ACF6F}");
+tocTab[tocTab.length] = new Array("0.2.1:2", "", "Utilities", "EARoot/EA2/EA1/EA25.htm", "5.png", "235", "0", "", "Class0","{1EDD8A13-3527-48c9-8F9E-682625482C56}");

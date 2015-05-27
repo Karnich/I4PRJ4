@@ -48,17 +48,17 @@ Microsoft.
 \newblock URL \url{http://www.microsoft.com/SQLServer}.
 \newblock Accessed 24.05.2015.
 
-\bibitem[Müller et~al.(2015)Müller, Delisle, and Chapeaux]{phpMyAdminWeb}
-Olivier Müller, Marc Delisle, and Loïc Chapeaux.
-\newblock {phpMyAdmin}, 2015.
-\newblock URL \url{http://www.phpmyadmin.net/}.
-\newblock Accessed 24.05.2015.
-
 \bibitem[MountainGoatSoftware(2015)]{scrumWeb}
 MountainGoatSoftware.
 \newblock {Scrum Methodology and Project Management}, 2015.
 \newblock URL \url{https://www.mountaingoatsoftware.com/agile/scrum}.
 \newblock Accessed 25.05.2015.
+
+\bibitem[Müller et~al.(2015)Müller, Delisle, and Chapeaux]{phpMyAdminWeb}
+Olivier Müller, Marc Delisle, and Loïc Chapeaux.
+\newblock {phpMyAdmin}, 2015.
+\newblock URL \url{http://www.phpmyadmin.net/}.
+\newblock Accessed 24.05.2015.
 
 \bibitem[Poole et~al.(2014)Poole, Prouse, and Busoli]{nunitWeb}
 Charlie Poole, Rob Prouse, and Simone Busoli.
