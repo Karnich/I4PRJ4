@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['startup',['Startup',['../class_website_1_1_startup.html',1,'Website']]]
+  ['bundleconfig',['BundleConfig',['../class_website_1_1_bundle_config.html',1,'Website']]]
 ];

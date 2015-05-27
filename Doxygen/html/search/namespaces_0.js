@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['website',['Website',['../namespace_website.html',1,'']]]
+  ['sqlservertypes',['SqlServerTypes',['../namespace_sql_server_types.html',1,'']]]
 ];
